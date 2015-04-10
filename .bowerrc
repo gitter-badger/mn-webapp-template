@@ -1,0 +1,10 @@
+{
+  "directory": "bower_components",
+  "analytics": false,
+  "strict-ssl": true,
+  "scripts": {
+    "preinstall": "",
+    "postinstall": "grunt preen",
+    "preuninstall": ""
+  }
+}
