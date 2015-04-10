@@ -2,7 +2,7 @@
 
 > Boilerplate environment for Web App development that leverages modern front-end tooling
 
-##Languages, Frameworks, & Libraries
+###Languages, Frameworks, & Libraries
 ![HTML5](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/html5.gif "HTML5")
 &nbsp;![CSS3](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/css3.gif "CSS3")
 &nbsp;[![JavaScript](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/js.gif "JavaScript (ECMAScript 5)")](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
@@ -10,7 +10,7 @@
 &nbsp;[![Marionette.js](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/marionette.gif "Marionette.js")](http://marionettejs.com/)
 &nbsp;[![RequireJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/require.gif "RequireJS")](http://requirejs.org/)
 
-##Front-end Testing & Tooling
+###Front-end Testing & Tooling
 &nbsp;![NodeJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/node.gif "NodeJS")
 &nbsp;[![GruntJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/grunt.gif "GruntJS")](http://gruntjs.com/)
 &nbsp;[![Bower](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/bower.gif "Bower")](http://bower.io/)
@@ -18,3 +18,30 @@
 &nbsp;[![Jasmine](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/jasmine.gif "Jasmine")](https://jasmine.github.io/2.2/introduction.html)
 &nbsp;[![JSCS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/jscs.gif "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/jshint.gif "JSHint")](http://jshint.com/docs/)
+
+##App Folder Structure
+
+    root
+     ??? :file_folder:app
+     ?   ??? :file_folder:config
+     ?   ??? :file_folder:models
+     ?   ??? :file_folder:views
+     ?   ??? :file_folder:controllers
+     ?   ??? :file_folder:util
+     ?   ??? :file_folder:...
+     ??? assets
+     ?   ??? :file_folder:bin
+     ?   ??? :file_folder:config
+     ?   ??? :file_folder:templates
+     ?   ??? :file_folder:css
+     ?   ??? :file_folder:fonts
+     ?   ??? :file_folder:images
+     ?   ??? :file_folder:library
+     ?   ??? :file_folder:...
+     ??? :file_folder:test
+     ??? :page_facing_up:LICENSE
+     ??? :page_facing_up:package.json
+     ??? :page_facing_up:bower.json
+     ??? :page_facing_up:.bowerrc
+     ??? :page_facing_up:GruntFile.js
+ 
