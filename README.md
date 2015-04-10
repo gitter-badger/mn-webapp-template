@@ -5,7 +5,7 @@
 ##Languages, Frameworks, & Libraries
 ![HTML5](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/html5.gif "HTML5")
 &nbsp;![CSS3](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/css3.gif "CSS3")
-&nbsp;![Backbone.js](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/backbone.gif "Backbone.js")
+&nbsp;[![Backbone.js](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/backbone.gif "Backbone.js")](http://backbonejs.org/)
 &nbsp;![Marionette.js](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/marionette.gif "Marionette.js")
 &nbsp;![RequireJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/require.gif "RequireJS")
 
