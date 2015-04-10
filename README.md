@@ -22,14 +22,14 @@
 ##App Folder Structure
 
     root
-     &#x022A2;? :file_folder:app
+     &or;? :file_folder:app
      ?   ??? :file_folder:config
      ?   ??? :file_folder:models
      ?   ??? :file_folder:views
      ?   ??? :file_folder:controllers
      ?   ??? :file_folder:util
      ?   ??? :file_folder:...
-     &#x022A2;? assets
+     &or;? assets
      ?   ??? :file_folder:bin
      ?   ??? :file_folder:config
      ?   ??? :file_folder:templates
@@ -38,10 +38,10 @@
      ?   ??? :file_folder:images
      ?   ??? :file_folder:library
      ?   ??? :file_folder:...
-     &#x022A2;? :file_folder:test
-     &#x022A2;? :page_facing_up:LICENSE
-     &#x022A2;? :page_facing_up:package.json
-     &#x022A2;? :page_facing_up:bower.json
-     &#x022A2;? :page_facing_up:.bowerrc
+     &or;? :file_folder:test
+     &or;? :page_facing_up:LICENSE
+     &or;? :page_facing_up:package.json
+     &or;? :page_facing_up:bower.json
+     &or;? :page_facing_up:.bowerrc
      ??? :page_facing_up:GruntFile.js
  
