@@ -2,12 +2,14 @@
 
 > Boilerplate environment for App development that leverages modern front-end tooling
 
-##Technology
-&nbsp;![HTML5](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/html5.png "HTML5")
+##Languages, Frameworks, & Libraries
+![HTML5](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/html5.png "HTML5")
 &nbsp;![CSS3](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/css3.png "CSS3")
 &nbsp;![Backbone.js](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/backbone.png "Backbone.js")
 &nbsp;![Marionette.js](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/marionette.png "Marionette.js")
 &nbsp;![RequireJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/require.png "RequireJS")
+
+##Front-end Testing & Tooling
 &nbsp;![NodeJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/node.png "NodeJS")
 &nbsp;![GruntJS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/grunt.png "GruntJS")
 &nbsp;![Bower](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/bower.png "Bower")
