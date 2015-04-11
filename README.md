@@ -56,9 +56,9 @@ root
 
 &#8866;-
 
-    &vdash;-
+    &vdash;
     
-    &RightTee;-
+    &RightTee;
     
     &#x022A2;-
     
