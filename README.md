@@ -22,7 +22,7 @@
 #Folder Structure
 
 > root
- &vdash;  app
+>  &vdash;  app
  ?   ??? config
  ?   ??? models
  ?   ??? views
