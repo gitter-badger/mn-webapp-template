@@ -19,7 +19,7 @@
 &nbsp;[![JSCS](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/jscs.gif "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](https://github.com/jhwohlgemuth/template-env-app/blob/master/assets/images/jshint.gif "JSHint")](http://jshint.com/docs/)
 
-##App Folder Structure
+#Folder Structure
 ```
 root
  ??? app
