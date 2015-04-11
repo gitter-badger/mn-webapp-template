@@ -46,7 +46,6 @@ root
  ??? GruntFile.js
  ```
  
-root
 :file_folder:app
 
 &nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: config
