@@ -44,9 +44,8 @@
  &vdash; bower.json
  &vdash; .bowerrc
  ??? GruntFile.js
-```
 
-> &vdash;-
+&vdash;-
 
 &RightTee;-
 
