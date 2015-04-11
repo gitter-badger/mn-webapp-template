@@ -44,4 +44,11 @@
      ??? bower.json
      ??? .bowerrc
      ??? GruntFile.js
+
+    thing
+    ??? index.js                - Routes
+    ??? thing.controller.js     - Controller for our `thing` endpoint
+    ??? thing.model.js          - Database model
+    ??? thing.socket.js         - Register socket events
+    ??? thing.spec.js           - Test
  
