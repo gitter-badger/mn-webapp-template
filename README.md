@@ -48,7 +48,7 @@ root
 
 ???
 
-&vdash;-
+> &vdash;-
 
 &RightTee;-
 
