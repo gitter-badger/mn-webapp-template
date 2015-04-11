@@ -21,7 +21,7 @@
 
 ##App Folder Structure
 
-    root <&#8870;>
+    root &#8870;
      ??? app
      ?   ??? config
      ?   ??? models
