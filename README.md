@@ -3,7 +3,7 @@
 > Boilerplate environment for Web App development that leverages modern front-end tooling
 
 ###Languages, Frameworks, & Libraries
-![HTML5](https://github.com/jhwohlgemuth/template-env-app/blob/images/assets/images/html5.gif "HTML5")
+![HTML5](../images/assets/images/html5.gif "HTML5")
 &nbsp;![CSS3](https://github.com/jhwohlgemuth/template-env-app/blob/images/assets/images/css3.gif "CSS3")
 &nbsp;[![JavaScript](https://github.com/jhwohlgemuth/template-env-app/blob/images/assets/images/js.gif "JavaScript (ECMAScript 5)")](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 &nbsp;[![Backbone.js](https://github.com/jhwohlgemuth/template-env-app/blob/images/assets/images/backbone.gif "Backbone.js")](http://backbonejs.org/)
@@ -44,4 +44,4 @@ root
  ??? bower.json
  ??? .bowerrc
  ??? GruntFile.js
- ```
+```
