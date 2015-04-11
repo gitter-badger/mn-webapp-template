@@ -1,11 +1,30 @@
 {
   "name": "template-env-app",
   "version": "0.1.0",
+  "author": "Jason Wohlgemuth",
+  "license": "MIT",
   "description": "Boilerplate environment for Web App development that leverages modern front-end tooling",
+  "keywords": [],
   "main": "app/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jhwohlgemuth/template-env-app.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "casperjs": "^1.1.0-beta3",
+    "jscs": "^1.12.0",
+    "jscs-jsdoc": "^0.4.6",
+    "jshint": "^2.7.0",
+    "jshint-table-reporter": "^0.1.0",
+    "jsinspect": "^0.5.0",
+    "karma": "^0.12.31",
+    "karma-cli": "0.0.4",
+    "karma-coverage": "^0.2.7",
+    "phantomjs": "^1.9.16"
   },
   "scripts": {
     "preinstall": "npm install grunt-cli",
@@ -16,13 +35,5 @@
     "inspect": "jsinspect app",
     "inspect:main": "jsinspect app/main.js",
     "start": "grunt"
-  },
-  "author": "Jason Wohlgemuth",
-  "license": "MIT",
-  "devDependencies": {
-    "jscs": "^1.12.0",
-    "jshint": "^2.7.0",
-    "jsinspect": "^0.5.0",
-    "karma-cli": "0.0.4"
   }
 }
