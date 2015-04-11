@@ -45,3 +45,44 @@ root
  ??? .bowerrc
  ??? GruntFile.js
  ```
+ 
+root
+:file_folder:app
+
+&nbsp;&nbsp;:page_facing_up: config
+
+&nbsp;&nbsp;:page_facing_up: models
+
+&nbsp;&nbsp;:page_facing_up: views
+
+&nbsp;&nbsp;:page_facing_up: controllers
+
+&nbsp;&nbsp;:page_facing_up: util
+
+:file_folder:assets
+
+&nbsp;&nbsp;:page_facing_up: bin
+
+&nbsp;&nbsp;:page_facing_up:config
+
+&nbsp;&nbsp;:page_facing_up: templates
+
+&nbsp;&nbsp;:page_facing_up: css
+
+&nbsp;&nbsp;:page_facing_up: fonts
+
+&nbsp;&nbsp;:page_facing_up: images
+
+&nbsp;&nbsp;:page_facing_up: library
+
+:file_folder:test
+
+:page_facing_up:LICENSE
+
+:page_facing_up:package.json
+
+:page_facing_up:bower.json
+
+:page_facing_up:.bowerrc
+
+:page_facing_up:GruntFile.js
