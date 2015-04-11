@@ -21,7 +21,7 @@
 
 ##App Folder Structure
 
-    root
+    root <&#8870;>
      ??? app
      ?   ??? config
      ?   ??? models
@@ -44,4 +44,4 @@
      ??? bower.json
      ??? .bowerrc
      ??? GruntFile.js
- <&#8870;>
+ 
