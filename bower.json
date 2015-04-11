@@ -1,7 +1,7 @@
 {
-  "name": "Kawa",
-  "version": "0.0.0",
-  "main": "source/main.js",
+  "name": "template-env-app",
+  "version": "0.1.0",
+  "main": "app/main.js",
   "moduleType": [
     "amd",
     "globals",
@@ -14,10 +14,8 @@
   "private": true,
   "ignore": [
     "node_modules",
-    "bower_components",
+    "assets/library/bower_components",
     "test",
-    "demo",
-    "docs",
     "Gruntfile.js",
     "karma.conf.js",
     "package.json",
@@ -25,12 +23,9 @@
     "*.md",
     "*.bat"
   ],
-  "dependencies": {
-    "jquery": "~2.1.1",
-    "jasmine": "~2.1.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "phantomcss": "~0.9.1"
+    "jasmine": "~2.2.1"
   },
   "preen": {
     "jquery": [
