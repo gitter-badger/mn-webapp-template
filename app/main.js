@@ -24,16 +24,19 @@ require.config({
     },
     paths: {
         //Paths are relative to this file and do not need extensions
-        jquery: 'path/to/jquery',
-        underscore: 'path/to/underscore',
-        backbone: 'path/to/backbone',
-        handlebars: 'path/to/handlebars'
+        jquery: '../assets/library/bower_components/jquery/dist/jquery.min',
+        underscore: '../assets/library/bower_components/underscore/underscore',
+        backbone: '../assets/library/bower_components/backbone/backbone',
+        marionette: '../assets/library/bower_components/marionette/lib/backbone.marionette.min',
+        handlebars: '../assets/library/bower_components/handlebars/handlebars.min'
     }
 });
 
 define(function (require) {
-    var dependency1 = require('dependency1'),
-        dependency2 = require('dependency2');
+    var $ = require('jquery'),
+        marionette = require('marionette');
 
-    return function () {};
+    $('document').ready(function(){
+        $('body').append(' World');
+    });
 });
