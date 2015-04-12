@@ -54,3 +54,4 @@
 - [HTML5 Shiv](https://github.com/aFarkas/html5shiv)
 
 ##References
+- [Patterns for separating RequireJS config from main module](https://github.com/jrburke/requirejs/wiki/Patterns-for-separating-config-from-the-main-module)
