@@ -48,9 +48,9 @@
     |- bower.json
     |- GruntFile.js
     |- .bowerrc
+    |- .csslintrc
     |- .jshintrc
     |- .jscsrc
-    |- .csslintrc
      
 ##Library
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
