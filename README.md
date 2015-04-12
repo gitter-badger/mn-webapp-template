@@ -27,13 +27,12 @@
     |   +- models
     |   +- views
     |   +- controllers
-    |   +- util
+    |   +- helpers
     |   |- index.html
     |   |- main.js
     |   |- config.js
     +- assets
     |   +- bin
-    |   +- config
     |   +- templates
     |   +- css
     |   +- images
@@ -46,8 +45,11 @@
     |- LICENSE
     |- package.json
     |- bower.json
-    |- .bowerrc
     |- GruntFile.js
+    |- .bowerrc
+    |- .jshintrc
+    |- .jscsrc
+    |- .csslintrc
      
 ##Library
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
