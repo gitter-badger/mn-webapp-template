@@ -7,8 +7,8 @@
 &nbsp;![CSS3](../images/assets/images/css3.gif "CSS3")
 &nbsp;[![JavaScript](../images/assets/images/js.gif "JavaScript (ECMAScript 5)")](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 
-&nbsp;[![Backbone.js](../images/assets/images/backbone.gif "Backbone.js")](http://backbonejs.org/)
 &nbsp;[![Marionette.js](../images/assets/images/marionette.gif "Marionette.js")](http://marionettejs.com/)
+&nbsp;[![Backbone.js](../images/assets/images/backbone.gif "Backbone.js")](http://backbonejs.org/)
 &nbsp;[![RequireJS](../images/assets/images/require.gif "RequireJS")](http://requirejs.org/)
 
 ###Front-end Testing & Tooling
