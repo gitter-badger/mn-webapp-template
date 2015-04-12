@@ -33,7 +33,6 @@
     |   |- main.js
     |   |- config.js
     +- assets
-    |   +- bin
     |   +- templates
     |   +- css
     |   +- images
