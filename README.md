@@ -12,7 +12,7 @@
 &nbsp;[![jQuery](../images/assets/images/jquery.gif "jQuery")](https://jquery.com/)
 &nbsp;[![RequireJS](../images/assets/images/require.gif "RequireJS")](http://requirejs.org/)
 
-###Front-end Testing & Tooling
+###Front-end Tooling & Testing
 &nbsp;![NodeJS](../images/assets/images/node.gif "NodeJS")
 &nbsp;[![GruntJS](../images/assets/images/grunt.gif "GruntJS")](http://gruntjs.com/)
 &nbsp;[![Bower](../images/assets/images/bower.gif "Bower")](http://bower.io/)
@@ -58,3 +58,4 @@
 
 ##References
 - [Patterns for separating RequireJS config from main module](https://github.com/jrburke/requirejs/wiki/Patterns-for-separating-config-from-the-main-module)
+- [RequireJS AMD "Sugar"](http://requirejs.org/docs/whyamd.html#sugar)
