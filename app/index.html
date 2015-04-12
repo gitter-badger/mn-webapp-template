@@ -5,7 +5,12 @@
     <title>Web App Name</title>
     <link href="../assets/css/reset.css"/>
     <link href="../assets/css/main.css"/>
-    <script data-main="main.js" src="../assets/library/require.min.js"></script>
+    <script src="../assets/library/require.min.js"></script>
+    <script>
+        require(['config'], function(){
+            require(['main'])
+        });
+    </script>
     <!--[if lt IE 9]>
     <script src="../assets/library/bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->

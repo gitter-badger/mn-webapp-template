@@ -23,32 +23,34 @@
 
 #Folder Structure
     
-     |+ app
-     |   +- config
-     |   +- models
-     |   +- views
-     |   +- controllers
-     |   +- util
-     |   |- index.html
-     |   |- main.js
-     |- assets
-     |   +- bin
-     |   +- config
-     |   +- templates
-     |   +- css
-     |   +- images
-     |   +- library
-     |   |   +- bower_components
-     |   |   |- require.min.js
-     |   +- ...
-     +- test
-     +- tasks
-     |- LICENSE
-     |- package.json
-     |- bower.json
-     |- .bowerrc
-     |- GruntFile.js
+    +- app
+    |   +- models
+    |   +- views
+    |   +- controllers
+    |   +- util
+    |   |- index.html
+    |   |- main.js
+    |   |- config.js
+    +- assets
+    |   +- bin
+    |   +- config
+    |   +- templates
+    |   +- css
+    |   +- images
+    |   +- library
+    |       +- bower_components
+    |       |- require.min.js
+    +- test
+    +- tasks
+    +- node_modules
+    |- LICENSE
+    |- package.json
+    |- bower.json
+    |- .bowerrc
+    |- GruntFile.js
      
 ##Library
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
 - [HTML5 Shiv](https://github.com/aFarkas/html5shiv)
+
+##References
