@@ -23,27 +23,31 @@
 
 #Folder Structure
     
-     ?? app
-     ?   ?? config
-     ?   ?? models
-     ?   ?? views
-     ?   ?? controllers
-     ?   ?? util
-     ?   ?? ...
-     ?? assets
-     ?   ?? bin
-     ?   ?? config
-     ?   ?? templates
-     ?   ?? css
-     ?   ?? images
-     ?   ?? library
-     ?   ?? ...
-     ?? test
-     ?? LICENSE
-     ?? package.json
-     ?? bower.json
-     ?? .bowerrc
-     ?? GruntFile.js
+     |+ app
+     |   +- config
+     |   +- models
+     |   +- views
+     |   +- controllers
+     |   +- util
+     |   |- index.html
+     |   |- main.js
+     |- assets
+     |   +- bin
+     |   +- config
+     |   +- templates
+     |   +- css
+     |   +- images
+     |   +- library
+     |   |   +- bower_components
+     |   |   |- require.min.js
+     |   +- ...
+     +- test
+     +- tasks
+     |- LICENSE
+     |- package.json
+     |- bower.json
+     |- .bowerrc
+     |- GruntFile.js
      
 ##Library
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
