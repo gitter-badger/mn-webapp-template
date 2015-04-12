@@ -28,6 +28,7 @@
     |   +- models
     |   +- views
     |   +- controllers
+    |   +- modules
     |   +- helpers
     |   |- index.html
     |   |- main.js
