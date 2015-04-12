@@ -44,3 +44,7 @@
      ?? bower.json
      ?? .bowerrc
      ?? GruntFile.js
+     
+##Library
+- [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
+- [HTML5 Shiv](https://github.com/aFarkas/html5shiv)
