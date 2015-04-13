@@ -1,6 +1,6 @@
 #Node and Bower directories
-/node_modules
-/assets/library/bower_components
+node_modules/
+assets/library/bower_components/
 
 #Coverage Results
 /test/coverage
