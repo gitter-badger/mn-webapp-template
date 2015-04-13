@@ -48,11 +48,8 @@
   "scripts": {
     "preinstall": "npm install grunt-cli",
     "postinstall": "bower install",
-    "test": "",
-    "lint": "jshint app",
-    "postlint": "jscs app",
-    "inspect": "jsinspect app",
-    "inspect:main": "jsinspect app/main.js",
-    "start": "grunt"
+    "test": "grunt jasmine karma:CI",
+    "inspect": "jsinspect app/**/*.js",
+    "inspect:main": "jsinspect app/main.js"
   }
 }
