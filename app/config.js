@@ -21,11 +21,11 @@ require.config({
     },
     paths: {
         //Paths are relative to this file and do not need extensions
-        jquery: '../assets/library/bower_components/jquery/dist/jquery.min',
-        underscore: '../assets/library/bower_components/underscore/underscore',
-        backbone: '../assets/library/bower_components/backbone/backbone',
-        marionette: '../assets/library/bower_components/marionette/lib/backbone.marionette.min',
-        handlebars: '../assets/library/bower_components/handlebars/handlebars.min',
+        jquery: '../assets/library/components/jquery/dist/jquery.min',
+        underscore: '../assets/library/components/underscore/underscore',
+        backbone: '../assets/library/components/backbone/backbone',
+        marionette: '../assets/library/components/marionette/lib/backbone.marionette.min',
+        handlebars: '../assets/library/components/handlebars/handlebars.min',
         text: '../assets/library/require.text'
     }
 });
