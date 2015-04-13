@@ -37,7 +37,7 @@
     |   +- css
     |   +- images
     |   +- library
-    |       +- bower_components
+    |       +- components
     |       |- require.min.js
     |       |- require.text.js
     +- test
@@ -45,11 +45,13 @@
     |       +- spec
     |       +- helper
     +- tasks
+    |   |- main.js
     +- node_modules
     |- LICENSE
     |- package.json
     |- bower.json
     |- GruntFile.js
+    |- .gitignore
     |- .bowerrc
     |- .csslintrc
     |- .jshintrc
