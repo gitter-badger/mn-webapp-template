@@ -1,44 +1,17 @@
 module.exports = function(grunt) {
     'use strict';
-    var env = {
-        name: 'ModuleX',
-        root: './',
-        encryptedFileExt: '.protected',
-        defaultPort: 4669,
-        livereloadPort: 46692,
-        karmaPort: 31415,
-        vagrantIP: '4.6.6.9'
+    var ports = {
+        default: 4669,
+        livereload: 46692,
+        karma: 31415
     };
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
-        name: env.name,
-        root: env.root,
-        defaultPort: env.defaultPort,
-        livereloadPort: env.livereloadPort,
-        karmaPort: env.karmaPort,
-        encryptExt: env.encryptedFileExt,
+        defaultPort: ports.default,
+        livereloadPort: ports.livereload,
+        karmaPort: ports.karma,
         pkg: grunt.file.readJSON('package.json'),
-        concat: {
-            options: {
-                separator: ';'
-            },
-            dist: {
-                src: ['<%= root %>source/*.js'],
-                dest: 'dist/<%= name %>.js'
-            }
-        },
-        uglify: {
-            options: {
-                mangle: true,
-                preserveComments: false
-            },
-            dist: {
-                files: {
-                    'dist/<%= name %>.min.js': ['<%= concat.dist.dest %>']
-                }
-            }
-        },
         jshint: {
             options: {
                 force: true,
@@ -70,12 +43,9 @@ module.exports = function(grunt) {
                 globals       : {},
                 '-W030'         : false // Warning: 'Expected an assignment or function call and instead saw an expression'
             },
-            all: {
-                src: ['Gruntfile.js', 'tasks/*.js', '<%= root %>source/*.js']
-            },
             grunt: 'Gruntfile.js',
-            tasks: 'tasks/*.js',
-            src: '<%= root %>source/*.js'
+            tasks: './tasks/*.js',
+            src: './app/**/*.js'
         },
         jscs: {
             options: {
@@ -84,83 +54,32 @@ module.exports = function(grunt) {
                 reporterOutput: null
             },
             main: {
-                options: {
-                    config: 'assets/config/.jscsrc'
-                },
                 files: {
-                    src: ['<%= root %>source/*.js']
-                }
-            },
-            comments: {
-                options: {
-                    plugins: [
-                        'jscs-jsdoc'
-                    ],
-                    jsDoc: {
-                        checkAnnotations: 'jsdoc3',
-                        checkParamNames: true,
-                        checkReturnTypes: true,
-                        checkRedundantParams: true,
-                        checkRedundantReturns: true,
-                        checkTypes: true,
-                        enforceExistence: true,
-                        requireParamTypes: true,
-                        requireReturnTypes: true
-                    }
-                },
-                files: {
-                    src: ['<%= root %>source/*.js']
+                    src: ['./app/**/*.js']
                 }
             }
         },
-        jsonlint: {
-            all: {
-                src: ['*.json']
-            },
-            npm: 'package.json',
-            bower: 'bower.json'
-        },
-        csslint: {
-            assets: {
-                options: {
-                    csslintrc: 'assets/config/.csslintrc'
-                },
-                src: ['assets/**/*.css']
-            }
-        },
-        uncss: {
-            options: {
-                //stylesheets: ['assets/css/*.css']
-            },
-            main: {
-                files: [
-                    {
-                        src: ['test/*.html'],
-                        dest: 'dist/main.css'
-                    }
-                ]
-            }
-        },
+        jsonlint: {src: ['./*.json']},
+        csslint: {src: ['./assets/css/**/*.css']},
         jasmine: {
-            main: {
-                src: ['<%= root %>source/*.js'],
-                options: {
-                    specs: 'test/Jasmine/spec/*.js',
-                    helpers: 'test/Jasmine/helper/*.js',
-                    vendor: 'bower_components/jquery/dist/jquery.min.js'
-                }
+            src: ['./app/**/*.js'],
+            options: {
+                specs: './test/jasmine/spec/*.js',
+                helpers: './test/jasmine/helper/*.js',
+                vendor: ['./assets/library/bower_components/jquery/dist/jquery.min.js', './assets/library/require.min.js']
             }
         },
         karma: {
             options: {
                 frameworks: ['jasmine'],
                 files: [
-                    'test/Jasmine/spec/*.js',
-                    'test/Jasmine/helper/*.js',
-                    'bower_components/jquery/dist/jquery.min.js',
-                    '<%= root %>source/*.js'
+                    './test/jasmine/spec/*.js',
+                    './test/jasmine/helper/*.js',
+                    './assets/library/bower_components/jquery/dist/jquery.min.js',
+                    './assets/library/require.min.js',
+                    './app/**/*.js'
                 ],
-                exclude: [],
+                exclude: ['./app/config.js'],
                 preprocessors: {
                     'source/*.js': 'coverage'
                 },
@@ -181,39 +100,33 @@ module.exports = function(grunt) {
                 reporters: ['coverage'],
                 singleRun: true
             },
-            cover: {
+            coverage: {
                 reporters: ['progress', 'coverage'],
                 autoWatch: true
             }
         },
         express: {
-            all: {
+            main: {
                 options: {
                     bases: [__dirname],
                     port: '<%= defaultPort %>',
                     hostname: '0.0.0.0',
                     livereload: '<%= livereloadPort %>'
                 }
-            },
-            demo: {
-                options: {
-                    bases: [__dirname],
-                    port: '<%= defaultPort %>',
-                    hostname: '0.0.0.0',
-                    serverreload: true
-                }
             }
         },
         watch: {
-            write: {
+            review: {
                 files: [
-                    '<%= root %>source/*.js',
-                    'test/*.html',
-                    'test/Jasmine/spec/*.js',
-                    'test/Jasmine/helper/*.js',
-                    'assets/css/*.css'
+                    './app/*.html',
+                    './app/**/*.js',
+                    './assets/css/**/*.css',
+                    './assets/templates/**/*.html',
+                    './test/*.html',
+                    './test/jasmine/spec/*.js',
+                    './test/jasmine/helper/*.js'
                 ],
-                tasks: ['csslint', 'jshint', 'jscs:main', 'jasmine'],
+                tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine'],
                 options: {
                     livereload: '<%= livereloadPort %>',
                     spawn: false
@@ -221,185 +134,22 @@ module.exports = function(grunt) {
             },
             browser: {
                 files: [
-                    '<%= root %>source/*.js',
-                    'test/*.html',
-                    'assets/css/*.css'
+                    './app/*.html',
+                    './app/**/*.js',
+                    './assets/css/**/*.css'
                 ],
                 tasks: [],
                 options: {
                     livereload: '<%= livereloadPort %>',
                     spawn: false
                 }
-            },
-            lint: {
-                files: [
-                    '<%= root %>source/*.js',
-                    'Gruntfile.js', '*.json',
-                    'assets/lib/*.js',
-                    'assets/css/*.css'
-                ],
-                tasks: ['lint'],
-                options: {
-                    spawn: false
-                }
-            },
-            test: {
-                files: [
-                    '<%= root %>source/*.js',
-                    'test/*.html',
-                    'test/Jasmine/spec/*.js',
-                    'test/Jasmine/helper/*.js'
-                ],
-                tasks: ['jasmine:main'],
-                options: {
-                    spawn: false
-                }
-            }
-        },
-        wiredep: {
-            directory: './bower_components',
-            test: {
-                src: ['test/*.html']
-            },
-            demo: {
-                src: ['dist/demo/*.html']
-            }
-        },
-        injector: {
-            options: {
-                relative: true,
-                addRootSlash: false,
-                starttag: '<!-- inject:{{ext}} -->',
-                endtag: '<!-- inject:end -->'
-            },
-            test: {
-                files: {
-                    'test/index.html': [
-                        '<%= root %>source/*.js',
-                        'assets/lib/*.js',
-                        'assets/css/*.css'
-                    ],
-                    'test/example.html': [
-                        '<%= root %>source/*.js',
-                        'assets/lib/*.js',
-                        'assets/css/*.css'
-                    ]
-                }
-            },
-            demo: {
-                files: {
-                    'dist/demo/index.html': [
-                        '<%= root %>dist/*.min.js',
-                        'assets/lib/*.js',
-                        'assets/css/*.css'
-                    ],
-                    'dist/demo/example.html': [
-                        '<%= root %>dist/*.min.js',
-                        'assets/lib/*.js',
-                        'assets/css/*.css'
-                    ]
-                }
-            }
-        },
-        copy: {
-            kawa: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= root %>',
-                        src: [
-                            '.gitignore',//Ignore Git repo files
-                            '.bowerrc',//Bower configuration
-                            '.travis.yml',//Travis-CI configuration
-                            '.js*',//various JS config files (JSHint, JSCS, etc...)
-                            'Vagrantfile',//Vagrant configuration
-                            'Gruntfile.js',//Grunt configuration
-                            'bower.json',//Bower dependencies
-                            'package.json',//node dependencies
-                            'assets/config/.*',//configuration files
-                            'assets/**/!(example.css)',
-                            'source/**/!(example.js)',
-                            'tasks/**',
-                            'test/**',
-                            'vault/**'],
-                        dest: grunt.cli.options.dest || '../workspace'
-                    }
-                ]
-            },
-            import: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: grunt.cli.options.src || '<%= root %>',
-                        src: [
-                            'source/*.js',
-                            'assets/config/.*',
-                            'assets/css/*.css',
-                            'assets/lib/**',
-                            'assets/img/*',
-                            'assets/font/*.{svg,eot,ttf,woff}',
-                            'test/*.html',
-                            'test/Jasmine/spec/*.js',
-                            'test/Jasmine/helper/*.js'
-                        ],
-                        dest: grunt.cli.options.dest || './'
-                    }
-                ]
-            },
-            demo: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'test',
-                        src: '*.html',
-                        dest: 'dist/demo/'
-                    }
-                ]
             }
         },
         open: {
-            test: {
-                path: grunt.cli.options.page ?
-                    'http://localhost:<%= defaultPort %>/test/<%= grunt.cli.options.page %>.html' :
-                    'http://localhost:<%= defaultPort %>/test',
+            review: {
+                path: 'http://localhost:<%= defaultPort %>/app',
                 app: 'Chrome'
-            },
-            demo: {
-                path: grunt.cli.options.page ?
-                    'http://localhost:<%= defaultPort %>/dist/demo/<%= grunt.cli.options.page %>.html' :
-                    'http://localhost:<%= defaultPort %>/dist/demo',
-                app: 'Chrome'
-            },
-            docs: {
-                path: __dirname + '/docs/index.html'
             }
-        },
-        clean: {
-            docs: ['docs'],
-            dist: ['dist'],
-            coverage: ['test/coverage'],
-            plain: ['vault/*', '!vault/*<%= encryptExt %>', '!vault/README.md'],
-            cipher: ['vault/*<%= encryptExt %>']
-        },
-        coveralls: {
-            options: {
-                force: true
-            },
-            main: {
-                src: 'test/coverage/Phantom*/lcov.info'
-            }
-        },
-        crypt:{
-            options: {
-                key: grunt.cli.options.key || 'password'
-            },
-            files: [
-                {
-                    dir: 'vault',
-                    include: '**/!(README.md|README.MD)',
-                    encryptedExtension: '<%= encryptExt %>'
-                }
-            ]
         }
     });
     grunt.registerTask('default', ['demo']);

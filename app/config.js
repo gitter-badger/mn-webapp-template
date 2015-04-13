@@ -1,12 +1,10 @@
 'use strict';
-
-// RequireJS allows us to configure shortcut alias
 require.config({
+    baseUrl: '',
     //urlArgs is used to cache bust.
     //development should use timestamp, production should use version
     urlArgs: "bust=" + (new Date()).getTime(),
-    // The shim config allows us to configure dependencies for
-    // scripts that do not call define() to register a module
+    skipDataMain: true,
     shim: {
         underscore: {
             exports: '_'
@@ -28,6 +26,7 @@ require.config({
         underscore: '../assets/library/bower_components/underscore/underscore',
         backbone: '../assets/library/bower_components/backbone/backbone',
         marionette: '../assets/library/bower_components/marionette/lib/backbone.marionette.min',
-        handlebars: '../assets/library/bower_components/handlebars/handlebars.min'
+        handlebars: '../assets/library/bower_components/handlebars/handlebars.min',
+        text: '../assets/library/require.text'
     }
 });

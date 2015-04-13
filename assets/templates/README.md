@@ -1,2 +1,3 @@
-# template-env-app
-Boilerplate environment for App development that leverages modern front-end tooling
+#HTML Templates will go here
+
+##Should I compile templates with ```grunt-contrib-jst```?
