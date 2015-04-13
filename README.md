@@ -64,3 +64,6 @@
 - [RequireJS AMD "Sugar"](http://requirejs.org/docs/whyamd.html#sugar)
 - ["Cache busting" RequireJS](http://requirejs.org/docs/api.html#config-urlArgs)
 - [Client-side Templating Throwdown](https://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more)
+- [HandlebarsJS Template Precompilation](http://handlebarsjs.com/precompilation.html)
+- [Marionette: The Backbone Framework (YouTube Video)](https://www.youtube.com/watch?v=EvQnntaqVdE&app=desktop)
+- [Building Beautiful Apps with Marionette (YouTube Video)](https://www.youtube.com/watch?v=7yZKsgKxziw&app=desktop)
