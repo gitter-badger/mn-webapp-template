@@ -1,6 +1,6 @@
 #Web App Project Template
 
-> Opinionated boilerplate environment for Web App development that leverages modern front-end tooling
+> Opinionated boilerplate environment for Web App development using modern front-end tooling
 
 ###Languages
 ![HTML5](../images/assets/images/html5.gif "HTML5")
