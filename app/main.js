@@ -1,9 +1,9 @@
 define(function(require) {
     'use strict';
     var $ = require('jquery');
-    var marionette = require('marionette');
+    var Marionette = require('marionette');
 
-    var App = new marionette.Application();
+    var App = new Marionette.Application();
 
     App.addRegions({});
 
