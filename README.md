@@ -61,13 +61,9 @@
     |- .jscsrc
      
 ##Grunt Tasks
-```lint```
-
-    Run jsonlint on JSON files, run csslint on CSS files, and run JSHint and JSCS on JS files
-
-```review```
-
-```tinker```
+- lint
+- review
+- tinker
 
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
