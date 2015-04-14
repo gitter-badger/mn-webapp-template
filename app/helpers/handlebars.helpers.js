@@ -1,4 +1,4 @@
-/*global define */ 
+/*global define */
 define(function(require) {
     'use strict';
     var Handlebars = require('handlebars');

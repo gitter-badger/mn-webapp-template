@@ -1,22 +1,25 @@
 define(function(require) {
     'use strict';
-    var $ = require('jquery');
     var Marionette = require('marionette');
 
     var App = new Marionette.Application();
 
-    App.addRegions({});
-
-    App.addInitializer(function() {
-        $('body').append(' World');
+    App.addRegions({
+        root: 'body',
+        main: '#main',
+        navigation: 'nav'
     });
 
     App.on('before:start', function() {
-        $('body').append('Hello');
+        console.log('App is starting...');
+    });
+
+    App.addInitializer(function() {
+        console.log('Initializer added.');
     });
 
     App.on('start', function() {
-        $('body').append('!');
+        console.log('App is started.');
     });
 
     App.start();
