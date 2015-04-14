@@ -4,7 +4,7 @@
   "author": "Jason Wohlgemuth",
   "license": "MIT",
   "description": "Boilerplate environment for Web App development that leverages modern front-end tooling",
-  "keywords": [],
+  "keywords": ["JavaScript", "Node", "Grunt", "Handlebars", "Karma", "Jasmine"],
   "main": "app/main.js",
   "repository": {
     "type": "git",
