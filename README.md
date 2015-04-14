@@ -61,9 +61,9 @@
     |- .jscsrc
      
 ##Grunt Tasks
-- lint
-- review
-- tinker
+- ```lint```
+- ```review```
+- ```tinker```
 
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
