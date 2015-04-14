@@ -11,6 +11,7 @@
 &nbsp;[![Marionette.js](../images/assets/images/marionette.gif "Marionette.js")](http://marionettejs.com/)
 &nbsp;[![Backbone.js](../images/assets/images/backbone.gif "Backbone.js")](http://backbonejs.org/)
 &nbsp;[![jQuery](../images/assets/images/jquery.gif "jQuery")](https://jquery.com/)
+&nbsp;[![Handlebars](../images/assets/images/handlebars.gif "Handlebars")](http://handlebarsjs.com/)
 &nbsp;[![RequireJS](../images/assets/images/require.gif "RequireJS")](http://requirejs.org/)
 
 ###Front-end Tooling
