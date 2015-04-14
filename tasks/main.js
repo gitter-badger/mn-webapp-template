@@ -11,4 +11,6 @@ module.exports = function(grunt) {
 
     //Test
     grunt.registerTask('test', ['lint', 'jasmine', 'karma:CI']);
+    grunt.registerTask('cover',['karma:CI']);
+    grunt.registerTask('covering',['karma:coverage']);
 };

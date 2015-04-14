@@ -62,11 +62,12 @@
      
 ##Grunt Tasks
 - ```grunt lint```
-- ```grunt linting```
-- ```grunt review```
-- ```grunt quick-review```
+- ```grunt linting``` (watch task)
+- ```grunt review``` (watch task)
+- ```grunt quick-review``` (watch task)
 - ```grunt test```
-- ```grunt karma:coverage```
+- ```grunt cover```
+- ```grunt covering``` (watch task)
 
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
