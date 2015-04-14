@@ -1,5 +1,6 @@
 node_modules/
-assets/library/bower_components/
+assets/library/components/
+test/coverage/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
