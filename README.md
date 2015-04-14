@@ -60,11 +60,18 @@
     |- .jshintrc
     |- .jscsrc
      
-##Library
-- [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
-- [HTML5 Shiv](https://github.com/aFarkas/html5shiv)
+##Grunt Tasks
+```lint```
+
+    Run jsonlint on JSON files, run csslint on CSS files, and run JSHint and JSCS on JS files
+
+```review```
+
+```tinker```
 
 ##References
+- [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
+- [HTML5 Shiv](https://github.com/aFarkas/html5shiv)
 - [Patterns for separating RequireJS config from main module](https://github.com/jrburke/requirejs/wiki/Patterns-for-separating-config-from-the-main-module)
 - [RequireJS AMD "Sugar"](http://requirejs.org/docs/whyamd.html#sugar)
 - ["Cache busting" RequireJS](http://requirejs.org/docs/api.html#config-urlArgs)
