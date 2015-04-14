@@ -69,3 +69,9 @@
 - [HandlebarsJS Template Precompilation](http://handlebarsjs.com/precompilation.html)
 - [Marionette: The Backbone Framework (YouTube Video)](https://www.youtube.com/watch?v=EvQnntaqVdE&app=desktop)
 - [Building Beautiful Apps with Marionette (YouTube Video)](https://www.youtube.com/watch?v=7yZKsgKxziw&app=desktop)
+
+##Future
+- [ ] Continuous Integration server integration and configuration ([Travis](https://travis-ci.org/) and [Coveralls](https://coveralls.io/))
+- [ ] Precompile Handlebars templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
+- [ ] [UnCSS](https://github.com/addyosmani/grunt-uncss) integration
+- [ ] [PhantomCSS](https://github.com/Huddle/PhantomCSS) and/or [BackstopJS](https://garris.github.io/BackstopJS/) integration for visual regression testing
