@@ -2,21 +2,23 @@
 
 > Boilerplate environment for Web App development that leverages modern front-end tooling
 
-###Languages, Frameworks, & Libraries
+###Languages
 ![HTML5](../images/assets/images/html5.gif "HTML5")
 &nbsp;![CSS3](../images/assets/images/css3.gif "CSS3")
 &nbsp;[![JavaScript](../images/assets/images/js.gif "JavaScript (ECMAScript 5)")](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 
+###Frameworks, & Libraries
 &nbsp;[![Marionette.js](../images/assets/images/marionette.gif "Marionette.js")](http://marionettejs.com/)
 &nbsp;[![Backbone.js](../images/assets/images/backbone.gif "Backbone.js")](http://backbonejs.org/)
 &nbsp;[![jQuery](../images/assets/images/jquery.gif "jQuery")](https://jquery.com/)
 &nbsp;[![RequireJS](../images/assets/images/require.gif "RequireJS")](http://requirejs.org/)
 
-###Front-end Tooling & Testing
+###Front-end Tooling
 &nbsp;![NodeJS](../images/assets/images/node.gif "NodeJS")
-&nbsp;[![GruntJS](../images/assets/images/grunt.gif "GruntJS")](http://gruntjs.com/)
 &nbsp;[![Bower](../images/assets/images/bower.gif "Bower")](http://bower.io/)
+&nbsp;[![GruntJS](../images/assets/images/grunt.gif "GruntJS")](http://gruntjs.com/)
 
+###Front-end Testing & Review
 &nbsp;[![Karma](../images/assets/images/karma.gif "Karma")](https://karma-runner.github.io/0.12/index.html)
 &nbsp;[![Jasmine](../images/assets/images/jasmine.gif "Jasmine")](https://jasmine.github.io/2.2/introduction.html)
 &nbsp;[![JSCS](../images/assets/images/jscs.gif "JSCS")](http://jscs.info/)
