@@ -48,7 +48,7 @@
   "scripts": {
     "preinstall": "npm install grunt-cli",
     "postinstall": "bower install",
-    "test": "grunt jasmine karma:CI",
+    "test": "grunt test",
     "inspect": "jsinspect app/**/*.js",
     "inspect:main": "jsinspect app/main.js"
   }

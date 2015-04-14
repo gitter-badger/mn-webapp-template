@@ -61,9 +61,12 @@
     |- .jscsrc
      
 ##Grunt Tasks
-- ```lint```
-- ```review```
-- ```tinker```
+- ```grunt lint```
+- ```grunt linting```
+- ```grunt review```
+- ```grunt quick-review```
+- ```grunt test```
+- ```grunt karma:coverage```
 
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```

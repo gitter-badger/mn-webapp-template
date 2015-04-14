@@ -116,6 +116,19 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            lint: {
+                files: [
+                    './app/*.html',
+                    './app/**/*.js',
+                    './assets/css/**/*.css',
+                    './assets/templates/**/*.html',
+                    './test/*.html',
+                    './test/jasmine/spec/*.js',
+                    './test/jasmine/helper/*.js'
+                ],
+                tasks: ['csslint', 'jshint:src', 'jscs'],
+                options: {spawn: false}
+            },
             review: {
                 files: [
                     './app/*.html',
