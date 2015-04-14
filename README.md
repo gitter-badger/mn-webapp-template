@@ -81,6 +81,7 @@
 - [Building Beautiful Apps with Marionette (YouTube Video)](https://www.youtube.com/watch?v=7yZKsgKxziw&app=desktop)
 
 ##Future
+- [ ] Build and deploy tasks
 - [ ] Continuous Integration server integration and configuration ([Travis](https://travis-ci.org/) and [Coveralls](https://coveralls.io/))
 - [ ] Precompile Handlebars templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
 - [ ] [UnCSS](https://github.com/addyosmani/grunt-uncss) integration
