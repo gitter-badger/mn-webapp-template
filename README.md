@@ -50,6 +50,7 @@
     |       +- helper
     +- tasks
     |   |- main.js
+    +- docs
     +- node_modules
     |- LICENSE
     |- package.json
