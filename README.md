@@ -44,6 +44,7 @@
     |       |- require.min.js
     |       |- require.text.js
     +- test
+    |   +- data
     |   +- jasmine
     |       +- spec
     |       +- helper
