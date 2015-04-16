@@ -4,7 +4,14 @@
   "author": "Jason Wohlgemuth",
   "license": "MIT",
   "description": "Boilerplate environment for Web App development that leverages modern front-end tooling",
-  "keywords": ["JavaScript", "Node", "Grunt", "Handlebars", "Karma", "Jasmine"],
+  "keywords": [
+    "JavaScript",
+    "Node",
+    "Grunt",
+    "Handlebars",
+    "Karma",
+    "Jasmine"
+  ],
   "main": "app/main.js",
   "repository": {
     "type": "git",
@@ -17,6 +24,8 @@
     "bower": "^1.4.1",
     "casperjs": "^1.1.0-beta3",
     "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-csslint": "^0.4.0",
     "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-htmlmin": "^0.4.0",
