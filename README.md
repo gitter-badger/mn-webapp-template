@@ -38,6 +38,8 @@
     +- assets
     |   +- templates
     |   +- css
+    |       |- main.css
+    |       |- reset.css
     |   +- images
     |   +- library
     |       +- components
