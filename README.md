@@ -34,24 +34,24 @@
     |   +- helpers
     |   |- index.html
     |   |- main.js
-    |   |- config.js
+    |   \- config.js
     +- assets
     |   +- templates
     |   +- css
     |       |- main.css
-    |       |- reset.css
+    |       \- reset.css
     |   +- images
     |   +- library
     |       +- components
     |       |- require.min.js
-    |       |- require.text.js
+    |       \- require.text.js
     +- test
     |   +- data
     |   +- jasmine
     |       +- spec
     |       +- helper
     +- tasks
-    |   |- main.js
+    |   \- main.js
     +- docs
     +- node_modules
     |- LICENSE
@@ -62,7 +62,7 @@
     |- .bowerrc
     |- .csslintrc
     |- .jshintrc
-    |- .jscsrc
+    \- .jscsrc
      
 ##Grunt Tasks
 - ```grunt lint```
