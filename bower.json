@@ -33,6 +33,10 @@
     "html5shiv": "~3.7.2"
   },
   "preen": {
+    "html5shiv": [
+      "dist/*.js",
+      "bower.json"
+    ],
     "jquery": [
       "dist/*.js",
       "bower.json"
@@ -43,6 +47,18 @@
     ],
     "backbone": [
       "backbone.js",
+      "bower.json"
+    ],
+    "marionette": [
+      "lib/*.js",
+      "bower.json"
+    ],
+    "backbone.babysitter": [
+      "lib/*.js",
+      "bower.json"
+    ],
+    "backbone.wreqr": [
+      "lib/*.js",
       "bower.json"
     ],
     "handlebars": [
@@ -56,6 +72,15 @@
     },
     "underscore": {
       "main": "underscore-min.js"
+    },
+    "marionette": {
+      "main": "lib/backbone.marionette.min.js"
+    },
+    "backbone.wreqr": {
+      "main": "lib/backbone.wreqr.min.js"
+    },
+    "backbone.babystitter": {
+      "main": "lib/backbone.babysitter.min.js"
     },
     "handlebars": {
       "main": "handlebars.min.js"
