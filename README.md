@@ -14,7 +14,7 @@
 &nbsp;[![Backbone.js](../images/assets/images/backbone.png "Backbone.js")](http://backbonejs.org/)
 &nbsp;[![jQuery](../images/assets/images/jquery.png "jQuery")](https://jquery.com/)
 &nbsp;[![Handlebars](../images/assets/images/handlebars.png "handlebars")](http://handlebarsjs.com/)
-&nbsp;[![RequireJS](../images/assets/images/require.png "RequireJS")](http://requirejs.org/)
+&nbsp;[![RequireJS](../images/assets/images/requirejs.png "RequireJS")](http://requirejs.org/)
 
 ###Front-end Tooling
 &nbsp;![NodeJS](../images/assets/images/node.png "NodeJS")
@@ -28,7 +28,7 @@
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
 
 ###Data Services
-&nbsp;[![MongoDB](../images/assets/images/mongo.png "MongoDB")](http://docs.mongodb.org/manual/)
+&nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](http://docs.mongodb.org/manual/)
 &nbsp;[![redis](../images/assets/images/redis.png "redis")](http://redis.io/documentation/)
 &nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](http://docs.couchdb.org/en/1.6.1/)
 
