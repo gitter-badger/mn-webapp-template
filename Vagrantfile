@@ -7,36 +7,36 @@ Vagrant.configure(2) do |config|
     config.hostmanager.manage_host = true
     config.hostmanager.ignore_private_ip = false
   end
-  config.vm.define 'server' do |server|
+  config.vm.define 'lamp-server' do |server|
     server.vm.box = "hashicorp/precise32"
-    server.vm.hostname = 'lamp'
+    server.vm.hostname = 'lamp-server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
       server.hostmanager.aliases = %w(server.lamp.io)
     end
     server.vm.network "private_network", ip: "10.10.10.10"
     server.vm.provision "shell", inline: $install_LAMP
   end
-  config.vm.define 'db' do |db|
+  config.vm.define 'mongo-db' do |db|
     db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'mongo'
+    db.vm.hostname = 'mongo-db'
     if Vagrant.has_plugin?("vagrant-hostmanager")
       db.hostmanager.aliases = %w(db.mongo.io)
     end
     db.vm.network "private_network", ip: "10.10.10.11"
     db.vm.provision "shell", inline: $install_mongo
   end
-  config.vm.define 'db' do |db|
+  config.vm.define 'redis-db' do |db|
     db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'redis'
+    db.vm.hostname = 'redis-db'
     if Vagrant.has_plugin?("vagrant-hostmanager")
       db.hostmanager.aliases = %w(db.redis.io)
     end
     db.vm.network "private_network", ip: "10.10.10.12"
     db.vm.provision "shell", inline: $install_redis
   end
-  config.vm.define 'db' do |db|
+  config.vm.define 'couch-db' do |db|
     db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'couch'
+    db.vm.hostname = 'couch-db'
     if Vagrant.has_plugin?("vagrant-hostmanager")
       db.hostmanager.aliases = %w(db.couch.io)
     end
@@ -73,7 +73,7 @@ $install_LAMP = <<LAMP
   sudo apt-get -y install lamp-server^ >/dev/null 2>&1
   printf "Creating symlink to /var/www..."
   sudo rm -rf /var/www
-  sudo ln -fs /vagrant/app /var/www
+  sudo ln -fs /vagrant /var/www
   sudo a2enmod rewrite >/dev/null 2>&1
   sudo sed -i '/AllowOverride None/c AllowOverride All' /etc/apache2/sites-available/default >/dev/null 2>&1
   sudo service apache2 restart >/dev/null 2>&1
