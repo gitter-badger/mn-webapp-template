@@ -7,41 +7,23 @@ Vagrant.configure(2) do |config|
     config.hostmanager.manage_host = true
     config.hostmanager.ignore_private_ip = false
   end
-  config.vm.define 'lamp-server' do |server|
+  config.vm.define 'lamp' do |server|
     server.vm.box = "hashicorp/precise32"
     server.vm.hostname = 'lamp-server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
-      server.hostmanager.aliases = %w(server.lamp.io)
+      server.hostmanager.aliases = %w(lamp.server.io)
     end
     server.vm.network "private_network", ip: "10.10.10.10"
     server.vm.provision "shell", inline: $install_LAMP
   end
-  config.vm.define 'mongo-db' do |db|
+  config.vm.define 'db' do |db|
     db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'mongo-db'
+    db.vm.hostname = 'db-server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
-      db.hostmanager.aliases = %w(db.mongo.io)
+      db.hostmanager.aliases = %w(db.server.io)
     end
     db.vm.network "private_network", ip: "10.10.10.11"
     db.vm.provision "shell", inline: $install_mongo
-  end
-  config.vm.define 'redis-db' do |db|
-    db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'redis-db'
-    if Vagrant.has_plugin?("vagrant-hostmanager")
-      db.hostmanager.aliases = %w(db.redis.io)
-    end
-    db.vm.network "private_network", ip: "10.10.10.12"
-    db.vm.provision "shell", inline: $install_redis
-  end
-  config.vm.define 'couch-db' do |db|
-    db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'couch-db'
-    if Vagrant.has_plugin?("vagrant-hostmanager")
-      db.hostmanager.aliases = %w(db.couch.io)
-    end
-    db.vm.network "private_network", ip: "10.10.10.13"
-    db.vm.provision "shell", inline: $install_couch
   end
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
@@ -50,19 +32,23 @@ Vagrant.configure(2) do |config|
 end
 
 $message = <<MSG
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-██╗  ██╗ █████╗ ██╗    ██╗ █████╗
-██║ ██╔╝██╔══██╗██║    ██║██╔══██╗
-█████╔╝ ███████║██║ █╗ ██║███████║
-██╔═██╗ ██╔══██║██║███╗██║██╔══██║
-██║  ██╗██║  ██║╚███╔███╔╝██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ┌┬┐┬┌┬┐┌─┐  ┌┬┐┌─┐  ┌─┐┬  ┌─┐┬ ┬
-  │ ││││├┤    │ │ │  ├┤ │  │ ││││
-  ┴ ┴┴ ┴└─┘   ┴ └─┘  └  ┴─┘└─┘└┴┘
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+░█░░░█▀█░█▄█░█▀█
+░█░░░█▀█░█░█░█▀▀
+░▀▀▀░▀░▀░▀░▀░▀░░
+VM Name ---> lamp
+IP --------> 10.10.10.10
+Hostname --> lamp.server.io
+MySQL Username: root
+MySQL Password: 123
 
-For instructions, see README.md
+░█▀▄░█▀▄
+░█░█░█▀▄
+░▀▀░░▀▀░
+VM Name ---> db
+IP --------> 10.10.10.11
+Hostname --> db.server.io
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MSG
 
 $install_LAMP = <<LAMP
