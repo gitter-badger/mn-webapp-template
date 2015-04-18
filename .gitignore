@@ -5,6 +5,9 @@ assets/library/components/
 #Coverage Results
 tests/coverage/
 
+#Vagrant system files
+services/.vagrant/
+
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
