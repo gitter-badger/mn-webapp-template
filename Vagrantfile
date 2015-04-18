@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
       db.hostmanager.aliases = %w(db.server.io)
     end
     db.vm.network "private_network", ip: "10.10.10.11"
-    db.vm.provision "shell", inline: $install_couch
+    db.vm.provision "shell", inline: $install_mongo
   end
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
@@ -33,7 +33,6 @@ Vagrant.configure(2) do |config|
 end
 
 $message = <<MSG
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ░█░░░█▀█░█▄█░█▀█
 ░█░░░█▀█░█░█░█▀▀
 ░▀▀▀░▀░▀░▀░▀░▀░░
@@ -49,7 +48,6 @@ MySQL Password: 123
 VM Name ---> db
 IP --------> 10.10.10.11
 Hostname --> db.server.io
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MSG
 
 $install_LAMP = <<LAMP
