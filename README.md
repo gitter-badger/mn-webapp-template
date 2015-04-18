@@ -2,6 +2,8 @@
 
 > Opinionated boilerplate environment for Web App development using modern front-end tooling
 
+###Web Service Badges
+
 ###Languages
 ![HTML5](../images/assets/images/html5.gif "HTML5")
 &nbsp;![CSS3](../images/assets/images/css3.gif "CSS3")
