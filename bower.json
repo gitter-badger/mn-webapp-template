@@ -38,7 +38,8 @@
       "bower.json"
     ],
     "jquery": [
-      "dist/*.js, dist/*.map",
+      "dist/*.js",
+      "dist/*.map",
       "bower.json"
     ],
     "jasmine": [
@@ -50,7 +51,8 @@
       "bower.json"
     ],
     "marionette": [
-      "lib/*.js, lib/*.map",
+      "lib/*.js",
+      "lib/*.map",
       "bower.json"
     ],
     "backbone.babysitter": [
