@@ -2,6 +2,13 @@
 
 > Opinionated boilerplate environment for Web App development using modern front-end tooling
 
+##Getting Started
+- ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
+- ```cd template-dev-webapp```
+- ```npm install```
+- Write some code and [run some Grunt tasks](#grunt-tasks)
+- Connect to a [local data service](#data-services)
+
 ###Languages
 ![HTML5](../images/assets/images/html5.png "HTML5")
 &nbsp;![CSS3](../images/assets/images/css3.png "CSS3")
@@ -30,11 +37,6 @@
 &nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](#using-mongodb)
 &nbsp;[![redis](../images/assets/images/redis.png "redis")](#using-redis)
 &nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](#using-couchdb)
-
-##Front-end Set-up
-- ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
-- ```cd template-dev-webapp```
-- ```npm install```
 
 ##Folder Structure
     
