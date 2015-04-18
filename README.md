@@ -33,11 +33,6 @@
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
 &nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 
-###Data Services
-&nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](#using-mongodb)
-&nbsp;[![redis](../images/assets/images/redis.png "redis")](#using-redis)
-&nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](#using-couchdb)
-
 ##Folder Structure
     
     +- app
@@ -89,6 +84,9 @@
 - ```grunt covering``` (watch task)
 
 #Data Services
+&nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](#using-mongodb)
+&nbsp;[![redis](../images/assets/images/redis.png "redis")](#using-redis)
+&nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](#using-couchdb)
 
 ###Requirements
 - [node.js]() is installed
