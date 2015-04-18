@@ -27,9 +27,9 @@
 &nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 
 ###Data Services
-&nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](http://docs.mongodb.org/manual/)
-&nbsp;[![redis](../images/assets/images/redis.png "redis")](http://redis.io/documentation/)
-&nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](http://docs.couchdb.org/en/1.6.1/)
+&nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](#using-mongodb)
+&nbsp;[![redis](../images/assets/images/redis.png "redis")](#using-redis)
+&nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](#using-couchdb)
 
 ##Front-end Set-up
 - ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
@@ -98,17 +98,6 @@
 - ```cd services```
 - ```vagrant up```
 
-###Using [CouchDB](http://docs.couchdb.org/en/1.6.1/)
-**&#x02713;** Set  ```inline``` to ```$install_couch``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
-
-**&#x02713;** Create a ssh tunnel on your host machine (input ```yes```, then ```vagrant```):
-
-    ssh -f -L localhost:5984:127.0.0.1:5984 vagrant@db-server -N
-
-**&#x02713;** Open your favorite browser and navigate to [localhost:5984/_utils](http://localhost:5984/_utils)
-
-> **Tip:** The default port for CouchDB is 5984.  It can be changed by editing ```/etc/couchdb/local.ini```
-
 ###Using [MongoDB](http://docs.mongodb.org/manual/)
 
 **&#x02713;** Set ```inline``` to ```$install_mongo``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
@@ -118,7 +107,6 @@
 **&#x02713;** In a mongo console, execute ```mongo kawa.db```
 
 > **Tip:** The default port for MongoDB is 27017.  It can be changed by editing ```/etc/mongod.conf```.
-
 ###Using [redis](http://redis.io/documentation/)
 
 **&#x02713;** Set ```inline``` to ```$install_redis``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
@@ -133,6 +121,16 @@
 
 > **Tip** The default port for redis is 6379.  It can be changed by editing ```/etc/redis/redis.conf```.
 
+###Using [CouchDB](http://docs.couchdb.org/en/1.6.1/)
+**&#x02713;** Set  ```inline``` to ```$install_couch``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
+
+**&#x02713;** Create a ssh tunnel on your host machine (input ```yes```, then ```vagrant```):
+
+    ssh -f -L localhost:5984:127.0.0.1:5984 vagrant@db-server -N
+
+**&#x02713;** Open your favorite browser and navigate to [localhost:5984/_utils](http://localhost:5984/_utils)
+
+> **Tip:** The default port for CouchDB is 5984.  It can be changed by editing ```/etc/couchdb/local.ini```
 
 #References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
