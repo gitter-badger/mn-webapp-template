@@ -100,10 +100,6 @@
 - [Vagrant](https://www.vagrantup.com/) is installed
 - vagrant hostmanager plugin is installed ```vagrant plugin install vagrant-hostmanager```
 
-###Set-up
-- Install vagrant hostmanager plugin with ```vagrant plugin install vagrant-hostmanager```
-- Choose data service and edit [line 26](Vagrantfile#L26) in the Vagrantfile
-- Execute ```vagrant up```
 
 ###Using [MongoDB](http://docs.mongodb.org/manual/)
 
