@@ -31,6 +31,11 @@
 &nbsp;[![redis](../images/assets/images/redis.png "redis")](http://redis.io/documentation/)
 &nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](http://docs.couchdb.org/en/1.6.1/)
 
+##Front-end Set-up
+- ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
+- ```cd template-dev-webapp```
+- ```npm install```
+
 ##Folder Structure
     
     +- app
