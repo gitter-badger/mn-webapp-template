@@ -104,6 +104,30 @@
 
 > **Tip:** The default port for CouchDB is 5984.  It can be changed by editing ```/etc/couchdb/local.ini```
 
+###Using [MongoDB](http://docs.mongodb.org/manual/)
+
+**&#x02713;** Set ```inline``` to ```$install_mongo``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
+
+**&#x02713;** [Install Mongo for windows](https://github.com/jhwohlgemuth/michi#mongodb-setup-on-windows)
+
+**&#x02713;** In a mongo console, execute ```mongo kawa.db```
+
+> **Tip:** The default port for MongoDB is 27017.  It can be changed by editing ```/etc/mongod.conf```.
+
+###Using [Redis](http://redis.io/documentation/)
+
+**&#x02713;** Set ```inline``` to ```$install_redis``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
+
+**&#x02713;** Install a redis client.  I like [Redis Commander](https://joeferner.github.io/redis-commander/).
+
+> Install Redis Commander with ```npm install redis-commander --global```
+
+**&#x02713;** Start Redis Commander with ```redis-commander --redis-host kawa.db```
+
+**&#x02713;** Open your favorite browser and navigate to [localhost:8081](http://localhost:8081)
+
+> **Tip** The default port for redis is 6379.  It can be changed by editing ```/etc/redis/redis.conf```.
+
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
 - [Patterns for separating RequireJS config from main module](https://github.com/jrburke/requirejs/wiki/Patterns-for-separating-config-from-the-main-module)
