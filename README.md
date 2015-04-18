@@ -1,4 +1,5 @@
 <div align="center"><h1>Web App Project Template</h1></div>
+[![Dependency Status](https://david-dm.org/jhwohlgemuth/template-dev-webapp.svg)](https://david-dm.org/jhwohlgemuth/template-dev-webapp)
 [![devDependency Status](https://david-dm.org/jhwohlgemuth/template-dev-webapp/dev-status.svg)](https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
