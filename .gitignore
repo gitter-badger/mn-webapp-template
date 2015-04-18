@@ -3,7 +3,7 @@ node_modules/
 assets/library/components/
 
 #Coverage Results
-/test/coverage
+tests/coverage/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template

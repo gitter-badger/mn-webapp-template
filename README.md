@@ -28,6 +28,9 @@
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
 
 ###Data Services
+&nbsp;[![MongoDB](../images/assets/images/mongo.png "MongoDB")](http://docs.mongodb.org/manual/)
+&nbsp;[![redis](../images/assets/images/redis.png "redis")](http://redis.io/documentation/)
+&nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](http://docs.couchdb.org/en/1.6.1/)
 
 #Folder Structure
     
@@ -51,14 +54,14 @@
     |       \- require.text.js
     +- services
     |   |- Vagrantfile
-    +- test
+    +- tests
     |   +- data
     |   +- jasmine
     |       +- spec
     |       +- helper
     +- tasks
     |   \- main.js
-    +- docs
+    +- documentation
     +- node_modules
     |- LICENSE
     |- package.json

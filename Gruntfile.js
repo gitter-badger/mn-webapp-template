@@ -64,8 +64,8 @@ module.exports = function(grunt) {
         jasmine: {
             src: ['./app/**/*.js'],
             options: {
-                specs: './test/jasmine/spec/*.js',
-                helpers: './test/jasmine/helper/*.js',
+                specs: './tests/jasmine/spec/*.js',
+                helpers: './tests/jasmine/helper/*.js',
                 vendor: ['./assets/library/bower_components/jquery/dist/jquery.min.js', './assets/library/require.min.js']
             }
         },
@@ -73,8 +73,8 @@ module.exports = function(grunt) {
             options: {
                 frameworks: ['jasmine'],
                 files: [
-                    './test/jasmine/spec/*.js',
-                    './test/jasmine/helper/*.js',
+                    './tests/jasmine/spec/*.js',
+                    './tests/jasmine/helper/*.js',
                     './assets/library/bower_components/jquery/dist/jquery.min.js',
                     './assets/library/require.min.js',
                     './app/**/*.js'
@@ -85,10 +85,10 @@ module.exports = function(grunt) {
                 },
                 coverageReporter: {
                     reporters: [
-                        {type: 'teamcity', dir: 'test/coverage', file: 'teamcity-coverage.txt'},
-                        {type: 'cobertura', dir: 'test/coverage'},
-                        {type: 'lcov', dir: 'test/coverage'},
-                        {type: 'text-summary', dir: 'test/coverage'}
+                        {type: 'teamcity', dir: 'tests/coverage', file: 'teamcity-coverage.txt'},
+                        {type: 'cobertura', dir: 'tests/coverage'},
+                        {type: 'lcov', dir: 'tests/coverage'},
+                        {type: 'text-summary', dir: 'tests/coverage'}
                     ]
                 },
                 browsers: ['PhantomJS'],
@@ -122,9 +122,9 @@ module.exports = function(grunt) {
                     './app/**/*.js',
                     './assets/css/**/*.css',
                     './assets/templates/**/*.html',
-                    './test/*.html',
-                    './test/jasmine/spec/*.js',
-                    './test/jasmine/helper/*.js'
+                    './tests/*.html',
+                    './tests/jasmine/spec/*.js',
+                    './tests/jasmine/helper/*.js'
                 ],
                 tasks: ['csslint', 'jshint:src', 'jscs'],
                 options: {spawn: false}
@@ -135,9 +135,9 @@ module.exports = function(grunt) {
                     './app/**/*.js',
                     './assets/css/**/*.css',
                     './assets/templates/**/*.html',
-                    './test/*.html',
-                    './test/jasmine/spec/*.js',
-                    './test/jasmine/helper/*.js'
+                    './tests/*.html',
+                    './tests/jasmine/spec/*.js',
+                    './tests/jasmine/helper/*.js'
                 ],
                 tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine'],
                 options: {
