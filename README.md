@@ -25,9 +25,11 @@
 &nbsp;[![JSCS](../images/assets/images/jscs.gif "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](../images/assets/images/jshint.gif "JSHint")](http://jshint.com/docs/)
 
+```
 &#9500;
 &#9500;
 &#9500;
+```
 
 
 #Folder Structure
