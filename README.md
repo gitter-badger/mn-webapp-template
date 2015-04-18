@@ -4,7 +4,7 @@
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp/dev-status.svg"></img></a>
 <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></img></a>
 </div>
-
+</br>
 
 > Opinionated boilerplate environment for Web App development using modern front-end tooling
 
