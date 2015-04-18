@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   end
   config.vm.define 'lamp' do |server|
     server.vm.box = "hashicorp/precise32"
-    server.vm.hostname = 'lamp-server'
+    server.vm.hostname = 'lamp.server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
       server.hostmanager.aliases = %w(lamp.server.io)
     end
@@ -19,9 +19,9 @@ Vagrant.configure(2) do |config|
   end
   config.vm.define 'db' do |db|
     db.vm.box = "hashicorp/precise32"
-    db.vm.hostname = 'db-server'
+    db.vm.hostname = 'db.server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
-      db.hostmanager.aliases = %w(db.server)
+      db.hostmanager.aliases = %w(db.server.io)
     end
     db.vm.network "private_network", ip: "10.10.10.11"
     db.vm.provision "shell", inline: $install_redis

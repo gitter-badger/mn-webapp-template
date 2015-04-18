@@ -91,11 +91,11 @@
 - [node.js](https://nodejs.org/) is installed
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads) is installed
 - [Vagrant](https://www.vagrantup.com/) is installed
-- Vagrant Hostmanager plugin is installed: ```vagrant plugin install vagrant-hostmanager```
 
 ###Set-up
-- Choose database technology and edit [line 26](Vagrantfile#L26)
-- ```vagrant up```
+- Install vagrant hostmanager plugin with ```vagrant plugin install vagrant-hostmanager```
+- Choose data service and edit [line 26](Vagrantfile#L26) in the Vagrantfile
+- Execute ```vagrant up```
 
 ###Using [MongoDB](http://docs.mongodb.org/manual/)
 
