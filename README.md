@@ -133,7 +133,7 @@
 
 **&#x02713;** Create a ssh tunnel on your host machine (input ```yes```, then ```vagrant```):
 
-    ssh -f -L localhost:5984:127.0.0.1:5984 vagrant@db-server -N
+    ssh -f -L localhost:5984:127.0.0.1:5984 vagrant@db.server -N
 
 **&#x02713;** Open your favorite browser and navigate to [localhost:5984/_utils](http://localhost:5984/_utils)
 
