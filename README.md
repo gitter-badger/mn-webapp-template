@@ -98,9 +98,7 @@
 - [node.js](https://nodejs.org/) is installed
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads) is installed
 - [Vagrant](https://www.vagrantup.com/) is installed
-- vagrant hostmanager plugin is installed
- 
-> vagrant plugin install vagrant-hostmanager
+- vagrant hostmanager plugin is installed ```vagrant plugin install vagrant-hostmanager```
 
 ###Set-up
 - Install vagrant hostmanager plugin with ```vagrant plugin install vagrant-hostmanager```
