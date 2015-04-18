@@ -128,6 +128,7 @@
 
 > **Tip** The default port for redis is 6379.  It can be changed by editing ```/etc/redis/redis.conf```.
 
+
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
 - [Patterns for separating RequireJS config from main module](https://github.com/jrburke/requirejs/wiki/Patterns-for-separating-config-from-the-main-module)
