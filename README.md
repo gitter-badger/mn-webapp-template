@@ -94,7 +94,6 @@
 - Vagrant Hostmanager plugin is installed: ```vagrant plugin install vagrant-hostmanager```
 
 ###Set-up
-- ```cd services```
 - ```vagrant up```
 
 ###Using [MongoDB](http://docs.mongodb.org/manual/)
