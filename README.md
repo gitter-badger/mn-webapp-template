@@ -26,6 +26,7 @@
 &nbsp;[![Jasmine](../images/assets/images/jasmine.png "Jasmine")](https://jasmine.github.io/2.2/introduction.html)
 &nbsp;[![JSCS](../images/assets/images/jscs.png "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
+&nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 
 ###Data Services
 &nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](http://docs.mongodb.org/manual/)
