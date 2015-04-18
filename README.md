@@ -28,8 +28,8 @@
 #Folder Structure
     
     +- app
-    |   +- models
-    |   +- views
+    |   &#9500;+- models
+    |   &#9500;+- views
     |   +- controllers
     |   +- helpers
     |   |- index.html
