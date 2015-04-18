@@ -102,7 +102,7 @@
 
 **&#x02713;** [Install Mongo for windows](https://github.com/jhwohlgemuth/michi#mongodb-setup-on-windows)
 
-**&#x02713;** In a mongo console, execute ```mongo kawa.db```
+**&#x02713;** In a mongo console, execute ```mongo db.server.io```
 
 > **Tip:** The default port for MongoDB is 27017.  It can be changed by editing ```/etc/mongod.conf```.
 
@@ -114,7 +114,7 @@
 
 > Install Redis Commander with ```npm install redis-commander --global```
 
-**&#x02713;** Start Redis Commander with ```redis-commander --redis-host kawa.db```
+**&#x02713;** Start Redis Commander with ```redis-commander --redis-host db.server.io```
 
 **&#x02713;** Open your favorite browser and navigate to [localhost:8081](http://localhost:8081)
 
