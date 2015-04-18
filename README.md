@@ -2,8 +2,6 @@
 
 > Opinionated boilerplate environment for Web App development using modern front-end tooling
 
-###Web Service Badges
-
 ###Languages
 ![HTML5](../images/assets/images/html5.png "HTML5")
 &nbsp;![CSS3](../images/assets/images/css3.png "CSS3")
@@ -17,7 +15,7 @@
 &nbsp;[![RequireJS](../images/assets/images/requirejs.png "RequireJS")](http://requirejs.org/)
 
 ###Front-end Tooling
-&nbsp;![NodeJS](../images/assets/images/node.png "NodeJS")
+&nbsp;![node.js](../images/assets/images/node.png "node.js")
 &nbsp;[![Bower](../images/assets/images/bower.png "Bower")](http://bower.io/)
 &nbsp;[![GruntJS](../images/assets/images/grunt.png "GruntJS")](http://gruntjs.com/)
 
@@ -33,7 +31,7 @@
 &nbsp;[![redis](../images/assets/images/redis.png "redis")](http://redis.io/documentation/)
 &nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](http://docs.couchdb.org/en/1.6.1/)
 
-#Folder Structure
+##Folder Structure
     
     +- app
     |   +- models
@@ -82,6 +80,13 @@
 - ```grunt test```
 - ```grunt cover```
 - ```grunt covering``` (watch task)
+
+##Data Services
+
+###Requirements
+- [ ] [![node.js](../images/assets/images/node.png "node.js")]() is installed
+- [ ] [Virtualbox]() is installed
+- [ ] [Vagrant]() is installed
 
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
