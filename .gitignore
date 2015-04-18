@@ -6,7 +6,7 @@ assets/library/components/
 tests/coverage/
 
 #Vagrant system files
-services/.vagrant/
+.vagrant/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template

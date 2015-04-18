@@ -53,8 +53,6 @@
     |       +- components
     |       |- require.min.js
     |       \- require.text.js
-    +- services
-    |   |- Vagrantfile
     +- tests
     |   +- data
     |   +- jasmine
@@ -68,6 +66,7 @@
     |- package.json
     |- bower.json
     |- GruntFile.js
+    |- Vagrantfile
     |- .gitignore
     |- .bowerrc
     |- .csslintrc
