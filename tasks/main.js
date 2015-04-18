@@ -16,4 +16,8 @@ module.exports = function(grunt) {
 
     //Deploy
 
+
+    //Utilities
+    grunt.registerTask('lock', ['encrypt', 'clean:plain']);
+    grunt.registerTask('unlock', ['decrypt', 'clean:cipher']);
 };

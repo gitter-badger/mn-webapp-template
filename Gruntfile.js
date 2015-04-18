@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         defaultPort: ports.default,
         livereloadPort: ports.livereload,
         karmaPort: ports.karma,
+        encryptExt: '.protected',
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
             options: {
@@ -163,6 +164,23 @@ module.exports = function(grunt) {
                 path: 'http://localhost:<%= defaultPort %>/app',
                 app: 'Chrome'
             }
+        },
+        clean: {
+            coverage: ['tests/coverage'],
+            plain: ['vault/*', '!vault/*<%= encryptExt %>', '!vault/README.md'],
+            cipher: ['vault/*<%= encryptExt %>']
+        },
+        crypt:{
+            options: {
+                key: grunt.cli.options.key || 'password'
+            },
+            files: [
+                {
+                    dir: 'vault',
+                    include: '**/!(README.md|README.MD)',
+                    encryptedExtension: '<%= encryptExt %>'
+                }
+            ]
         }
     });
     grunt.registerTask('default', ['demo']);

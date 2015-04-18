@@ -53,13 +53,14 @@
     |       +- components
     |       |- require.min.js
     |       \- require.text.js
+    +- tasks
+    |   \- main.js
     +- tests
     |   +- data
     |   +- jasmine
     |       +- spec
     |       +- helper
-    +- tasks
-    |   \- main.js
+    +- vault
     +- documentation
     +- node_modules
     |- LICENSE
