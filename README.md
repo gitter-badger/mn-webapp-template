@@ -84,9 +84,25 @@
 ##Data Services
 
 ###Requirements
-- [ ] [![node.js](../images/assets/images/node.png "node.js")]() is installed
+- [ ] [node.js]() is installed
 - [ ] [Virtualbox]() is installed
 - [ ] [Vagrant]() is installed
+- [ ] Vagrant Hostmanager plugin is installed - ```vagrant plugin install vagrant-hostmanager```
+
+###Set-up
+- ```cd services```
+- ```vagrant up```
+
+###Using [CouchDB](http://docs.couchdb.org/en/1.6.1/)
+**&#x02713;** Set  ```inline``` to ```$install_couch``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
+
+**&#x02713;** Create a ssh tunnel on your host machine (input ```yes```, then ```vagrant```):
+
+    ssh -f -L localhost:5984:127.0.0.1:5984 vagrant@db-server -N
+
+**&#x02713;** Open your favorite browser and navigate to [localhost:5984/_utils](http://localhost:5984/_utils)
+
+> **Tip:** The default port for CouchDB is 5984.  It can be changed by editing ```/etc/couchdb/local.ini```
 
 ##References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
