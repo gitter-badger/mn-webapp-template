@@ -111,7 +111,7 @@ module.exports = function(grunt) {
                     bases: [__dirname],
                     port: '<%= defaultPort %>',
                     hostname: '0.0.0.0',
-                    livereload: '<%= ports.livereload %>'
+                    livereload: '<%= livereloadPort %>'
                 }
             }
         },
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine'],
                 options: {
-                    livereload: '<%= ports.livereload %>',
+                    livereload: '<%= livereloadPort %>',
                     spawn: false
                 }
             },
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
                 ],
                 tasks: [],
                 options: {
-                    livereload: '<%= ports.livereload %>',
+                    livereload: '<%= livereloadPort %>',
                     spawn: false
                 }
             }
