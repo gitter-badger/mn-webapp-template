@@ -114,7 +114,7 @@
 
 > **Tip:** The default port for MongoDB is 27017.  It can be changed by editing ```/etc/mongod.conf```.
 
-###Using [Redis](http://redis.io/documentation/)
+###Using [redis](http://redis.io/documentation/)
 
 **&#x02713;** Set ```inline``` to ```$install_redis``` on [line 27](https://github.com/jhwohlgemuth/kawa/blob/master/Vagrantfile#L27).
 
