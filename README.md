@@ -22,7 +22,7 @@
 &nbsp;[![RequireJS](../images/assets/images/requirejs.png "RequireJS")](http://requirejs.org/)
 
 ###Front-end Tooling
-&nbsp;![node.js](../images/assets/images/node.png "node.js")
+&nbsp;[![node.js](../images/assets/images/node.png "node.js")](https://nodejs.org/)
 &nbsp;[![Bower](../images/assets/images/bower.png "Bower")](http://bower.io/)
 &nbsp;[![GruntJS](../images/assets/images/grunt.png "GruntJS")](http://gruntjs.com/)
 
@@ -88,9 +88,9 @@
 &nbsp;[![CouchDB](../images/assets/images/couchdb.png "CouchDB")](#using-couchdb)
 
 ###Requirements
-- [node.js]() is installed
-- [Virtualbox]() is installed
-- [Vagrant]() is installed
+- [node.js](https://nodejs.org/) is installed
+- [Virtualbox](https://www.virtualbox.org/wiki/Downloads) is installed
+- [Vagrant](https://www.vagrantup.com/) is installed
 - Vagrant Hostmanager plugin is installed: ```vagrant plugin install vagrant-hostmanager```
 
 ###Set-up
@@ -145,6 +145,6 @@
 #Future
 - [ ] Build and deploy tasks
 - [ ] Continuous Integration server integration and configuration ([Travis](https://travis-ci.org/) and [Coveralls](https://coveralls.io/))
-- [ ] Precompile Handlebars templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
+- [ ] Precompile templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
 - [ ] [UnCSS](https://github.com/addyosmani/grunt-uncss) integration
 - [ ] [PhantomCSS](https://github.com/Huddle/PhantomCSS) and/or [BackstopJS](https://garris.github.io/BackstopJS/) integration for visual regression testing
