@@ -108,6 +108,8 @@
 
 **&#x02713;** Set ```inline``` to ```$install_mongo``` on [line 26](Vagrantfile#L26).
 
+**&#x02713;** Execute ```vagrant up```
+
 **&#x02713;** [Install Mongo for windows](https://github.com/jhwohlgemuth/michi#mongodb-setup-on-windows)
 
 **&#x02713;** In a mongo console, execute ```mongo db.server```
@@ -117,6 +119,8 @@
 ###Using [redis](http://redis.io/documentation/)
 
 **&#x02713;** Set ```inline``` to ```$install_redis``` on [line 26](Vagrantfile#L26).
+
+**&#x02713;** Execute ```vagrant up```
 
 **&#x02713;** Install a redis client.  I like [Redis Commander](https://joeferner.github.io/redis-commander/).
 
@@ -130,6 +134,8 @@
 
 ###Using [CouchDB](http://docs.couchdb.org/en/1.6.1/)
 **&#x02713;** Set  ```inline``` to ```$install_couch``` on [line 26](Vagrantfile#L26).
+
+**&#x02713;** Execute ```vagrant up```
 
 **&#x02713;** Create a ssh tunnel on your host machine (input ```yes```, then ```vagrant```):
 

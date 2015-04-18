@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
       db.hostmanager.aliases = %w(db.server.io)
     end
     db.vm.network "private_network", ip: "10.10.10.11"
-    db.vm.provision "shell", inline: $install_redis
+    db.vm.provision "shell", inline: $install_couch
   end
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
