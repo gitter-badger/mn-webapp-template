@@ -25,6 +25,8 @@
 &nbsp;[![JSCS](../images/assets/images/jscs.gif "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](../images/assets/images/jshint.gif "JSHint")](http://jshint.com/docs/)
 
+###Data Services
+
 #Folder Structure
     
     +- app
@@ -45,6 +47,8 @@
     |       +- components
     |       |- require.min.js
     |       \- require.text.js
+    +- services
+    |   |- Vagrantfile
     +- test
     |   +- data
     |   +- jasmine
