@@ -8,5 +8,8 @@ require(['app'], function (WebApp){
         myModule.on('stop', function(){
             console.log('myModule stopped...');
         });
+        myModule.someFunction = function(){
+            console.log('some function called');
+        }
     });
 });

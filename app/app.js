@@ -21,5 +21,9 @@ define(function(require) {
         console.log('App is started.');
     });
 
+    App.vent.on('foo', function(){
+        console.log('boot');
+    })
+
     return App;
 });

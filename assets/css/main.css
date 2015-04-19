@@ -1,3 +1,27 @@
 body {
     font-size: 16px;
 }
+
+li {
+    background-color: #CCC;
+    margin:0 auto;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    width: 300px;
+}
+
+li:hover {
+    background-color: lightblue;
+}
+
+li > a {
+    color: #333;
+}
+
+li > a,
+li > a:focus,
+li > a:active,
+li > a:visited {
+    text-decoration: none;
+}
