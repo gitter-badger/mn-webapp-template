@@ -1,14 +1,14 @@
 require(['app'], function (WebApp){
     'use strict';
     WebApp.module('myModule', function(myModule){
-        myModule.startWithParent = true;
-        myModule.addInitializer(function(){
+        this.startWithParent = true;
+        this.on('start', function(){
             console.log('myModule started...');
         });
-        myModule.on('stop', function(){
+        this.on('stop', function(){
             console.log('myModule stopped...');
         });
-        myModule.someFunction = function(){
+        this.someFunction = function(){
             console.log('some function called');
         }
     });

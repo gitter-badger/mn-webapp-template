@@ -8,15 +8,17 @@ li {
     padding: 1em;
     position: relative;
     text-align: center;
-    width: 300px;
+    width: 200px;
 }
 
 li:hover {
     background-color: lightblue;
+    cursor: pointer;
 }
 
 li > a {
     color: #333;
+    text-transform: uppercase;
 }
 
 li > a,

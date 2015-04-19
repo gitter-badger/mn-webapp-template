@@ -13,17 +13,15 @@ define(function(require) {
         console.log('App is starting...');
     });
 
-    App.addInitializer(function() {
-        console.log('Initializer added.');
-    });
-
     App.on('start', function() {
         console.log('App is started.');
+        this.controllers = {};
+
     });
 
     App.vent.on('foo', function(){
-        console.log('boot');
-    })
+        console.log('boot!!!');
+    });
 
     return App;
 });
