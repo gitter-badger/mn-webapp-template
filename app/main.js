@@ -13,4 +13,7 @@ define(function(require) {
 
     WebApp.start();
     WebApp.navigation.show(errorsView);
+    window.setTimeout(function(){
+        WebApp.myModule.someFunction();
+    }, 1000);
 });
