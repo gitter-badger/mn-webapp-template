@@ -45,10 +45,12 @@
     |   +- models
     |   +- views
     |   +- controllers
+    |   +- modules
     |   +- helpers
-    |   |- index.html
+    |   |- app.js
     |   |- main.js
-    |   \- config.js
+    |   |- config.js
+    |   \- index.html
     +- assets
     |   +- templates
     |   +- css
