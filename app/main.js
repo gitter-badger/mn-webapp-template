@@ -1,15 +1,16 @@
-require(['app',
-        'marionette',
-        'models/Error',
-        'views/Error',
-        'text!../tests/data/ERRORS.json',
-        'modules/myModule'],
-    function (WebApp, Mn, Error, ErrorView, data){
-        'use strict';
-        var errorsView = new ErrorView({
-            collection: (new Error.collection(JSON.parse(data)))
-        });
+define(function(require) {
+    'use strict';
+    require('modules/myModule');
 
-        WebApp.start();
-        WebApp.navigation.show(errorsView);
+    var WebApp = require('app');
+    var Error = require('models/Error');
+    var ErrorView = require('views/Error');
+    var data = require('text!../tests/data/ERRORS.json');
+
+    var errorsView = new ErrorView({
+        collection: (new Error.collection(JSON.parse(data)))
+    });
+
+    WebApp.start();
+    WebApp.navigation.show(errorsView);
 });
