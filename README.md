@@ -144,6 +144,14 @@
 
 > **Tip:** The default port for CouchDB is 5984.  It can be changed by editing ```/etc/couchdb/local.ini```
 
+#Alternatives
+- [Yeoman](http://yeoman.io/) - The web's scaffolding tool for modern web apps
+- [Lineman.js](http://linemanjs.com/) - Build awesome web apps, easily
+- [Front-end Boilerplate](http://frontendboilerplate.com/) - The easy way to start your web projects from scratch!
+- [Component](https://github.com/componentjs/component) - Front-end package manager and build tool for modular web applications.
+- [Mixture](http://mixture.io/) - A rapid front-end development toolset for Mac & Windows
+- [Volo](http://volojs.org/) - a tool which lets you quickly create projects, add libraries, and automate common tasks using node and JS
+
 #References
 - [Eric Meyer CSS Reset](http://meyerweb.com/eric/tools/css/reset/) ```assets/css/reset.css```
 - [Patterns for separating RequireJS config from main module](https://github.com/jrburke/requirejs/wiki/Patterns-for-separating-config-from-the-main-module)
