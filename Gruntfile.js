@@ -148,7 +148,8 @@ module.exports = function(grunt) {
             },
             browser: {
                 files: [
-                    './app/*.html',
+                    './app/**/*.html',
+                    './assets/templates/**/*.html',
                     './app/**/*.js',
                     './assets/css/**/*.css'
                 ],

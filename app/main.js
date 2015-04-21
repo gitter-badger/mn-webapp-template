@@ -4,32 +4,33 @@ define(function(require) {
 
     var WebApp = require('app');
     var handlebars = require('handlebars');
-    var Error = require('models/Error');
-    var ErrorView = require('views/Error');
-    var data = require('text!../tests/data/ERRORS.json');
-    var listTemplate = require('text!../../assets/templates/error.html');
-    var compositeTemplate = require('text!../assets/templates/errorComposite.html');
+    var Data = require('models/Data');
+    var DataView = require('views/Data');
+    var data = require('text!../tests/data/DATA.json');
+    var listTemplate = require('text!../../assets/templates/data.html');
+    var compositeTemplate = require('text!../assets/templates/dataComposite.html');
 
-    var ErrorItemView = Marionette.ItemView.extend({
+    var DataItemView = Marionette.ItemView.extend({
         tagName: 'li',
         template: handlebars.compile(listTemplate)
     });
 
-    var ErrorComposite = Marionette.CompositeView.extend({
+    var DataComposite = Marionette.CompositeView.extend({
         tagName: 'ul',
-        childView: ErrorItemView,
+        childView: DataItemView,
         childViewContainer: '.list',
         template: handlebars.compile(compositeTemplate)
     });
 
-    var errorsView = new ErrorView({
-        collection: (new Error.collection(JSON.parse(data)))
+    var dataView = new DataView({
+        collection: (new Data.collection(JSON.parse(data)))
     });
 
-    var errorCompositeView = new ErrorComposite({
-        collection: (new Error.collection(JSON.parse(data)))
+    var dataCompositeView = new DataComposite({
+        collection: (new Data.collection(JSON.parse(data)))
     });
 
     WebApp.start();
-    WebApp.navigation.show(errorsView);
+    WebApp.navigation.show(dataView);
+    WebApp.navigation.show(dataCompositeView);
 });

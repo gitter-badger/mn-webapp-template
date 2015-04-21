@@ -1,14 +1,41 @@
 body {
+    color: #333;
     font-size: 16px;
+    padding: 10px 0;
+}
+
+section {
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+}
+
+h1 {
+    background-color: #EEE;
+    border: 5px solid #999;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 2em;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 li {
-    background-color: #CCC;
+    background-color: #EEE;
+    border-left: 5px solid #999;
+    border-right: 5px solid #999;
     margin:0 auto;
     padding: 1em;
     position: relative;
     text-align: center;
-    width: 200px;
+}
+
+li:last-of-type {
+    border-bottom: 5px solid #999;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 li:hover {

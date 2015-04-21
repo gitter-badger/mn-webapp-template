@@ -3,16 +3,16 @@ define(function(require) {
     var Marionette = require('marionette');
     var handlebars = require('handlebars');
     var WebApp = require('app');
-    var tpl = require('text!../../assets/templates/error.html');
+    var tpl = require('text!../../assets/templates/data.html');
 
-    var ErrorItemView = Marionette.ItemView.extend({
+    var DataItemView = Marionette.ItemView.extend({
         tagName: 'li',
         template: handlebars.compile(tpl)
     });
 
     return Marionette.CollectionView.extend({
         tagName: 'ul',
-        childView: ErrorItemView,
+        childView: DataItemView,
         events: {
             'click li': "foo",
             'click a':  "preventDefault"
