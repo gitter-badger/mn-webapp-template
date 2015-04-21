@@ -1,5 +1,11 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf") format('truetype');
+}
+
 body {
     color: #333;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 16px;
     padding: 10px 0;
 }
@@ -7,7 +13,8 @@ body {
 section {
     position: relative;
     margin: 0 auto;
-    width: 50%;
+    min-width: 500px;
+    width: 30%;
 }
 
 h1 {
