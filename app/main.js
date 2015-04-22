@@ -1,5 +1,7 @@
+/*global define */
 define(function(require) {
     'use strict';
+
     require('modules/myModule');
 
     var WebApp = require('app');
