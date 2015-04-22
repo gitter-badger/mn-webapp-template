@@ -1,8 +1,8 @@
 define(function(require) {
     'use strict';
+
     var Marionette = require('marionette');
     var handlebars = require('handlebars');
-    var WebApp = require('app');
     var tpl = require('text!../../assets/templates/data.html');
 
     var DataItemView = Marionette.ItemView.extend({
@@ -14,13 +14,10 @@ define(function(require) {
         tagName: 'ul',
         childView: DataItemView,
         events: {
-            'click li': "foo",
-            'click a':  "preventDefault"
+            'click li': 'foo',
+            'click a':  'preventDefault'
         },
-        foo: function(){
-            WebApp.vent.trigger('foo');
-        },
-        preventDefault: function(e){
+        preventDefault: function(e) {
             e.preventDefault();
         }
     });

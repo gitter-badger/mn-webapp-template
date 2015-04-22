@@ -60,8 +60,13 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jsonlint: {src: ['./*.json']},
-        csslint: {src: ['./assets/css/**/*.css']},
+        jsonlint: {src: ['./*.json', './assets/templates/data/*.json']},
+        csslint: {
+            options: {
+                csslintrc: '.csslintrc'
+            },
+            src: ['./assets/css/**/*.css']
+        },
         jasmine: {
             src: ['./app/**/*.js'],
             options: {
@@ -136,6 +141,7 @@ module.exports = function(grunt) {
                     './app/**/*.js',
                     './assets/css/**/*.css',
                     './assets/templates/**/*.html',
+                    './assets/templates/data/*.json',
                     './tests/*.html',
                     './tests/jasmine/spec/*.js',
                     './tests/jasmine/helper/*.js'
@@ -150,6 +156,7 @@ module.exports = function(grunt) {
                 files: [
                     './app/**/*.html',
                     './assets/templates/**/*.html',
+                    './assets/templates/data/*.json',
                     './app/**/*.js',
                     './assets/css/**/*.css'
                 ],

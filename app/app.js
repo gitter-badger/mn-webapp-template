@@ -1,5 +1,6 @@
 define(function(require) {
     'use strict';
+
     var Marionette = require('marionette');
     var App = new Marionette.Application();
 
@@ -15,11 +16,10 @@ define(function(require) {
 
     App.on('start', function() {
         console.log('App is started.');
-        this.controllers = {};
 
     });
 
-    App.vent.on('foo', function(){
+    App.vent.on('foo', function() {
         console.log('boot!!!');
     });
 
