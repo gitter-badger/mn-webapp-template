@@ -6,6 +6,8 @@
 </div>
 </br>
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jhwohlgemuth/template-dev-webapp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 > Opinionated boilerplate environment for Web App development using modern front-end tooling
 
 ##Getting Started
@@ -168,6 +170,4 @@
 - [ ] Precompile templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
 - [ ] [UnCSS](https://github.com/addyosmani/grunt-uncss) integration
 - [ ] [PhantomCSS](https://github.com/Huddle/PhantomCSS) and/or [BackstopJS](https://garris.github.io/BackstopJS/) integration for visual regression testing
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jhwohlgemuth/template-dev-webapp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
