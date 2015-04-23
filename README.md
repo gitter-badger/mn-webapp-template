@@ -2,12 +2,10 @@
 <div align="center">
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp.svg"></img></a>
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp/dev-status.svg"></img></a>
-<a href="https://bitdeli.com/free"><img src="https://d2weczhvl823v0.cloudfront.net/jhwohlgemuth/template-dev-webapp/trend.png" alt="Bitdeli Badge"></img></a>
 <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License"></img></a>
+<a href="https://bitdeli.com/free"><img src="https://d2weczhvl823v0.cloudfront.net/jhwohlgemuth/template-dev-webapp/trend.png" alt="Bitdeli Badge"></img></a>
 </div>
 </br>
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jhwohlgemuth/template-dev-webapp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 > Opinionated boilerplate environment for Web App development using modern front-end tooling
 
