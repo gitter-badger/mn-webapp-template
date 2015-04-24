@@ -78,34 +78,6 @@ module.exports = function(grunt) {
                         }
                     }
                 }
-            },
-            coverage: {
-                src: ['app/**/*.js'],
-                options: {
-                    specs: ['tests/jasmine/spec/*.js'],
-                    template: require('grunt-template-jasmine-istanbul'),
-                    templateOptions: {
-                        coverage: 'tests/coverage/coverage.json',
-                        report: [
-                            {
-                                type: 'html',
-                                options: {
-                                    dir: 'tests/coverage'
-                                }
-                            },
-                            {
-                                type: 'text-summary'
-                            }
-                        ],
-                        template: require('grunt-template-jasmine-requirejs'),
-                        templateOptions: {
-                            requireConfigFile: 'app/config.js',
-                            requireConfig: {
-                                baseUrl: '.grunt/grunt-contrib-jasmine/app'
-                            }
-                        }
-                    }
-                }
             }
         },
         express: {
