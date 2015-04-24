@@ -68,26 +68,29 @@ module.exports = function(grunt) {
             src: ['./assets/css/**/*.css']
         },
         jasmine: {
-            src: ['./app/**/*.js'],
+            src: 'app/**/*.js',
             options: {
-                specs: './tests/jasmine/spec/*.js',
-                helpers: './tests/jasmine/helper/*.js',
-                vendor: ['./assets/library/bower_components/jquery/dist/jquery.min.js', './assets/library/require.min.js']
+                specs: 'tests/jasmine/spec/*.js',
+                template: require('grunt-template-jasmine-requirejs'),
+                templateOptions: {
+                    requireConfigFile: 'app/config.js',
+                    requireConfig: {
+                        baseUrl: 'app'
+                    }
+                }
             }
         },
         karma: {
             options: {
-                frameworks: ['jasmine'],
+                frameworks: ['jasmine', 'requirejs'],
                 files: [
-                    './tests/jasmine/spec/*.js',
-                    './tests/jasmine/helper/*.js',
-                    './assets/library/bower_components/jquery/dist/jquery.min.js',
-                    './assets/library/require.min.js',
-                    './app/**/*.js'
+                    {pattern: 'app/**/*.js', included: false},
+                    {pattern: 'tests/jasmine/spec/**/*.js', included: false},
+                    'tests/test-main.js'
                 ],
-                exclude: ['./app/config.js'],
+                exclude: ['app/config.js'],
                 preprocessors: {
-                    'source/*.js': 'coverage'
+                    'app/**/*.js': 'coverage'
                 },
                 coverageReporter: {
                     reporters: [

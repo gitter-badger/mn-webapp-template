@@ -2,8 +2,11 @@
 define(function(require) {
     'use strict';
 
+    var $ = require('jquery');
     var Marionette = require('marionette');
     var App = new Marionette.Application();
+
+    $('nav').length === 0 ? $('body').append('<nav></nav>') : null;
 
     App.addRegions({
         root: 'body',

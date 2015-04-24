@@ -69,7 +69,6 @@
     |   +- data
     |   +- jasmine
     |       +- spec
-    |       +- helper
     +- vault
     +- documentation
     +- node_modules
