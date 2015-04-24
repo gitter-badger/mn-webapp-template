@@ -82,6 +82,7 @@ module.exports = function(grunt) {
         },
         karma: {
             options: {
+                basePath: '',
                 frameworks: ['jasmine', 'requirejs'],
                 files: [
                     {pattern: 'app/**/*.js', included: false},
