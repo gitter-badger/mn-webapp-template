@@ -1,18 +1,18 @@
 module.exports = function(grunt) {
     'use strict';
-    var ports = {
-        default: 4669,
-        livereload: 46692,
-        karma: 31415
-    };
     require('time-grunt')(grunt);
-    require('load-grunt-tasks')(grunt);
+    require('load-grunt-tasks')(grunt, {
+        pattern: ['grunt-*', '!grunt-template-jasmine-istanbul']
+    });
     grunt.initConfig({
-        defaultPort: ports.default,
-        livereloadPort: ports.livereload,
-        karmaPort: ports.karma,
-        encryptExt: '.protected',
-        pkg: grunt.file.readJSON('package.json'),
+        ports: {
+            default: 4660,
+            livereload: 46692
+        },
+        meta: {
+            encryptedExtension: '.protected',
+            package: grunt.file.readJSON('package.json')
+        },
         jshint: {
             options: {
                 force: true,
@@ -62,66 +62,59 @@ module.exports = function(grunt) {
         },
         jsonlint: {src: ['./*.json', './assets/templates/data/*.json']},
         csslint: {
-            options: {
-                csslintrc: '.csslintrc'
-            },
+            options: {csslintrc: '.csslintrc'},
             src: ['./assets/css/**/*.css']
         },
         jasmine: {
-            src: 'app/**/*.js',
-            options: {
-                specs: 'tests/jasmine/spec/*.js',
-                template: require('grunt-template-jasmine-requirejs'),
-                templateOptions: {
-                    requireConfigFile: 'app/config.js',
-                    requireConfig: {
-                        baseUrl: 'app'
+            main: {
+                src: ['app/**/*.js'],
+                options: {
+                    specs: ['tests/jasmine/spec/*.js'],
+                    template: require('grunt-template-jasmine-requirejs'),
+                    templateOptions: {
+                        requireConfigFile: 'app/config.js',
+                        requireConfig: {
+                            baseUrl: 'app'
+                        }
                     }
                 }
-            }
-        },
-        karma: {
-            options: {
-                basePath: '',
-                frameworks: ['jasmine', 'requirejs'],
-                files: [
-                    {pattern: 'app/**/*.js', included: false},
-                    {pattern: 'tests/jasmine/spec/**/*.js', included: false},
-                    'tests/test-main.js'
-                ],
-                exclude: ['app/config.js'],
-                preprocessors: {
-                    'app/**/*.js': 'coverage'
-                },
-                coverageReporter: {
-                    reporters: [
-                        {type: 'teamcity', dir: 'tests/coverage', file: 'teamcity-coverage.txt'},
-                        {type: 'cobertura', dir: 'tests/coverage'},
-                        {type: 'lcov', dir: 'tests/coverage'},
-                        {type: 'text-summary', dir: 'tests/coverage'}
-                    ]
-                },
-                browsers: ['PhantomJS'],
-                port: '<%= karmaPort %>',
-                autoWatch: false,
-                singleRun: false
-            },
-            CI: {
-                reporters: ['coverage'],
-                singleRun: true
             },
             coverage: {
-                reporters: ['progress', 'coverage'],
-                autoWatch: true
+                src: ['app/**/*.js'],
+                options: {
+                    specs: ['tests/jasmine/spec/*.js'],
+                    template: require('grunt-template-jasmine-istanbul'),
+                    templateOptions: {
+                        coverage: 'tests/coverage/coverage.json',
+                        report: [
+                            {
+                                type: 'html',
+                                options: {
+                                    dir: 'tests/coverage'
+                                }
+                            },
+                            {
+                                type: 'text-summary'
+                            }
+                        ],
+                        template: require('grunt-template-jasmine-requirejs'),
+                        templateOptions: {
+                            requireConfigFile: 'app/config.js',
+                            requireConfig: {
+                                baseUrl: '.grunt/grunt-contrib-jasmine/app'
+                            }
+                        }
+                    }
+                }
             }
         },
         express: {
             main: {
                 options: {
                     bases: [__dirname],
-                    port: '<%= defaultPort %>',
+                    port: '<%= ports.default %>',
                     hostname: '0.0.0.0',
-                    livereload: '<%= livereloadPort %>'
+                    livereload: '<%= ports.livereload %>'
                 }
             }
         },
@@ -133,8 +126,7 @@ module.exports = function(grunt) {
                     './assets/css/**/*.css',
                     './assets/templates/**/*.html',
                     './tests/*.html',
-                    './tests/jasmine/spec/*.js',
-                    './tests/jasmine/helper/*.js'
+                    './tests/jasmine/spec/*.js'
                 ],
                 tasks: ['csslint', 'jshint:src', 'jscs'],
                 options: {spawn: false}
@@ -147,12 +139,11 @@ module.exports = function(grunt) {
                     './assets/templates/**/*.html',
                     './assets/templates/data/*.json',
                     './tests/*.html',
-                    './tests/jasmine/spec/*.js',
-                    './tests/jasmine/helper/*.js'
+                    './tests/jasmine/spec/*.js'
                 ],
-                tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine'],
+                tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine:main'],
                 options: {
-                    livereload: '<%= livereloadPort %>',
+                    livereload: '<%= ports.livereload %>',
                     spawn: false
                 }
             },
@@ -166,21 +157,21 @@ module.exports = function(grunt) {
                 ],
                 tasks: [],
                 options: {
-                    livereload: '<%= livereloadPort %>',
+                    livereload: '<%= ports.livereload %>',
                     spawn: false
                 }
             }
         },
         open: {
             review: {
-                path: 'http://localhost:<%= defaultPort %>/app',
+                path: 'http://localhost:<%= ports.default %>/app',
                 app: 'Chrome'
             }
         },
         clean: {
             coverage: ['tests/coverage'],
-            plain: ['vault/*', '!vault/*<%= encryptExt %>', '!vault/README.md'],
-            cipher: ['vault/*<%= encryptExt %>']
+            plain: ['vault/*', '!vault/*<%= meta.encryptedExtension %>', '!vault/README.md'],
+            cipher: ['vault/*<%= meta.encryptedExtension %>']
         },
         crypt:{
             options: {
@@ -190,7 +181,7 @@ module.exports = function(grunt) {
                 {
                     dir: 'vault',
                     include: '**/!(README.md|README.MD)',
-                    encryptedExtension: '<%= encryptExt %>'
+                    encryptedExtension: '<%= meta.encryptedExtension %>'
                 }
             ]
         }

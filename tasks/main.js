@@ -10,9 +10,7 @@ module.exports = function(grunt) {
     //Build
 
     //Test
-    grunt.registerTask('test', ['lint', 'jasmine', 'karma:CI']);
-    grunt.registerTask('cover',['karma:CI']);
-    grunt.registerTask('covering',['karma:coverage']);
+    grunt.registerTask('test', ['lint', 'jasmine:main']);
 
     //Deploy
 
