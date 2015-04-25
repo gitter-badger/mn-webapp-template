@@ -1,9 +1,7 @@
 module.exports = function(grunt) {
     'use strict';
     require('time-grunt')(grunt);
-    require('load-grunt-tasks')(grunt, {
-        pattern: ['grunt-*', '!grunt-template-jasmine-istanbul']
-    });
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         ports: {
             default: 4660,
