@@ -24,7 +24,7 @@ define(function(require) {
     });
 
     App.vent.on('foo', function() {
-        console.log('boot!!!');
+        console.log('boot!!');
     });
 
     return App;

@@ -1,5 +1,5 @@
 {
-  //"disallowDanglingUnderscores": true,
+  "disallowDanglingUnderscores": true,
   "disallowEmptyBlocks": true,
   "disallowKeywords": ["with"],
   "disallowKeywordsOnNewLine": ["else"],
@@ -11,9 +11,6 @@
   "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
   "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
   "disallowSpacesInAnonymousFunctionExpression": {
-    "beforeOpeningRoundBrace": true
-  },
-  "disallowSpacesInFunctionExpression": {
     "beforeOpeningRoundBrace": true
   },
   "disallowSpacesInFunctionExpression": {
@@ -66,7 +63,7 @@
     "!=="
   ],
   "requireSpaceBeforeBlockStatements": true,
-  //"validateIndentation": 4,
+  "validateIndentation": 4,
   "validateLineBreaks": "CRLF",
   "validateQuoteMarks": "'"
 }

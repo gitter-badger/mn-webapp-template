@@ -85,9 +85,10 @@
 ##Grunt Tasks
 - ```grunt lint```
 - ```grunt linting``` (watch task)
-- ```grunt review``` (watch task)
-- ```grunt quick-review``` (watch task)
 - ```grunt test```
+- ```grunt testing``` (watch task)
+- ```grunt review``` (watch task)
+- ```grunt quick-review``` (watch task) **[default task]**
 
 #Data Services
 &nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](#using-mongodb)

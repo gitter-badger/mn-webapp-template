@@ -63,6 +63,7 @@
     "preinstall": "npm install grunt-cli",
     "postinstall": "bower install && preen",
     "test": "grunt test",
+    "start": "grunt",
     "inspect": "jsinspect app/**/*.js",
     "inspect:main": "jsinspect app/main.js"
   }

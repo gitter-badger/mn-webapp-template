@@ -7,49 +7,44 @@ module.exports = function(grunt) {
     grunt.initConfig({
         ports: {
             default: 4660,
+            karma: 31415,
             livereload: 46692
         },
         meta: {
             encryptedExtension: '.protected',
-            package: grunt.file.readJSON('package.json')
+            package: grunt.file.readJSON('package.json'),
+            files: {
+                all: [
+                    './app/**/*.html',//HTML
+                    './app/**/*.js',//JS
+                    './assets/css/**/*.css',//CSS
+                    './assets/templates/**/*.html',//Templates
+                    './assets/templates/data/*.json',//JSON Template Data
+                    './tests/**/*.js',//Tests
+                    '!./tests/coverage/**/*'//Exclude coverage files
+                ],
+                app: [
+                    './app/**/*.html',//HTML
+                    './app/**/*.js',//JS
+                    './assets/css/**/*.css',//CSS
+                    './assets/templates/**/*.html',//Templates
+                    './assets/templates/data/*.json'//JSON Template Data
+                ]
+            }
         },
         jshint: {
             options: {
                 force: true,
                 reporter: require('jshint-table-reporter'),
-                maxerr        : 50,     // {int} Maximum error before stopping
-                bitwise       : true,   // Prohibit bitwise operators (&, |, ^, etc.)
-                camelcase     : true,   // Identifiers must be in camelCase
-                eqeqeq        : true,   // Require triple equals (===) for comparison
-                forin         : true,   // Require filtering for..in loops with obj.hasOwnProperty()
-                freeze        : true,   // Prohibit overwriting prototypes of native objects
-                indent        : 4,      // {int} Number of spaces to use for indentation
-                newcap        : true,   // Require capitalization of all constructor functions
-                noarg         : true,   // Prohibit use of `arguments.caller` and `arguments.callee`
-                noempty       : true,   // Prohibit use of empty blocks
-                nonbsp        : true,   // Prohibit "non-breaking whitespace" characters.
-                quotmark      : true,   // Quotation mark consistency: true --> ensure whatever is used is consistent
-                unused        : true,   // Require all defined variables be used
-                strict        : true,   // Requires all functions run in ES5 Strict Mode
-                maxparams     : 10,      // Requires all functions run in ES5 Strict Mode
-                maxdepth      : 10,      // {int} Max depth of nested blocks (within functions)
-                maxstatements : 50,     // {int} Max number statements per function
-                maxcomplexity : 10,      // {int} Max cyclomatic complexity per function
-                maxlen        : 130,    // {int} Max number of characters per line
-                browser       : true,   // Web Browser (window, document, etc)
-                devel         : false,  // Development/debugging (alert, confirm, etc)
-                jasmine       : true,
-                jquery        : true,
-                worker        : false,  // Web Workers
-                globals       : {},
-                '-W030'         : false // Warning: 'Expected an assignment or function call and instead saw an expression'
+                jshintrc: '.jshintrc'
             },
             grunt: 'Gruntfile.js',
             tasks: './tasks/*.js',
-            src: './app/**/*.js'
+            app: './app/**/*.js'
         },
         jscs: {
             options: {
+                config: '.jscsrc',
                 force: true,
                 reporter: 'console',//checkstyle, inline, console, text
                 reporterOutput: null
@@ -83,6 +78,7 @@ module.exports = function(grunt) {
         karma: {
             options: {
                 basePath: '',
+                port: '<%= ports.karma%>',
                 frameworks: ['jasmine', 'requirejs'],
                 files: [
                     {pattern: 'assets/library/components/**/*.js', included: false},
@@ -97,23 +93,39 @@ module.exports = function(grunt) {
                     dir: 'tests/coverage/',
                     includeAllSources: true,
                     reporters: [
+                        {type: 'text-summary'},
+                        {type: 'text-summary',subdir: '.', file: 'text-summary.txt'},
                         {type: 'html', subdir: 'report-html'},
                         {type: 'lcov', subdir: 'report-lcov'},
                         {type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt'},
-                        {type: 'text-summary', subdir: '.', file: 'text-summary.txt'},
                         {type: 'cobertura', subdir: '.', file: 'report-cobertura.txt'}//Jenkins compatible
                     ]
                 },
                 colors: true,
                 logLevel: 'INFO',//DISABLE, ERROR, WARN, INFO, DEBUG
                 browsers: ['PhantomJS'],//Chrome, ChromeCanary, Firefox, Opera, IE (Win), Safari (Mac)
-                captureTimeout: 60000
-            },
-            coverage: {
-                autoWatch: false,
+                captureTimeout: 60000,
                 singleRun: true
             },
-            ci: {
+            watch: {
+                background: true,
+                singleRun: false,
+                coverageReporter: {
+                    dir: 'tests/coverage/',
+                    includeAllSources: true,
+                    reporters: [
+                        {type: 'text-summary',subdir: '.', file: 'text-summary.txt'},
+                        {type: 'html', subdir: 'report-html'},
+                        {type: 'lcov', subdir: 'report-lcov'},
+                        {type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt'},
+                        {type: 'cobertura', subdir: '.', file: 'report-cobertura.txt'}//Jenkins compatible
+                    ]
+                }
+            },
+            coverage: {
+                autoWatch: false
+            },
+            covering: {
                 autoWatch: true,
                 singleRun: false
             }
@@ -130,41 +142,20 @@ module.exports = function(grunt) {
         },
         watch: {
             lint: {
-                files: [
-                    './app/*.html',
-                    './app/**/*.js',
-                    './assets/css/**/*.css',
-                    './assets/templates/**/*.html',
-                    './tests/*.html',
-                    './tests/jasmine/spec/*.js'
-                ],
+                files: '<%= meta.files.all %>',
                 tasks: ['csslint', 'jshint:src', 'jscs'],
                 options: {spawn: false}
             },
             review: {
-                files: [
-                    './app/*.html',
-                    './app/**/*.js',
-                    './assets/css/**/*.css',
-                    './assets/templates/**/*.html',
-                    './assets/templates/data/*.json',
-                    './tests/*.html',
-                    './tests/jasmine/spec/*.js'
-                ],
-                tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine:main'],
+                files: '<%= meta.files.all %>',
+                tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine:main', 'karma:watch:run'],
                 options: {
                     livereload: '<%= ports.livereload %>',
                     spawn: false
                 }
             },
             browser: {
-                files: [
-                    './app/**/*.html',
-                    './assets/templates/**/*.html',
-                    './assets/templates/data/*.json',
-                    './app/**/*.js',
-                    './assets/css/**/*.css'
-                ],
+                files: '<%= meta.files.app %>',
                 tasks: [],
                 options: {
                     livereload: '<%= ports.livereload %>',
@@ -196,6 +187,6 @@ module.exports = function(grunt) {
             ]
         }
     });
-    grunt.registerTask('default', ['demo']);
+    grunt.registerTask('default', ['quick-review']);
     grunt.loadTasks('./tasks');
 };
