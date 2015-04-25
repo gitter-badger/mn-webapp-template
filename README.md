@@ -163,7 +163,7 @@
 
 #Future
 - [ ] Build and deploy tasks
-- [ ] Optimize RequireJS code with r.js
+- [ ] Optimize JS code with r.js
 - [ ] Precompile templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
 - [ ] [UnCSS](https://github.com/addyosmani/grunt-uncss) integration
 - [ ] [PhantomCSS](https://github.com/Huddle/PhantomCSS) and/or [BackstopJS](https://garris.github.io/BackstopJS/) integration for visual regression testing
