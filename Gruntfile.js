@@ -143,12 +143,12 @@ module.exports = function(grunt) {
         watch: {
             lint: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:src', 'jscs'],
+                tasks: ['csslint', 'jshint:app', 'jscs'],
                 options: {spawn: false}
             },
             review: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:src', 'jscs', 'jasmine:main', 'karma:watch:run'],
+                tasks: ['csslint', 'jshint:app', 'jscs', 'jasmine:main', 'karma:watch:run'],
                 options: {
                     livereload: '<%= ports.livereload %>',
                     spawn: false

@@ -23,7 +23,7 @@ define(function(require) {
     });
 
     App.vent.on('foo', function() {
-        console.log('boot!!');
+        console.log('BOOT!!!');
     });
 
     return App;

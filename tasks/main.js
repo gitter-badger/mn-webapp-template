@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     'use strict';
 
     //Review & Write Code
-    grunt.registerTask('lint', ['jsonlint', 'csslint', 'jshint:src', 'jscs']);
+    grunt.registerTask('lint', ['jsonlint', 'csslint', 'jshint:app', 'jscs']);
     grunt.registerTask('linting', ['lint', 'watch:lint']);
     grunt.registerTask('review', ['lint', 'karma:coverage', 'karma:watch:start', 'express', 'open:review', 'watch:review']);
     grunt.registerTask('quick-review', ['express', 'open:review', 'watch:browser']);
