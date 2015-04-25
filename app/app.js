@@ -5,7 +5,7 @@ define(function(require) {
     var Marionette = require('marionette');
     var App = new Marionette.Application();
 
-    $('nav').length === 0 ? $('body').append('<nav></nav>') : null;
+
 
     App.addRegions({
         root: 'body',
@@ -14,6 +14,7 @@ define(function(require) {
     });
 
     App.on('before:start', function() {
+        $('nav').length === 0 ? $('body').append('<nav></nav>') : null;//needed for running tests
         console.log('App is starting...');
     });
 
