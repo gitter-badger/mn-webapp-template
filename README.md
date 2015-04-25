@@ -67,8 +67,7 @@
     |   \- main.js
     +- tests
     |   +- data
-    |   +- jasmine
-    |       +- spec
+    |   \- test-main.js
     +- vault
     +- documentation
     +- node_modules
