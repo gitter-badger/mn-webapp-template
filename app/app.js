@@ -19,7 +19,7 @@ define(function(require) {
     });
 
     App.on('start', function() {
-        console.log('App is started.');
+        console.log('App is started!');
 
     });
 

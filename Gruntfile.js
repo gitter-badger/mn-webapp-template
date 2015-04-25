@@ -81,64 +81,41 @@ module.exports = function(grunt) {
             }
         },
         karma: {
+            options: {
+                basePath: '',
+                frameworks: ['jasmine', 'requirejs'],
+                files: [
+                    {pattern: 'assets/library/components/**/*.js', included: false},
+                    {pattern: 'app/**/*.js', included: false},
+                    {pattern: 'tests/**/*Spec.js', included: false},
+                    'tests/test-main.js'
+                ],
+                exclude: ['app/config.js'],
+                reporters: ['progress', 'coverage'],
+                preprocessors: { 'app/**/*.js': ['coverage'] },
+                coverageReporter: {
+                    dir: 'tests/coverage/',
+                    includeAllSources: true,
+                    reporters: [
+                        {type: 'html', subdir: 'report-html'},
+                        {type: 'lcov', subdir: 'report-lcov'},
+                        {type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt'},
+                        {type: 'text-summary', subdir: '.', file: 'text-summary.txt'},
+                        {type: 'cobertura', subdir: '.', file: 'report-cobertura.txt'}//Jenkins compatible
+                    ]
+                },
+                colors: true,
+                logLevel: 'INFO',//DISABLE, ERROR, WARN, INFO, DEBUG
+                browsers: ['PhantomJS'],//Chrome, ChromeCanary, Firefox, Opera, IE (Win), Safari (Mac)
+                captureTimeout: 60000
+            },
             coverage: {
-                options: {
-                    // base path, that will be used to resolve files and exclude
-                    basePath: '',
-
-                    // frameworks to use
-                    frameworks: ['jasmine', 'requirejs'],
-
-                    // list of files / patterns to load in the browser
-                    files: [
-                        {pattern: 'assets/library/components/**/*.js', included: false},
-                        {pattern: 'app/**/*.js', included: false},
-                        {pattern: 'tests/**/*Spec.js', included: false},
-                        'tests/test-main.js'
-                    ],
-
-                    // list of files to exclude
-                    exclude: [
-                        'app/config.js'
-                    ],
-
-                    // test results reporter to use
-                    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-                    reporters: ['progress', 'coverage'],
-
-                    // We need 'coverage' both in `reporters` and `preprocessors`
-                    // The coverage data will be stored into the "coverage/" folder
-                    // both in HTML and JSON format
-                    preprocessors: { 'app/**/*.js': ['coverage'] },
-
-                    // enable / disable colors in the output (reporters and logs)
-                    colors: true,
-
-                    // level of logging
-                    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-                    logLevel: 'INFO',
-
-                    // enable / disable watching file and executing tests whenever any file changes
-                    autoWatch: true,
-
-                    // Start these browsers, currently available:
-                    // - Chrome
-                    // - ChromeCanary
-                    // - Firefox
-                    // - Opera
-                    // - Safari (only Mac)
-                    // - PhantomJS
-                    // - IE (only Windows)
-                    // PhantomJS appears to be used even if not listed here
-                    browsers: ['PhantomJS'],
-
-                    // If browser does not capture in given timeout [ms], kill it
-                    captureTimeout: 60000,
-
-                    // Continuous Integration mode
-                    // if true, it capture browsers, run tests and exit
-                    singleRun: true
-                }
+                autoWatch: false,
+                singleRun: true
+            },
+            ci: {
+                autoWatch: true,
+                singleRun: false
             }
         },
         express: {
