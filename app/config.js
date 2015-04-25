@@ -1,4 +1,4 @@
-require.config({
+requirejs.config({
     baseUrl: '',
     //urlArgs is used to cache bust.
     //development should use timestamp, production should use version
