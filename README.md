@@ -41,14 +41,14 @@
 &nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 
 ###Free DevOps Tools
-[![Code Climate](../images/assets/images/devops/code%20climate.png)](https://codeclimate.com/dashboard)
-&nbsp;[![Codeship](../images/assets/images/devops/codeship.png)](https://codeship.com/)
-&nbsp;[![Travis-CI](../images/assets/images/devops/travis.png)](https://travis-ci.org/)
-&nbsp;[![Circle CI](../images/assets/images/devops/circleci.png)](https://circleci.com)
-&nbsp;[![drone.io](../images/assets/images/devops/drone.io.png)](https://drone.io/)
-&nbsp;[![Semaphore](../images/assets/images/devops/semaphore.png)](https://semaphoreci.com/)
-&nbsp;[![Shippable](../images/assets/images/devops/shippable.png)](http://www.shippable.com/)
-&nbsp;[![Wercker](../images/assets/images/devops/wercker.png)](https://app.wercker.com)
+[![Code Climate](../images/assets/images/devops/code%20climate.png "Code Climate")](https://codeclimate.com/dashboard)
+&nbsp;[![Codeship](../images/assets/images/devops/codeship.png ""Codeship")](https://codeship.com/)
+&nbsp;[![Travis-CI](../images/assets/images/devops/travis.png "Travis-CI")](https://travis-ci.org/)
+&nbsp;[![Circle CI](../images/assets/images/devops/circleci.png "Circle CI")](https://circleci.com)
+&nbsp;[![drone.io](../images/assets/images/devops/drone.io.png "drone.io")](https://drone.io/)
+&nbsp;[![Semaphore](../images/assets/images/devops/semaphore.png "Semaphore")](https://semaphoreci.com/)
+&nbsp;[![Shippable](../images/assets/images/devops/shippable.png "Shippable")](http://www.shippable.com/)
+&nbsp;[![Wercker](../images/assets/images/devops/wercker.png "Wercker")](https://app.wercker.com)
 
 
 ##Folder Structure
