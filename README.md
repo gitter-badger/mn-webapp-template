@@ -22,25 +22,34 @@
 &nbsp;[![JavaScript](../images/assets/images/js.png "JavaScript (ECMAScript 5)")](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 
 ###Frameworks & Libraries
-&nbsp;[![Marionette.js](../images/assets/images/marionette.png "Marionette.js")](http://marionettejs.com/)
+[![Marionette.js](../images/assets/images/marionette.png "Marionette.js")](http://marionettejs.com/)
 &nbsp;[![Backbone.js](../images/assets/images/backbone.png "Backbone.js")](http://backbonejs.org/)
 &nbsp;[![jQuery](../images/assets/images/jquery.png "jQuery")](https://jquery.com/)
 &nbsp;[![Handlebars](../images/assets/images/handlebars.png "handlebars")](http://handlebarsjs.com/)
 &nbsp;[![RequireJS](../images/assets/images/requirejs.png "RequireJS")](http://requirejs.org/)
 
 ###Front-end Tooling
-&nbsp;[![node.js](../images/assets/images/node.png "node.js")](https://nodejs.org/)
+[![node.js](../images/assets/images/node.png "node.js")](https://nodejs.org/)
 &nbsp;[![Bower](../images/assets/images/bower.png "Bower")](http://bower.io/)
 &nbsp;[![GruntJS](../images/assets/images/grunt.png "GruntJS")](http://gruntjs.com/)
 
 ###Front-end Testing & Review
-&nbsp;[![Karma](../images/assets/images/karma.png "Karma")](https://karma-runner.github.io/0.12/index.html)
+[![Karma](../images/assets/images/karma.png "Karma")](https://karma-runner.github.io/0.12/index.html)
 &nbsp;[![Jasmine](../images/assets/images/jasmine.png "Jasmine")](https://jasmine.github.io/2.2/introduction.html)
 &nbsp;[![JSCS](../images/assets/images/jscs.png "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
 &nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 
 ###Free DevOps Tools
+[![Code Climate](../images/assets/images/devops/code%20climate.png)](https://codeclimate.com/dashboard)
+&nbsp;[![Codeship](../images/assets/images/devops/codeship.png)](https://codeship.com/)
+&nbsp;[![Travis-CI](../images/assets/images/devops/travis.png)](https://travis-ci.org/)
+&nbsp;[![Circle CI](../images/assets/images/devops/circleci.png)](https://circleci.com)
+&nbsp;[![drone.io](../images/assets/images/devops/drone.io.png)](https://drone.io/)
+&nbsp;[![Semaphore](../images/assets/images/devops/semaphore.png)](https://semaphoreci.com/)
+&nbsp;[![Shippable](../images/assets/images/devops/shippable.png)](http://www.shippable.com/)
+&nbsp;[![Wercker](../images/assets/images/devops/wercker.png)](https://app.wercker.com)
+
 
 ##Folder Structure
     
