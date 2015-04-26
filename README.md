@@ -173,3 +173,7 @@
 - [ ] [UnCSS](https://github.com/addyosmani/grunt-uncss) integration
 - [ ] [PhantomCSS](https://github.com/Huddle/PhantomCSS) and/or [BackstopJS](https://garris.github.io/BackstopJS/) integration for visual regression testing
 
+</br>
+<div align="center">
+<a href="https://bitdeli.com/free"><img src="https://d2weczhvl823v0.cloudfront.net/jhwohlgemuth/template-dev-webapp/trend.png" alt="Bitdeli Badge"></img></a>
+</div>
