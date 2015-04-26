@@ -33,9 +33,6 @@ module.exports = function(grunt) {
                     './assets/css/**/*.css',//CSS
                     './assets/templates/**/*.html',//Templates
                     './assets/templates/data/*.json'//JSON Template Data
-                ],
-                pages: [
-                    './app/index.html'
                 ]
             }
         },
@@ -68,14 +65,25 @@ module.exports = function(grunt) {
             src: ['./assets/css/**/*.css']
         },
         accessibility: {
-            options: {
-                accessibilityLevel: 'WCAG2AAA',
-                ignore : [
-                    'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2'
-                ]
-            },
-            test: {
+            pages: {
+                options: {
+                    accessibilityLevel: 'WCAG2AAA',
+                    ignore : [
+                        'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2'
+                    ]
+                },
                 src: ['./app/*.html']
+            },
+            templates: {
+                options: {
+                    accessibilityLevel: 'WCAG2AAA',
+                    ignore : [
+                        'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2',
+                        'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.1.NoTitleEl',
+                        'WCAG2A.Principle3.Guideline3_1.3_1_1.H57.2'
+                    ]
+                },
+                src: ['./assets/templates/**/*.html']
             }
         },
         a11y: {
@@ -141,12 +149,12 @@ module.exports = function(grunt) {
         watch: {
             lint: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility:test'],
+                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility'],
                 options: {spawn: false}
             },
             review: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility:test', 'jasmine:main', 'karma:watch:run'],
+                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility', 'jasmine:main', 'karma:watch:run'],
                 options: {
                     livereload: '<%= ports.livereload %>',
                     spawn: false
