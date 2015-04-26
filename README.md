@@ -78,16 +78,12 @@
     +- vault
     +- documentation
     +- node_modules
-    |- LICENSE
-    |- package.json
-    |- bower.json
-    |- GruntFile.js
-    |- Vagrantfile
     |- .gitignore
     |- .bowerrc
-    |- .csslintrc
-    |- .jshintrc
-    \- .jscsrc
+    |- bower.json
+    |- GruntFile.js
+    |- package.json
+    \- Vagrantfile
      
 ##Grunt Tasks
 - ```grunt lint```
