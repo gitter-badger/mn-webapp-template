@@ -40,6 +40,8 @@
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
 &nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 
+###Free DevOps Tools
+
 ##Folder Structure
     
     +- .config
