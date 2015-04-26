@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     'use strict';
 
     //Review & Write Code
-    grunt.registerTask('lint', ['jsonlint', 'csslint', 'jshint:app', 'jscs']);
+    grunt.registerTask('lint', ['jsonlint', 'csslint', 'jshint:app', 'jscs', 'aria']);
     grunt.registerTask('linting', ['lint', 'watch:lint']);
     grunt.registerTask('review', ['lint', 'karma:coverage', 'karma:watch:start', 'express', 'open:review', 'watch:review']);
     grunt.registerTask('quick-review', ['express', 'open:review', 'watch:browser']);
@@ -17,6 +17,8 @@ module.exports = function(grunt) {
     //Test
     grunt.registerTask('test', ['lint', 'jasmine:main', 'karma:coverage']);
     grunt.registerTask('testing', ['lint', 'karma:covering']);
+    grunt.registerTask('aria', ['accessibility', 'a11y']);
+
 
     //Deploy
         //Upload to endpoint

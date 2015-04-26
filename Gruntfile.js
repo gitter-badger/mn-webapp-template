@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         ports: {
-            default: 4660,
+            default: 4669,
             karma: 31415,
             livereload: 46692
         },
@@ -33,6 +33,9 @@ module.exports = function(grunt) {
                     './assets/css/**/*.css',//CSS
                     './assets/templates/**/*.html',//Templates
                     './assets/templates/data/*.json'//JSON Template Data
+                ],
+                pages: [
+                    './app/index.html'
                 ]
             }
         },
@@ -63,6 +66,24 @@ module.exports = function(grunt) {
         csslint: {
             options: {csslintrc: '<%= config.csslint %>'},
             src: ['./assets/css/**/*.css']
+        },
+        accessibility: {
+            options: {
+                accessibilityLevel: 'WCAG2AAA',
+                ignore : [
+                    'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2'
+                ]
+            },
+            test: {
+                src: ['./app/*.html']
+            }
+        },
+        a11y: {
+            test: {
+                options: {
+                    urls: ['./app/index.html']
+                }
+            }
         },
         jasmine: {
             main: {
@@ -120,12 +141,12 @@ module.exports = function(grunt) {
         watch: {
             lint: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:app', 'jscs'],
+                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility:test'],
                 options: {spawn: false}
             },
             review: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:app', 'jscs', 'jasmine:main', 'karma:watch:run'],
+                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility:test', 'jasmine:main', 'karma:watch:run'],
                 options: {
                     livereload: '<%= ports.livereload %>',
                     spawn: false
