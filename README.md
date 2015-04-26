@@ -42,7 +42,7 @@
 
 ###Free DevOps Tools
 [![Code Climate](../images/assets/images/devops/code%20climate.png "Code Climate")](https://codeclimate.com/dashboard)
-&nbsp;[![Codeship](../images/assets/images/devops/codeship.png ""Codeship")](https://codeship.com/)
+&nbsp;[![Codeship](../images/assets/images/devops/codeship.png "Codeship")](https://codeship.com/)
 &nbsp;[![Travis-CI](../images/assets/images/devops/travis.png "Travis-CI")](https://travis-ci.org/)
 &nbsp;[![Circle CI](../images/assets/images/devops/circleci.png "Circle CI")](https://circleci.com)
 &nbsp;[![drone.io](../images/assets/images/devops/drone.io.png "drone.io")](https://drone.io/)
