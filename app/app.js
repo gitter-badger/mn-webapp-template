@@ -10,7 +10,6 @@ define(function(require) {
 
     App.on('start', function() {
         console.log('App is started!');
-
     });
 
     App.vent.on('foo', function() {
