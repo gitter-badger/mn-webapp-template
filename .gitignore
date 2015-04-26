@@ -1,6 +1,7 @@
 node_modules/
 assets/library/components/
-test/coverage/
+tests/coverage/
+.vagrant/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
