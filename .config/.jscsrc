@@ -1,5 +1,5 @@
 {
-  "disallowDanglingUnderscores": true,
+  //"disallowDanglingUnderscores": true,
   "disallowEmptyBlocks": true,
   "disallowKeywords": ["with"],
   "disallowKeywordsOnNewLine": ["else"],

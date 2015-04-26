@@ -8,6 +8,12 @@ module.exports = function(grunt) {
             karma: 31415,
             livereload: 46692
         },
+        config: {
+            jshint: './.config/.jshintrc',
+            jscs: './.config/.jscsrc',
+            csslint: './.config/.csslintrc',
+            karma: './.config/karma.conf.js'
+        },
         meta: {
             encryptedExtension: '.protected',
             package: grunt.file.readJSON('package.json'),
@@ -34,7 +40,7 @@ module.exports = function(grunt) {
             options: {
                 force: true,
                 reporter: require('jshint-table-reporter'),
-                jshintrc: '.jshintrc'
+                jshintrc: '<%= config.jshint %>'
             },
             grunt: 'Gruntfile.js',
             tasks: './tasks/*.js',
@@ -42,7 +48,7 @@ module.exports = function(grunt) {
         },
         jscs: {
             options: {
-                config: '.jscsrc',
+                config: '<%= config.jscs %>',
                 force: true,
                 reporter: 'console',//checkstyle, inline, console, text
                 reporterOutput: null
@@ -55,14 +61,14 @@ module.exports = function(grunt) {
         },
         jsonlint: {src: ['./*.json', './assets/templates/data/*.json']},
         csslint: {
-            options: {csslintrc: '.csslintrc'},
+            options: {csslintrc: '<%= config.csslint %>'},
             src: ['./assets/css/**/*.css']
         },
         jasmine: {
             main: {
                 src: ['app/**/*.js'],
                 options: {
-                    specs: ['tests/**/*Spec.js'],
+                    specs: ['tests/jasmine/specs/**/*.js'],
                     template: require('grunt-template-jasmine-requirejs'),
                     templateOptions: {
                         requireConfigFile: 'app/config.js',
@@ -75,35 +81,8 @@ module.exports = function(grunt) {
         },
         karma: {
             options: {
-                basePath: '',
-                port: '<%= ports.karma%>',
-                frameworks: ['jasmine', 'requirejs'],
-                files: [
-                    {pattern: 'assets/library/components/**/*.js', included: false},
-                    {pattern: 'app/**/*.js', included: false},
-                    {pattern: 'tests/**/*Spec.js', included: false},
-                    'tests/test-main.js'
-                ],
-                exclude: ['app/config.js'],
-                reporters: ['progress', 'coverage'],
-                preprocessors: { 'app/**/*.js': ['coverage'] },
-                coverageReporter: {
-                    dir: 'tests/coverage/',
-                    includeAllSources: true,
-                    reporters: [
-                        {type: 'text-summary'},
-                        {type: 'text-summary',subdir: '.', file: 'text-summary.txt'},
-                        {type: 'html', subdir: 'report-html'},
-                        {type: 'lcov', subdir: 'report-lcov'},
-                        {type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt'},
-                        {type: 'cobertura', subdir: '.', file: 'report-cobertura.txt'}//Jenkins compatible
-                    ]
-                },
-                colors: true,
-                logLevel: 'INFO',//DISABLE, ERROR, WARN, INFO, DEBUG
-                browsers: ['PhantomJS'],//Chrome, ChromeCanary, Firefox, Opera, IE (Win), Safari (Mac)
-                captureTimeout: 60000,
-                singleRun: true
+                configFile: '<%= config.karma %>',
+                port: '<%= ports.karma %>'
             },
             watch: {
                 background: true,

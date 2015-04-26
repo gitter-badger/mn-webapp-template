@@ -31,7 +31,16 @@ define(function(require) {
         collection: (new Data.collection(JSON.parse(data)))
     });
 
+    WebApp.on('start', function() {
+        $('nav').length === 0 ? $('body').append('<nav></nav>') : null;//needed for running tests
+        this.addRegions({
+            root: 'body',
+            main: '#main',
+            navigation: 'nav'
+        });
+        this.navigation.show(dataView);
+        this.navigation.show(dataCompositeView);
+    });
+
     WebApp.start();
-    WebApp.navigation.show(dataView);
-    WebApp.navigation.show(dataCompositeView);
 });

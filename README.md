@@ -42,6 +42,11 @@
 
 ##Folder Structure
     
+    +- .config
+    |   |- .csslintrc
+    |   |- .jscsrc
+    |   |- .jshintrc
+    |   \- karma.conf.js
     +- app
     |   +- models
     |   +- views
@@ -67,6 +72,8 @@
     |   \- main.js
     +- tests
     |   +- data
+    |   +- jasmine
+    |       +- specs
     |   \- test-main.js
     +- vault
     +- documentation
