@@ -1,5 +1,6 @@
 <div align="center"><h1>Web App Project Template</h1></div>
 <div align="center">
+<a href="https://codeclimate.com/github/jhwohlgemuth/template-dev-webapp"><img src="https://codeclimate.com/github/jhwohlgemuth/template-dev-webapp/badges/gpa.svg" /></a>
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp.svg"></img></a>
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp/dev-status.svg"></img></a>
 <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License"></img></a>
