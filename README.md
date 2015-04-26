@@ -176,6 +176,7 @@
 - [Building Beautiful Apps with Marionette (YouTube Video)](https://www.youtube.com/watch?v=7yZKsgKxziw&app=desktop)
 
 #Future
+- [ ] Passing tests on [CI servers](#free-devops-tools)
 - [ ] Build and deploy tasks
 - [ ] Optimize JS code with r.js
 - [ ] Precompile templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
