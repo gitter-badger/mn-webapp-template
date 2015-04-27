@@ -67,6 +67,11 @@ module.exports = function(grunt) {
         accessibility: {
             pages: {
                 options: {
+                    reportLevels: {
+                        notice: false,
+                        warning: true,
+                        error: true
+                    },
                     accessibilityLevel: 'WCAG2AAA',
                     ignore : [
                         'WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2'
