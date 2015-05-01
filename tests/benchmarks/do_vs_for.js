@@ -1,19 +1,14 @@
 var forLoop = function(n) {
-    var i;
-    var arr = [];
-    for (i=0;i<n;i++) {
-        arr.push(i);
+    var i = 0, k = 0;
+    for (; ; ) {
+        k += i; i++;
+        if (i>=n) break;
     }
 };
 
 var doLoop = function(n) {
-    var i;
-    var arr = [];
-    do {
-        arr.push(i);
-        i++;
-    }
-    while (i < n);
+    var i = 0, k = 0;
+    do { k += i; i++ } while (i<n);
 };
 
 // A test suite
