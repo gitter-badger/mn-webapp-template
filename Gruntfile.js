@@ -151,16 +151,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        benchmark: {
-            options: {
-                displayResults: true
-            },
-
-            all: {
-                src: ['./tests/benchmarks/do_vs_for.js'],
-                dest: './tests/benchmarks/results.csv'
-            }
-        },
         watch: {
             lint: {
                 files: '<%= meta.files.all %>',

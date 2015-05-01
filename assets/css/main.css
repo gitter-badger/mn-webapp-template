@@ -1,8 +1,14 @@
+/*------------------------------------*\
+    #FONTS
+\*------------------------------------*/
 @font-face {
     font-family: "Open Sans";
     src: url("../fonts/OpenSans-Regular.ttf") format('truetype');
 }
 
+/*------------------------------------*\
+    #MAIN
+\*------------------------------------*/
 body {
     color: #333;
     font-family: "Open Sans", Arial, sans-serif;
