@@ -157,7 +157,7 @@ module.exports = function(grunt) {
             },
 
             all: {
-                src: ['./tests/benchmarks/*.js'],
+                src: ['./tests/benchmarks/do_vs_for.js'],
                 dest: './tests/benchmarks/results.csv'
             }
         },
