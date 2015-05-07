@@ -118,7 +118,7 @@
 
 ###Using [MongoDB](http://docs.mongodb.org/manual/)
 
-**&#x02713;** Set ```inline``` to ```$install_mongo``` on [line 26](Vagrantfile#L26).
+**&#x02713;** Set ```inline``` to ```$install_mongo``` on [line 27](Vagrantfile#L27).
 
 **&#x02713;** Execute ```vagrant up```
 
@@ -130,7 +130,7 @@
 
 ###Using [redis](http://redis.io/documentation/)
 
-**&#x02713;** Set ```inline``` to ```$install_redis``` on [line 26](Vagrantfile#L26).
+**&#x02713;** Set ```inline``` to ```$install_redis``` on [line 27](Vagrantfile#L27).
 
 **&#x02713;** Execute ```vagrant up```
 
@@ -145,7 +145,7 @@
 > **Tip** The default port for redis is 6379.  It can be changed by editing ```/etc/redis/redis.conf```.
 
 ###Using [CouchDB](http://docs.couchdb.org/en/1.6.1/)
-**&#x02713;** Set  ```inline``` to ```$install_couch``` on [line 26](Vagrantfile#L26).
+**&#x02713;** Set  ```inline``` to ```$install_couch``` on [line 27](Vagrantfile#L27).
 
 **&#x02713;** Execute ```vagrant up```
 
