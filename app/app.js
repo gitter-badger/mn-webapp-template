@@ -1,7 +1,7 @@
 define(function(require) {
     'use strict';
 
-    require('modules/Settings');
+    require('modules/TemplateOverride');
 
     var Marionette = require('marionette');
     var App = new Marionette.Application();
