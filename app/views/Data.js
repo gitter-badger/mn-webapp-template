@@ -2,12 +2,11 @@ define(function(require) {
     'use strict';
 
     var Marionette = require('marionette');
-    var handlebars = require('handlebars');
     var tpl = require('text!../../assets/templates/data.html');
 
     var DataItemView = Marionette.ItemView.extend({
         tagName: 'li',
-        template: handlebars.compile(tpl)
+        template: tpl
     });
 
     return Marionette.CollectionView.extend({

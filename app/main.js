@@ -4,7 +4,6 @@ define(function(require) {
     require('modules/myModule');
 
     var WebApp = require('app');
-    var handlebars = require('handlebars');
     var Data = require('models/Data');
     var DataView = require('views/Data');
     var data = require('text!../tests/data/DATA.json');
@@ -13,14 +12,14 @@ define(function(require) {
 
     var DataItemView = Marionette.ItemView.extend({
         tagName: 'li',
-        template: handlebars.compile(listTemplate)
+        template: listTemplate
     });
 
     var DataComposite = Marionette.CompositeView.extend({
         tagName: 'ul',
         childView: DataItemView,
         childViewContainer: '.list',
-        template: handlebars.compile(compositeTemplate)
+        template: compositeTemplate
     });
 
     var dataView = new DataView({
