@@ -7,17 +7,17 @@ Vagrant.configure(2) do |config|
     config.hostmanager.manage_host = true
     config.hostmanager.ignore_private_ip = false
   end
-  config.vm.define 'lamp' do |server|
+  config.vm.define 'web-server' do |server|
     server.vm.box = "hashicorp/precise32"
-    server.vm.hostname = 'lamp.server'
+    server.vm.hostname = 'web.server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
-      server.hostmanager.aliases = %w(lamp.server.io)
+      server.hostmanager.aliases = %w(web.server.io)
     end
     server.vm.network "private_network", ip: "10.10.10.10"
-    server.vm.provision "shell", inline: $install_LAMP
+    server.vm.provision "shell", inline: $install_web_server
     server.vm.post_up_message = $message
   end
-  config.vm.define 'db' do |db|
+  config.vm.define 'db-server' do |db|
     db.vm.box = "hashicorp/precise32"
     db.vm.hostname = 'db.server'
     if Vagrant.has_plugin?("vagrant-hostmanager")
@@ -33,24 +33,40 @@ Vagrant.configure(2) do |config|
 end
 
 $message = <<MSG
-░█░░░█▀█░█▄█░█▀█
-░█░░░█▀█░█░█░█▀▀
-░▀▀▀░▀░▀░▀░▀░▀░░
-VM Name ---> lamp
+░█░█░█▀▀░█▀▄
+░█▄█░█▀▀░█▀▄
+░▀░▀░▀▀▀░▀▀░
+VM Name ---> web-server
 IP --------> 10.10.10.10
-Hostname --> lamp.server.io
+Hostname --> web.server.io
 MySQL Username: root
 MySQL Password: 123
 
 ░█▀▄░█▀▄
 ░█░█░█▀▄
 ░▀▀░░▀▀░
-VM Name ---> db
+VM Name ---> db-server
 IP --------> 10.10.10.11
 Hostname --> db.server.io
 MSG
 
-$install_LAMP = <<LAMP
+$install_web_server = <<WEB
+  printf "Installing various items..."
+  sudo apt-get update >/dev/null 2>&1
+  sudo apt-get install -y make >/dev/null 2>&1
+  sudo apt-get install -y figlet >/dev/null 2>&1
+  sudo apt-get install -y toilet >/dev/null 2>&1
+  sudo apt-get install -y curl >/dev/null 2>&1
+  printf "Installing JRE and JDK..."
+  sudo apt-get update >/dev/null 2>&1
+  sudo apt-get install -y default-jre >/dev/null 2>&1
+  sudo apt-get install -y default-jdk >/dev/null 2>&1
+  printf "Preparing to install node.js and npm..."
+  curl -sL https://deb.nodesource.com/setup | sudo bash - >/dev/null 2>&1
+  echo "Installing node.js and npm..."
+  sudo apt-get install -y nodejs >/dev/null 2>&1
+  printf "Installing Git..."
+  sudo apt-get install -y git >/dev/null 2>&1
   printf "Installing LAMP stack..."
   sudo apt-get update >/dev/null 2>&1
   sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password 123'
@@ -66,7 +82,7 @@ $install_LAMP = <<LAMP
   #printf "ServerName localhost" | sudo tee /etc/apache2/conf.d/fqdn >/dev/null 2>&1
   # Restart apache
   sudo service apache2 reload >/dev/null 2>&1
-LAMP
+WEB
 
 $install_mongo = <<MONGO
   printf "Installing MongoDB..."
