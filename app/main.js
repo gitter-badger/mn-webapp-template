@@ -5,29 +5,13 @@ define(function(require) {
 
     var WebApp = require('app');
     var Data = require('models/Data');
-    var DataView = require('views/Data');
+    var DataComposite = require('views/DataComposite');
     var data = require('text!../tests/data/DATA.json');
-    var listTemplate = require('text!../../assets/templates/data.html');
-    var compositeTemplate = require('text!../assets/templates/dataComposite.html');
 
-    var DataItemView = Marionette.ItemView.extend({
-        tagName: 'li',
-        template: listTemplate
-    });
-
-    var DataComposite = Marionette.CompositeView.extend({
-        tagName: 'ul',
-        childView: DataItemView,
-        childViewContainer: '.list',
-        template: compositeTemplate
-    });
-
-    var dataView = new DataView({
-        collection: (new Data.collection(JSON.parse(data)))
-    });
+    var dataCollection = new Data.collection(JSON.parse(data));
 
     var dataCompositeView = new DataComposite({
-        collection: (new Data.collection(JSON.parse(data)))
+        collection: dataCollection
     });
 
     WebApp.on('start', function() {
@@ -35,10 +19,9 @@ define(function(require) {
         this.addRegions({
             root: 'body',
             main: '#main',
-            navigation: 'nav'
+            nav: 'nav'
         });
-        this.navigation.show(dataView);
-        this.navigation.show(dataCompositeView);
+        this.main.show(dataCompositeView);
     });
 
     WebApp.start();

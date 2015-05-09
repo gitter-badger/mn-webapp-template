@@ -2,19 +2,21 @@ define(function(require) {
     'use strict';
 
     var Marionette = require('marionette');
-    var tpl = require('text!../../assets/templates/data.html');
+    var listTemplate = require('text!../../assets/templates/data.html');
+    var compositeTemplate = require('text!../../assets/templates/dataComposite.html');
 
     var DataItemView = Marionette.ItemView.extend({
         tagName: 'li',
-        template: tpl
+        template: listTemplate
     });
 
-    return Marionette.CollectionView.extend({
+    return Marionette.CompositeView.extend({
         tagName: 'ul',
         childView: DataItemView,
+        childViewContainer: '.list',
+        template: compositeTemplate,
         events: {
-            'click li': 'foo',
-            'click a':  'preventDefault'
+            'click a': 'preventDefault'
         },
         preventDefault: function(e) {
             e.preventDefault();
