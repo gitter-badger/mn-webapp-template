@@ -175,9 +175,13 @@ module.exports = function(grunt) {
             }
         },
         open: {
-            review: {
+            chrome: {
                 path: 'http://localhost:<%= ports.default %>/app',
                 app: 'Chrome'
+            },
+            firefox: {
+                path: 'http://localhost:<%= ports.default %>/app',
+                app: 'Firefox'
             }
         },
         clean: {
