@@ -5,16 +5,6 @@ requirejs.config({
     urlArgs: 'bust=' + (new Date()).getTime(),
     skipDataMain: true,
     shim: {
-        underscore: {
-            exports: '_'
-        },
-        backbone: {
-            deps: [
-                'underscore',
-                'jquery'
-            ],
-            exports: 'Backbone'
-        },
         handlebars: {
             exports: 'Handlebars'
         }

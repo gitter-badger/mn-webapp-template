@@ -4,7 +4,15 @@ module.exports = function(grunt) {
     //Review & Write Code
     grunt.registerTask('lint', ['jsonlint', 'csslint', 'jshint:app', 'jscs', 'aria']);
     grunt.registerTask('linting', ['lint', 'watch:lint']);
-    grunt.registerTask('review', ['lint', 'karma:coverage', 'karma:watch:start', 'express', 'open:chrome', 'open:firefox', 'watch:review']);
+    grunt.registerTask('review', [
+        'lint',
+        'karma:coverage',
+        'karma:watch:start',
+        'express',
+        'open:chrome',
+        'open:firefox',
+        'watch:review'
+    ]);
     grunt.registerTask('quick-review', ['express', 'open:chrome', 'open:firefox', 'watch:browser']);
 
     //Build
