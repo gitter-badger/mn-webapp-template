@@ -4,11 +4,6 @@ requirejs.config({
     //development should use timestamp, production should use version
     urlArgs: 'bust=' + (new Date()).getTime(),
     skipDataMain: true,
-    shim: {
-        handlebars: {
-            exports: 'Handlebars'
-        }
-    },
     paths: {
         //Paths are relative to this file and do not need extensions
         jquery: '../assets/library/components/jquery/dist/jquery.min',

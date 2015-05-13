@@ -19,9 +19,10 @@ define(function(require) {
         this.addRegions({
             root: 'body',
             main: '#main',
-            nav: 'nav'
+            nav:  'nav'
         });
         this.main.show(dataCompositeView);
+        this.vent.trigger('foo');
     });
 
     WebApp.start();
