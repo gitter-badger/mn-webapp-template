@@ -1,2 +1,2 @@
-# template-env-app
-Boilerplate environment for App development that leverages modern front-end tooling
+##Controllers
+###```Marionette.Controller``` is deprecated, use ```Marionette.Object```
