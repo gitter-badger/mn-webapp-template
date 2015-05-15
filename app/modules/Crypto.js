@@ -19,10 +19,11 @@ require(['app'], function(app) {
                 }
                 hex += c;
             }
+            console.log(hex);
             return hex;
         }
         this.generateHash = function(data) {
-            var test = document.getElementById('test');
+            var output;
             var crypto = window.crypto || window.msCrypto;
             if(crypto.subtle) {
                 var promise = crypto.subtle.digest({name: "SHA-256"}, convertStringToArrayBufferView(data));

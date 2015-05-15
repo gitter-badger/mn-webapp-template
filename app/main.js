@@ -17,9 +17,7 @@ define(function(require) {
 
     WebApp.on('before:start', function(){
         var crypto = WebApp.module('crypto');
-        window.setTimeout(function() {
-            alert(crypto.generateHash('Hello World'));
-        }, 1000);
+        crypto.generateHash('Hello World');
     });
 
     WebApp.on('start', function() {
