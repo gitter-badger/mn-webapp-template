@@ -2,6 +2,7 @@ define(function(require) {
     'use strict';
 
     require('modules/myModule');
+    require('modules/Crypto');
 
     var WebApp = require('app');
     var Data = require('models/Data');
@@ -14,6 +15,11 @@ define(function(require) {
         collection: dataCollection
     });
 
+    WebApp.on('before:start', function(){
+        var crypto = WebApp.module('crypto');
+        console.log(crypto.hash('Hello World'));
+    });
+
     WebApp.on('start', function() {
         $('nav').length === 0 ? $('body').append('<nav></nav>') : null;//needed for running tests
         this.addRegions({
@@ -22,7 +28,6 @@ define(function(require) {
             nav:  'nav'
         });
         this.main.show(dataCompositeView);
-        this.vent.trigger('foo');
     });
 
     WebApp.start();
