@@ -2,40 +2,36 @@ require(['app'], function(app) {
     'use strict';
 
     app.module('crypto', function() {
-        this.supported = !!(window.crypto && window.crypto.subtle);
-        this.stringToArrayBuffer = function(str) {
-            var i;
+        function convertStringToArrayBufferView(str) {
             var bytes = new Uint8Array(str.length);
-            for (i = 0; i < str.length; i++) {
-                bytes[i] = str.charCodeAt(i);
+            for (var iii = 0; iii < str.length; iii++) {
+                bytes[iii] = str.charCodeAt(iii);
             }
             return bytes;
-        };
-        this.arrayBufferToHex = function(buffer) {
-            var dataView = new DataView(buffer);
-            var i;
-            var c;
-            var len;
-            var hex = '';
-            for (i = 0, len = dataView.byteLength; i < len; i += 1) {
-                c = dataView.getUint8(i).toString(16);
-                if (c.length < 2) {
+        }
+        function convertArrayBufferToHexaDecimal(buffer) {
+            var data_view = new DataView(buffer);
+            var iii, len, hex = '', c;
+            for(iii = 0, len = data_view.byteLength; iii < len; iii += 1) {
+                c = data_view.getUint8(iii).toString(16);
+                if(c.length < 2) {
                     c = '0' + c;
                 }
                 hex += c;
             }
             return hex;
-        };
-        this.hash = function(ptext) {
-            var module = this;
+        }
+        this.generateHash = function(data) {
+            var test = document.getElementById('test');
             var crypto = window.crypto || window.msCrypto;
-            if (module.supported) {
-                var promise = crypto.subtle.digest({name: 'SHA-256'}, module.stringToArrayBuffer(ptext))
-                    .then(function(result) {
-                        return module.arrayBufferToHex(result);
-                    });
+            if(crypto.subtle) {
+                var promise = crypto.subtle.digest({name: "SHA-256"}, convertStringToArrayBufferView(data));
+
+                promise.then(function(result){
+                    return convertArrayBufferToHexaDecimal(result);
+                });
             } else {
-                console.error('Cryptography API not Supported');
+                console.error("Cryptography API not Supported");
             }
         };
     });
