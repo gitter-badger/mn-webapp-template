@@ -15,9 +15,9 @@ define(function(require) {
         collection: dataCollection
     });
 
-    WebApp.on('before:start', function(){
+    WebApp.on('before:start', function() {
         var crypto = WebApp.module('crypto');
-        crypto.generateHash('Hello World');
+        crypto.input = 'Hello World';
     });
 
     WebApp.on('start', function() {
