@@ -24,14 +24,20 @@ require(['app'], function(app) {
             return hex;
         }
         this.on('start', function() {
-            window.setInterval(function() {
-                module.generateHash(module.input, 'SHA-512');
-                console.log(module.hash);
-            }, 100)
+            module.clock = window.setInterval(function() {
+                module.generateHash(module.input, module.algorithm);
+                module.output && console.log(module.output);
+            }, 10)
 
         });
-        this.hash = '';
+        this.on('stop', function() {
+            window.clearInterval(module.clock);
+            console.log('Crypto service stopped.');
+        });
+        this.clock = null;
+        this.algorithm = 'SHA-256';
         this.input = '';
+        this.output = '';
         this.generateHash = function(input, algorithm) {
             var promise;
             var module = this;
@@ -39,7 +45,7 @@ require(['app'], function(app) {
             if (crypto.subtle) {
                 promise = crypto.subtle.digest({name: algorithm}, stringToArrayBuffer(input));
                 promise.then(function(result) {
-                    module.hash = arrayBufferToHex(result);
+                    module.output = arrayBufferToHex(result);
                 });
             } else {
                 console.error('Cryptography API not Supported');
