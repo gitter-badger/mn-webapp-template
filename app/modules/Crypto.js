@@ -27,7 +27,7 @@ require(['app'], function(app) {
             module.clock = window.setInterval(function() {
                 module.generateHash(module.input, module.algorithm);
                 module.output && console.log(module.output);
-            }, 10)
+            }, 10);
 
         });
         this.on('stop', function() {
