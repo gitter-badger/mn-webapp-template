@@ -1,6 +1,6 @@
 {
-  "name": "template-env-app",
-  "version": "0.1.0",
+  "name": "template-dev-webapp",
+  "version": "0.2.0",
   "author": "Jason Wohlgemuth",
   "license": "MIT",
   "description": "Boilerplate environment for Web App development that leverages modern front-end tooling",
@@ -15,7 +15,7 @@
   "main": "app/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jhwohlgemuth/template-env-app.git"
+    "url": "https://github.com/jhwohlgemuth/template-dev-webapp.git"
   },
   "engines": {
     "node": "*"
