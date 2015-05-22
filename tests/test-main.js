@@ -12,25 +12,16 @@ requirejs.config({
     // Karma serves files from '/base'
     // The "src/" part is the same as the one in the repo root
     baseUrl: '/base/app',
-
-    // Usual RequireJS stuff...
     paths: {
-        jquery: '../assets/library/components/jquery/dist/jquery.min',
+        jquery:     '../assets/library/components/jquery/dist/jquery.min',
         underscore: '../assets/library/components/underscore/underscore',
-        backbone: '../assets/library/components/backbone/backbone',
+        backbone:   '../assets/library/components/backbone/backbone',
         marionette: '../assets/library/components/marionette/lib/backbone.marionette.min',
         handlebars: '../assets/library/components/handlebars/handlebars.min',
-        text: '../assets/library/require.text'
+        text:       '../assets/library/require.text'
     },
-    shim: {
-        'underscore': {
-            exports: '_'
-        }
-    },
-
     // ask Require.js to load these files (all our tests) that we collected before
     deps: tests,
-
     // start test run, once Require.js is done
     callback: window.__karma__.start
 });
