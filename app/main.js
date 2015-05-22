@@ -16,9 +16,7 @@ define(function(require) {
     });
 
     WebApp.on('before:start', function() {
-        var crypto = WebApp.module('crypto');
-        crypto.algorithm = 'SHA-512';
-        crypto.input = 'Hello World';
+        console.info('WebApp starting...');
     });
 
     WebApp.on('start', function() {

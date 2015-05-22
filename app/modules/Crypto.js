@@ -23,6 +23,7 @@ require(['app'], function(app) {
             }
             return hex;
         }
+        this.startWithParent = false;
         this.on('start', function() {
             module.clock = window.setInterval(function() {
                 module.generateHash(module.input, module.algorithm);
