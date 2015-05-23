@@ -1,7 +1,7 @@
 define(function(require) {
     'use strict';
 
-    require('modules/myModule');
+    require('modules/marionetteModule');
 
     var WebApp = require('app');
     var Data = require('models/Data');
