@@ -2,7 +2,6 @@ define(function(require) {
     'use strict';
 
     require('modules/myModule');
-    require('modules/Crypto');
 
     var WebApp = require('app');
     var Data = require('models/Data');
