@@ -8,8 +8,8 @@ define(function(require) {
     var Radio = require('radio');
     Marionette.Application.prototype._initChannel = function () {
         this.channelName = _.result(this, 'channelName') || 'global';
-        this.channel = _.result(this, 'channel') || Radio.channel(this.channelName);
-        this.vent = _.result(this, 'channel');
+        this.channel =     _.result(this, 'channel') || Radio.channel(this.channelName);
+        this.vent =        _.result(this, 'channel');
     };
 
     var App = new Marionette.Application();
