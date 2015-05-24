@@ -6,9 +6,8 @@ define(function(require) {
     var DataComposite = require('views/DataComposite');
     var data =          require('text!../tests/data/DATA.json');
 
-    var dataCollection = new Data.collection(JSON.parse(data));
     var dataCompositeView = new DataComposite({
-        collection: dataCollection
+        collection: (new Data.collection(JSON.parse(data)))
     });
     WebApp.on('before:start', function() {
         WebApp.channel.comply('foo', function(){console.info('bar');});
