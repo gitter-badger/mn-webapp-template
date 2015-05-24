@@ -39,6 +39,7 @@
     "grunt-jsonlint": "^1.0.4",
     "grunt-karma": "^0.10.1",
     "grunt-open": "^0.2.3",
+    "grunt-preen": "^1.2.0",
     "grunt-template-jasmine-requirejs": "^0.2.3",
     "jasmine-core": "^2.2.0",
     "jscs": "^1.12.0",
@@ -61,7 +62,7 @@
   },
   "scripts": {
     "preinstall": "npm install grunt-cli -g",
-    "postinstall": "bower install && preen",
+    "postinstall": "bower install && grunt preen",
     "test": "grunt test",
     "start": "grunt",
     "inspect": "jsinspect app/**/*.js",

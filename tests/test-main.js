@@ -16,6 +16,7 @@ requirejs.config({
         jquery:     '../assets/library/components/jquery/dist/jquery.min',
         underscore: '../assets/library/components/underscore/underscore',
         backbone:   '../assets/library/components/backbone/backbone',
+        radio:      '../assets/library/components/backbone.radio/backbone.radio.min',
         marionette: '../assets/library/components/marionette/lib/backbone.marionette.min',
         handlebars: '../assets/library/components/handlebars/handlebars.min',
         text:       '../assets/library/require.text'

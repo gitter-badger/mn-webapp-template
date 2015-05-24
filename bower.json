@@ -26,7 +26,8 @@
   "dependencies": {
     "marionette": "~2.4.1",
     "jquery": "~2.1.3",
-    "handlebars": "~3.0.0"
+    "handlebars": "~3.0.0",
+    "backbone.radio": "~0.9.0"
   },
   "devDependencies": {
     "jasmine": "~2.2.1",
@@ -55,12 +56,16 @@
       "lib/*.map",
       "bower.json"
     ],
+    "backbone.wreqr": [
+      "lib/*.js",
+      "bower.json"
+    ],
     "backbone.babysitter": [
       "lib/*.js",
       "bower.json"
     ],
-    "backbone.wreqr": [
-      "lib/*.js",
+    "backbone.radio": [
+      "build/*.js",
       "bower.json"
     ],
     "handlebars": [
@@ -81,8 +86,11 @@
     "backbone.wreqr": {
       "main": "lib/backbone.wreqr.min.js"
     },
-    "backbone.babystitter": {
+    "backbone.babysitter": {
       "main": "lib/backbone.babysitter.min.js"
+    },
+    "backbone.radio": {
+      "main": "build/backbone.radio.min.js"
     },
     "handlebars": {
       "main": "handlebars.min.js"
