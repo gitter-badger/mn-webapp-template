@@ -1,11 +1,19 @@
 define(function(require) {
     'use strict';
 
-    require('modules/TemplateOverride');
+    require('modules/Mn.Override.Templates');
 
     var Marionette = require('marionette');
-    var App = new Marionette.Application();
 
+    //Backbone.radio shim
+    var Radio = require('radio');
+    Marionette.Application.prototype._initChannel = function () {
+        this.channelName = _.result(this, 'channelName') || 'global';
+        this.channel = _.result(this, 'channel') || Radio.channel(this.channelName);
+        this.vent = _.result(this, 'channel');
+    };
+
+    var App = new Marionette.Application();
     App.on('before:start', function() {
         console.log('App is starting...');
     });

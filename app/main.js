@@ -1,8 +1,6 @@
 define(function(require) {
     'use strict';
 
-    require('modules/marionetteModule');
-
     var WebApp = require('app');
     var Data = require('models/Data');
     var DataComposite = require('views/DataComposite');
@@ -15,6 +13,7 @@ define(function(require) {
     });
 
     WebApp.on('before:start', function() {
+        WebApp.vent.comply('foo', function(){console.info('bar');});
         console.info('WebApp starting...');
     });
 
@@ -23,6 +22,7 @@ define(function(require) {
             root: 'body'
         });
         this.root.show(dataCompositeView);
+        console.log(WebApp.channel);
     });
 
     WebApp.start();

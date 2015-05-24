@@ -1,6 +1,7 @@
 define(function(require) {
     'use strict';
 
+    var WebApp = require('app');
     var Marionette = require('marionette');
     var listTemplate = require('text!../../assets/templates/data.html');
     var compositeTemplate = require('text!../../assets/templates/dataComposite.html');
@@ -19,6 +20,7 @@ define(function(require) {
             'click a': 'preventDefault'
         },
         preventDefault: function(e) {
+            WebApp.vent.command('foo');
             e.preventDefault();
         }
     });
