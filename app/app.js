@@ -4,7 +4,6 @@ define(function(require) {
     require('modules/Mn.Override.Templates');
 
     var Marionette = require('marionette');
-
     //Backbone.radio shim
     var Radio = require('radio');
     Marionette.Application.prototype._initChannel = function () {
@@ -15,12 +14,10 @@ define(function(require) {
 
     var App = new Marionette.Application();
     App.on('before:start', function() {
-        console.log('App is starting...');
+        console.info('App is starting...');
     });
-
     App.on('start', function() {
-        console.log('App is started!');
+        console.info('App is started!');
     });
-
     return App;
 });

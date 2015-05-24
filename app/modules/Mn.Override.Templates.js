@@ -1,6 +1,5 @@
 require(['app', 'handlebars'], function(app, Handlebars) {
     'use strict';
-
     app.module('templateOverride', function(settings, app, Backbone, Marionette) {
         // Override MarionetteJS template retrieval & compilation to use Handlebars.js
         this.on('before:start', function() {

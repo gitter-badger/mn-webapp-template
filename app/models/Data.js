@@ -17,11 +17,9 @@ define(function(require) {
             isActive: null
         }
     });
-
     var DataCollection = Backbone.Collection.extend({
         model: DataModel
     });
-
     return {
         model: DataModel,
         collection: DataCollection

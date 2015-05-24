@@ -1,6 +1,5 @@
 require(['app'], function(WebApp) {
     'use strict';
-
     WebApp.module('myModule', function(myModule) {
         this.startWithParent = true;
         this.on('start', function() {
