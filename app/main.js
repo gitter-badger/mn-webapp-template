@@ -19,13 +19,10 @@ define(function(require) {
     });
 
     WebApp.on('start', function() {
-        $('nav').length === 0 ? $('body').append('<nav></nav>') : null;//needed for running tests
         this.addRegions({
-            root: 'body',
-            main: '#main',
-            nav:  'nav'
+            root: 'body'
         });
-        this.main.show(dataCompositeView);
+        this.root.show(dataCompositeView);
     });
 
     WebApp.start();

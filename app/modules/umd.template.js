@@ -1,5 +1,6 @@
 //Plugin name is "returnExports"
-(function (root, factory) {
+(function(root, factory) {
+    'use strict';
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], factory);
@@ -12,7 +13,7 @@
         // Browser globals (root is window)
         root.returnExports = factory();
     }
-}(this, function () {
+}(this, function() {
     'use strict';
     return {};
 }));
