@@ -160,6 +160,8 @@
 #Alternatives
 - [Yeoman](http://yeoman.io/) - The web's scaffolding tool for modern web apps
 - [Lineman.js](http://linemanjs.com/) - Build awesome web apps, easily
+- [Rin](https://sanographix.github.io/rin/) - A lean, gulp-based HTML & SASS boilerplate for better front-end coding
+- [Wee](https://www.weepower.com/) - A lightweight front-end framework for logically building complex, responsive web projects
 - [Front-end Boilerplate](http://frontendboilerplate.com/) - The easy way to start your web projects from scratch!
 - [Component](https://github.com/componentjs/component) - Front-end package manager and build tool for modular web applications.
 - [Mixture](http://mixture.io/) - A rapid front-end development toolset for Mac & Windows
