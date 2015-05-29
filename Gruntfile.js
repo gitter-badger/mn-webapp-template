@@ -70,15 +70,7 @@ module.exports = function(grunt) {
                     paths: ['assets/less']
                 },
                 files: {
-                    'assets/css/result.css': 'assets/less/effort.less'
-                }
-            },
-            prod: {
-                options: {
-                    paths: ['assets/less']
-                },
-                files: {
-                    'assets/css/result.css': 'assets/less/effort.less'
+                    'assets/css/result.css': 'assets/less/source.less'
                 }
             }
         },
