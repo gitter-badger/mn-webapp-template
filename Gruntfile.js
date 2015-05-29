@@ -4,15 +4,15 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         ports: {
-            default: 4669,
-            karma: 31415,
+            default:    4669,
+            karma:      31415,
             livereload: 46692
         },
         config: {
-            jshint: './.config/.jshintrc',
-            jscs: './.config/.jscsrc',
+            jshint:  './.config/.jshintrc',
+            jscs:    './.config/.jscsrc',
             csslint: './.config/.csslintrc',
-            karma: './.config/karma.conf.js'
+            karma:   './.config/karma.conf.js'
         },
         meta: {
             encryptedExtension: '.protected',
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
             },
             grunt: 'Gruntfile.js',
             tasks: './tasks/*.js',
-            app: './app/**/*.js'
+            app:   './app/**/*.js'
         },
         jscs: {
             options: {
@@ -63,6 +63,24 @@ module.exports = function(grunt) {
         csslint: {
             options: {csslintrc: '<%= config.csslint %>'},
             src: ['./assets/css/**/*.css']
+        },
+        less: {
+            dev: {
+                options: {
+                    paths: ['assets/less']
+                },
+                files: {
+                    'assets/css/result.css': 'assets/less/effort.less'
+                }
+            },
+            prod: {
+                options: {
+                    paths: ['assets/less']
+                },
+                files: {
+                    'assets/css/result.css': 'assets/less/effort.less'
+                }
+            }
         },
         accessibility: {
             pages: {
@@ -145,21 +163,26 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     bases: [__dirname],
-                    port: '<%= ports.default %>',
-                    hostname: '0.0.0.0',
+                    port:       '<%= ports.default %>',
+                    hostname:   '0.0.0.0',
                     livereload: '<%= ports.livereload %>'
                 }
             }
         },
         watch: {
+            less: {
+                files: 'assets/less/**/*.less',
+                tasks: ['less', 'csslint'],
+                options: {spawn: false}
+            },
             lint: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility'],
+                tasks: ['less', 'csslint', 'jshint:app', 'jscs'],
                 options: {spawn: false}
             },
             review: {
                 files: '<%= meta.files.all %>',
-                tasks: ['csslint', 'jshint:app', 'jscs', 'accessibility', 'jasmine:main', 'karma:watch:run'],
+                tasks: ['csslint', 'jshint:app', 'jscs', 'jasmine:main', 'karma:watch:run'],
                 options: {
                     livereload: '<%= ports.livereload %>',
                     spawn: false
