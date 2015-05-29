@@ -67,7 +67,22 @@ module.exports = function(grunt) {
         less: {
             dev: {
                 options: {
-                    paths: ['assets/less']
+                    paths: ['assets/less'],
+                    plugins: [
+                        new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]})
+                    ]
+                },
+                files: {
+                    'assets/css/result.css': 'assets/less/source.less'
+                }
+            },
+            prod: {
+                options: {
+                    paths: ['assets/less'],
+                    plugins: [
+                        new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
+                        new (require('less-plugin-clean-css'))({advanced: true})
+                    ]
                 },
                 files: {
                     'assets/css/result.css': 'assets/less/source.less'
