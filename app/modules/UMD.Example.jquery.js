@@ -1,16 +1,16 @@
 (function(root, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        // AMD - Register as an anonymous module.
-        define(['jquery'], factory);
+        define(['jquery'], function($) {
+            return (root.PluginName = factory(root, $));
+        });
     } else if (typeof exports === 'object') {
-        // Node - Does not work with strict CommonJS.
-        module.exports = factory(require('jquery'));
+        var $ = require('jquery');
+        module.exports = factory(root, $);
     } else {
-        // Browser globals (root is window)
-        root.PluginName = factory(jQuery);
+        root.PluginName = factory(root, jQuery);
     }
-}(this, function($) {
+}(this, function(root, $) {
     // Scope for plugin code
     'use strict';
 
