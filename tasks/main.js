@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     //Test
     grunt.registerTask('test', [
         'lint',
-        'aria:pages',
+        //'aria',
         'jasmine:main',
         'karma:coverage'
     ]);
