@@ -33,7 +33,12 @@ module.exports = function(grunt) {
         //Copy files to 'dist' directory...
 
     //Test
-    grunt.registerTask('test', ['lint', 'aria', 'jasmine:main', 'karma:coverage']);
+    grunt.registerTask('test', [
+        'lint',
+        'aria:pages',
+        'jasmine:main',
+        'karma:coverage'
+    ]);
     grunt.registerTask('testing', ['lint', 'karma:covering']);
     grunt.registerTask('aria', ['accessibility', 'a11y']);
 
