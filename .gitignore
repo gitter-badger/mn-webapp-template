@@ -9,7 +9,7 @@ tests/coverage/
 .vagrant/
 
 #Grunt template files
-.grunt/
+
 _SpecRunner.html
 
 # Created by .ignore support plugin (hsz.mobi)
