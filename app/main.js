@@ -10,7 +10,7 @@ define(function(require) {
         collection: (new Data.collection(JSON.parse(data)))
     });
     WebApp.on('before:start', function() {
-        WebApp.channel.comply('foo', function(){console.info('bar');});
+        WebApp.channel.comply('foo', function() {console.info('bar');});
     });
     WebApp.on('start', function() {
         this.addRegions({

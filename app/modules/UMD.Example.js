@@ -10,7 +10,7 @@
     } else {
         root.returnExports = factory(root);
     }
-}(this, function(root) {
+}(this, function() {
     'use strict';
     return {};
 }));
