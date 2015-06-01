@@ -13,10 +13,7 @@ define(function(require) {
         WebApp.channel.comply('foo', function() {console.info('bar');});
     });
     WebApp.on('start', function() {
-        this.addRegions({
-            root: 'body'
-        });
-        this.root.show(dataCompositeView);
+        this.regions.get('root').show(dataCompositeView);
     });
     WebApp.start();
 });
