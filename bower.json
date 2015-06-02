@@ -1,6 +1,6 @@
 {
-  "name": "template-env-app",
-  "version": "0.1.0",
+  "name": "template-dev-webapp",
+  "version": "0.2.0",
   "main": "app/main.js",
   "moduleType": [
     "amd",
