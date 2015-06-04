@@ -183,6 +183,16 @@ module.exports = function(grunt) {
                 tasks: ['less', 'csslint'],
                 options: {spawn: false}
             },
+            csslint: {
+                files: './assets/css/**/*.css',
+                tasks: ['less', 'csslint'],
+                options: {spawn: false}
+            },
+            jshint: {
+                files: './app/**/*.js',
+                tasks: ['jshint:app'],
+                options: {spawn: false}
+            },
             lint: {
                 files: '<%= meta.files.all %>',
                 tasks: ['less', 'csslint', 'jshint:app', 'jscs'],

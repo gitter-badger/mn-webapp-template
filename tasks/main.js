@@ -9,6 +9,8 @@ module.exports = function(grunt) {
         'jshint:app',
         'jscs'
     ]);
+    grunt.registerTask('csslinting',['csslint', 'watch:csslint']);
+    grunt.registerTask('jshinting',['jshint:app', 'watch:jshint']);
     grunt.registerTask('linting', ['lint', 'watch:lint']);
     grunt.registerTask('review', [
         'lint',
