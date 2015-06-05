@@ -103,7 +103,8 @@
 - ```grunt testing``` (watch task)
 - ```grunt review``` (watch task)
 - ```grunt quick-review``` (watch task) **[default task]**
-- Check [tasks/main.js](tasks/main.js) for all available tasks
+- ```grunt aria```
+- Read [tasks/main.js](tasks/main.js) for all available tasks
 
 #Data Services
 &nbsp;[![MongoDB](../images/assets/images/mongodb.png "MongoDB")](#using-mongodb)
