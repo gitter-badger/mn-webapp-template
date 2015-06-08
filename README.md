@@ -90,8 +90,6 @@
     +- documentation
     +- node_modules
     |- .gitignore
-    |- .bowerrc
-    |- bower.json
     |- GruntFile.js
     |- package.json
     \- Vagrantfile

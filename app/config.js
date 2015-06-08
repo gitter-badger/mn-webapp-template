@@ -6,12 +6,12 @@ requirejs.config({
     skipDataMain: true,
     paths: {
         //Paths are relative to this file and do not need extensions
-        jquery:     '../assets/library/components/jquery/dist/jquery.min',
-        underscore: '../assets/library/components/underscore/underscore',
-        backbone:   '../assets/library/components/backbone/backbone',
-        radio:      '../assets/library/components/backbone.radio/build/backbone.radio.min',
-        marionette: '../assets/library/components/marionette/lib/backbone.marionette.min',
-        handlebars: '../assets/library/components/handlebars/handlebars.min',
+        jquery:     '../assets/library/components/jquery',
+        underscore: '../assets/library/components/underscore',
+        backbone:   '../assets/library/components/backbone',
+        radio:      '../assets/library/components/backbone.radio.min',
+        marionette: '../assets/library/components/backbone.marionette.min',
+        handlebars: '../assets/library/components/handlebars.min',
         text:       '../assets/library/require.text'
     }
 });
