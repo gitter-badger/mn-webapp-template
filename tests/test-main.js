@@ -13,12 +13,12 @@ requirejs.config({
     // The "src/" part is the same as the one in the repo root
     baseUrl: '/base/app',
     paths: {
-        jquery:     '../assets/library/components/jquery/dist/jquery.min',
-        underscore: '../assets/library/components/underscore/underscore',
-        backbone:   '../assets/library/components/backbone/backbone',
-        radio:      '../assets/library/components/backbone.radio/build/backbone.radio.min',
-        marionette: '../assets/library/components/marionette/lib/backbone.marionette.min',
-        handlebars: '../assets/library/components/handlebars/handlebars.min',
+        jquery:     '../assets/library/components/jquery',
+        underscore: '../assets/library/components/underscore',
+        backbone:   '../assets/library/components/backbone',
+        radio:      '../assets/library/components/backbone.radio.min',
+        marionette: '../assets/library/components/backbone.marionette.min',
+        handlebars: '../assets/library/components/handlebars.min',
         text:       '../assets/library/require.text'
     },
     // ask Require.js to load these files (all our tests) that we collected before

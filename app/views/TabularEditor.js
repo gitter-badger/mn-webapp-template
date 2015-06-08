@@ -1,7 +1,6 @@
 define(function(require) {
     'use strict';
 
-    var app           = require('app');
     var Marionette    = require('marionette');
     var _             = require('underscore');
     var $             = require('jquery');
@@ -10,7 +9,7 @@ define(function(require) {
     var tableTemplate = require('text!../../assets/templates/tabularEditor.html');
 
     var RowView = Marionette.ItemView.extend({
-        tagName: "tr",
+        tagName: 'tr',
         template: rowTemplate
     });
     return Marionette.CompositeView.extend({
@@ -27,7 +26,7 @@ define(function(require) {
         },
         tagName: 'table',
         childView: RowView,
-        childViewContainer: "tbody",
+        childViewContainer: 'tbody',
         template: tableTemplate,
         ui: {
             'addRowBtn':   '#add-row',
@@ -108,7 +107,7 @@ define(function(require) {
                 if (/\d*%$/.test(str)) {
                     return parseInt(str.substring(0, str.length - 1), 10) / 100;
                 } else {
-                    console.error(str + ' is not a percentage.')
+                    console.error(str + ' is not a percentage.');
                 }
             }
             var em = stringToNumber($('body').css('font-size'), 'px');
@@ -128,11 +127,11 @@ define(function(require) {
             var $head = view.$el.find('thead');
             var $body = view.$el.find('tbody');
             var colNum = view.model.get('headers').length;
-            var rowNum = view.collection.length;
             var padding = 0.5 * em;
             var columnWidth = ((width - scrollbarWidth) / colNum) - 2 * (cellBorder + padding);
-            var calculatedWidth = (scrollbarWidth + colNum * (columnWidth + 2 * (cellBorder + padding)));
-            var calculatedHeight = ((((2 * padding) + em) + rowNum) * rowNum) + (3 * em);
+            //var rowNum = view.collection.length;
+            //var calculatedWidth = (scrollbarWidth + colNum * (columnWidth + 2 * (cellBorder + padding)));
+            //var calculatedHeight = ((((2 * padding) + em) + rowNum) * rowNum) + (3 * em);
             $body
                 .height(height)
                 .add($head).find('.data').width(columnWidth);

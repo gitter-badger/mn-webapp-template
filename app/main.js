@@ -2,8 +2,8 @@ define(function(require) {
     'use strict';
 
     // import test data
-    var data = require('text!../tests/data/DATA.json');
-    var rows = require('text!../../../tests/data/rows.json');
+    //var data = require('text!../tests/data/DATA.json');
+    //var rows = require('text!../../../tests/data/rows.json');
 
     // import dependencies
     var WebApp    = require('app');
@@ -11,7 +11,7 @@ define(function(require) {
     var DataView  = require('views/DataComposite');
     var TableRow  = require('models/TabularEditorRow');
     var TableView = require('views/TabularEditor');
-
+/*
     // dataView is a CompositeView that uses data to output a list of company names
     var dataView = new DataView({
         collection: (new Data.collection(JSON.parse(data)))
@@ -28,6 +28,6 @@ define(function(require) {
         // by default the view is rendered in the body element
         this.regions.get('root').show(tabularView);
     });
-
+*/
     WebApp.start();
 });
