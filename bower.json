@@ -30,8 +30,7 @@
     "backbone.radio": "~0.9.0"
   },
   "devDependencies": {
-    "jasmine": "~2.2.1",
-    "html5shiv": "~3.7.2"
+    "jasmine": "~2.2.1"
   },
   "preen": {
     "html5shiv": [
