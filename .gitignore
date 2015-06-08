@@ -1,6 +1,5 @@
 #Node and Bower directories
 node_modules/
-assets/library/components/
 
 #Coverage Results
 tests/coverage/
