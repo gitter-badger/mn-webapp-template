@@ -2,8 +2,8 @@ define(function(require) {
     'use strict';
 
     // import test data
-    //var data = require('text!../tests/data/DATA.json');
-    //var rows = require('text!../../../tests/data/rows.json');
+    var data = require('text!../tests/data/DATA.json');
+    var rows = require('text!../../../tests/data/rows.json');
 
     // import dependencies
     var WebApp    = require('app');
@@ -16,18 +16,18 @@ define(function(require) {
     var dataView = new DataView({
         collection: (new Data.collection(JSON.parse(data)))
     });
-
+*/
     // tabularView is a CompositeView that displays data in a tabular interface
-    var tabularView = new TableView({
-        collection: (new TableRow.collection(JSON.parse(rows)))
-    });
+    //var rowModels = new TableRow.collection(JSON.parse(rows));
+    //var tabularView = new TableView({collection: rowModels});
 
     WebApp.on('start', function() {
 
         // show dataView or tabularView
         // by default the view is rendered in the body element
-        this.regions.get('root').show(tabularView);
+        //this.regions.get('root').show(tabularView);
+
     });
-*/
+
     WebApp.start();
 });
