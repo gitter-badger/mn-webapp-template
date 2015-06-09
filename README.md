@@ -31,7 +31,6 @@
 
 ###Front-end Tooling
 [![node.js](../images/assets/images/node.png "node.js")](https://nodejs.org/)
-&nbsp;[![Bower](../images/assets/images/bower.png "Bower")](http://bower.io/)
 &nbsp;[![GruntJS](../images/assets/images/grunt.png "GruntJS")](http://gruntjs.com/)
 
 ###Front-end Testing & Review
