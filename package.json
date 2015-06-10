@@ -22,7 +22,6 @@
     "node": "*"
   },
   "devDependencies": {
-    "bower": "^1.4.1",
     "grunt": "^0.4.5",
     "grunt-a11y": "^0.1.1",
     "grunt-accessibility": "^3.0.2",
@@ -63,10 +62,10 @@
     "time-grunt": "^1.1.0"
   },
   "scripts": {
-    "preinstall": "npm install grunt-cli -g",
-    "test": "grunt test",
-    "start": "grunt",
-    "inspect": "jsinspect app/**/*.js",
+    "preinstall":   "npm install grunt-cli -g",
+    "test":         "grunt test",
+    "start":        "grunt",
+    "inspect":      "jsinspect app/**/*.js",
     "inspect:main": "jsinspect app/main.js"
   },
   "dependencies": {}
