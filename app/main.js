@@ -1,3 +1,10 @@
+/**
+ * @file Main entry point for app
+ * @author Jason Wohlgemuth
+ * @version 1.0.0
+ * @copyright Jason Wohlgemuth 2015
+ * @license MIT
+ */
 define(function(require) {
     'use strict';
 
