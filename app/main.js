@@ -24,10 +24,11 @@ define(function(require) {
         collection: (new Data.collection(JSON.parse(data)))
     });
 */
+/*
     // tabularView is a CompositeView that displays data in a tabular interface
-    //var rowModels = new TableRow.collection(JSON.parse(rows));
-    //var tabularView = new TableView({collection: rowModels});
-
+    var rowModels = new TableRow.collection(JSON.parse(rows));
+    var tabularView = new TableView({collection: rowModels});
+*/
     WebApp.on('start', function() {
 
         // show dataView or tabularView
