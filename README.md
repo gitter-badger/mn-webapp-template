@@ -15,7 +15,7 @@
 - ```cd template-dev-webapp```
 - ```npm install```
 - Write some code and [run some Grunt tasks](#grunt-tasks)
-- Enforce code [standards](#jscs-rules)
+- Enforce code [standards](#jscs-rules-jshintrc)
 - Connect to a [local data service](#data-services)
 
 ###Languages
