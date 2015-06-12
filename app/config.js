@@ -1,3 +1,7 @@
+/**
+ * @file RequireJS configuration file
+ * @author Jason Wohlgemuth
+ */
 requirejs.config({
     baseUrl: '',
     //urlArgs is used to cache bust.

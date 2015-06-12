@@ -1,3 +1,9 @@
+/**
+ * @file app.js
+ * @author Jason Wohlgemuth
+ * @module app
+ * @exports app
+ */
 define(function(require) {
     'use strict';
 
@@ -13,23 +19,30 @@ define(function(require) {
         this.vent        =  _.result(this, 'channel');
     };
 
+    /**
+     * @class ApplicationModel
+     * @requires Backbone.js
+     * @extends Backbone.Model
+     * @prop {object} default
+     * @prop {string} default.name='WebApp'
+     */
     var ApplicationModel = Backbone.Model.extend({
         defaults: {
-            name: 'My Web App'
+            name: 'WebApp'
         }
     });
-    var App = new Marionette.Application();
-    App.regions = new Marionette.RegionManager({
-        regions: {
-            'root': 'body'
+    var App = new Marionette.Application({
+        model:   new ApplicationModel(),
+        regions: new Marionette.RegionManager(),
+        onBeforeStart: function() {
+            console.info(this.model.get('name') + ' is starting...');
+        },
+        onStart: function() {
+            console.info(this.model.get('name') + ' is started!');
         }
     });
-    App.model = new ApplicationModel();
-    App.on('before:start', function() {
-        console.info(App.model.get('name') + ' is starting...');
-    });
-    App.on('start', function() {
-        console.info(App.model.get('name') + ' is started!');
+    App.regions.addRegions({
+        'root': 'body'
     });
     return App;
 });

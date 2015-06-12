@@ -1,5 +1,5 @@
 /**
- * @file Main entry point for app
+ * @file Main entry point for application
  * @author Jason Wohlgemuth
  * @version 1.0.0
  * @copyright Jason Wohlgemuth 2015
