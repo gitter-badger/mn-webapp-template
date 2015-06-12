@@ -15,17 +15,15 @@ define(function(require) {
     var WebApp    = require('app');
     var Data      = require('models/Data');
     var DataView  = require('views/Data');
-/*
+
     // dataView is a CompositeView that uses data to output a list of company names
-    var dataView = new DataView({
-        collection: (new Data.collection(JSON.parse(data)))
-    });
-*/
+    //var dataView = new DataView({collection: (new Data.collection(JSON.parse(data)))});
+
     WebApp.on('start', function() {
 
         // show dataView or tabularView
         // by default the view is rendered in the body element
-        //this.regions.get('root').show(tabularView);
+        //this.regions.get('root').show(dataView);
 
     });
 

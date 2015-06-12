@@ -226,7 +226,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            coverage: ['tests/coverage'],
+            build: ['docs', 'tests/coverage'],
             plain: ['vault/*', '!vault/*<%= meta.encryptedExtension %>', '!vault/README.md'],
             cipher: ['vault/*<%= meta.encryptedExtension %>']
         },
@@ -245,7 +245,7 @@ module.exports = function(grunt) {
         jsdoc : {
             app: {
                 src: ['app/**/*.js'],
-                dest: 'documentation/app'
+                dest: 'docs'
             }
         }
     });

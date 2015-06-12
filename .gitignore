@@ -4,6 +4,9 @@ node_modules/
 #Coverage Results
 tests/coverage/
 
+#Documentation
+docs/
+
 #Vagrant system files
 .vagrant/
 

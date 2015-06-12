@@ -15,7 +15,7 @@
 - ```cd template-dev-webapp```
 - ```npm install```
 - Write some code and [run some Grunt tasks](#grunt-tasks)
-- Enforce code [standards](#jscs-rules-jshintrc)
+- Enforce code [standards](#jscs-rules-jshint-rules)
 - Connect to a [local data service](#data-services)
 
 ###Languages
@@ -101,6 +101,7 @@
 - ```grunt review``` (watch task)
 - ```grunt quick-review``` (watch task) **[default task]**
 - ```grunt aria```
+- ```grunt docs```
 - Read [tasks/main.js](tasks/main.js) for all available tasks
 
 ##JSCS Rules ([JSHint rules](.config/.jshintrc))
