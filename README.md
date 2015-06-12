@@ -8,7 +8,7 @@
 </div>
 </br>
 
-> Opinionated boilerplate environment for Web App development using modern front-end tooling
+> Opinionated boilerplate environment for Web App development using modern front-end tools
 
 ##Getting Started
 - ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
