@@ -4,9 +4,9 @@ define(function(require) {
     var Marionette    = require('marionette');
     var _             = require('underscore');
     var $             = require('jquery');
-    var TabularRow    = require('models/TabularEditorRow');
-    var rowTemplate   = require('text!../../assets/templates/tabularEditorRow.html');
-    var tableTemplate = require('text!../../assets/templates/tabularEditor.html');
+    var TabularRow    = require('models/TableRow');
+    var tableTemplate = require('text!../../assets/templates/table.html');
+    var rowTemplate   = require('text!../../assets/templates/tableRow.html');
 
     var RowView = Marionette.ItemView.extend({
         tagName: 'tr',

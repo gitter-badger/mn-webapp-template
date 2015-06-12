@@ -42,6 +42,10 @@ module.exports = function(grunt) {
         //Pre-compile templates...
         //Minimize HTML files...
         //Copy files to 'dist' directory...
+    grunt.registerTask('docs', [
+        'lint',
+        'jsdoc:app'
+    ]);
 
     //Test
     grunt.registerTask('test', [

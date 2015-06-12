@@ -241,6 +241,12 @@ module.exports = function(grunt) {
                     encryptedExtension: '<%= meta.encryptedExtension %>'
                 }
             ]
+        },
+        jsdoc : {
+            app: {
+                src: ['app/**/*.js'],
+                dest: 'documentation/app'
+            }
         }
     });
     grunt.registerTask('default', ['quick-review']);
