@@ -86,7 +86,6 @@
     |       +- specs
     |   \- test-main.js
     +- vault
-    +- documentation
     +- node_modules
     |- .gitignore
     |- GruntFile.js
