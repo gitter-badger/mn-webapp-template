@@ -10,7 +10,7 @@ define(function(require) {
 
     // import test data
     //var data = require('text!../../../tests/data/DATA.json');
-    var treeData = require('text!../../../tests/data/tree.json');
+    //var treeData = require('text!../../../tests/data/tree.json');
 
     // import dependencies
     var WebApp    = require('app');
@@ -29,7 +29,7 @@ define(function(require) {
 
         // show dataView or tabularView
         // by default the view is rendered in the body element
-        this.regions.get('root').show(treeView);
+        //this.regions.get('root').show(treeView);
 
     });
 
