@@ -23,7 +23,7 @@ define(function(require) {
     //var dataView = new DataView({collection: (new Data.collection(JSON.parse(data)))});
 
     // treeView is a CollectionView that creates a nested tree structure
-    var treeView = new TreeView({collection: (new Tree.collection(JSON.parse(treeData)))});
+    //var treeView = new TreeView({collection: (new Tree.collection(JSON.parse(treeData)))});
 
     WebApp.on('start', function() {
 
