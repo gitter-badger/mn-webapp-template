@@ -226,7 +226,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            build: ['docs', 'tests/coverage'],
+            build: ['docs/*', 'tests/coverage'],
             plain: ['vault/*', '!vault/*<%= meta.encryptedExtension %>', '!vault/README.md'],
             cipher: ['vault/*<%= meta.encryptedExtension %>']
         },
