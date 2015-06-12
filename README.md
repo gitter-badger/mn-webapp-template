@@ -15,6 +15,7 @@
 - ```cd template-dev-webapp```
 - ```npm install```
 - Write some code and [run some Grunt tasks](#grunt-tasks)
+- Enforce code [standards](#jscs-rules)
 - Connect to a [local data service](#data-services)
 
 ###Languages
@@ -102,7 +103,7 @@
 - ```grunt aria```
 - Read [tasks/main.js](tasks/main.js) for all available tasks
 
-##JSCS Rules
+##JSCS Rules ([.jshintrc](.config/.jshintrc))
  - [Disallow Dangling Underscores](http://catatron.com/node-jscs/rules/disallow-dangling-underscores)
  - [Disallow Empty Blocks](http://catatron.com/node-jscs/rules/disallow-empty-blocks)
  - [Disallow Keywords: ("with")](http://catatron.com/node-jscs/rules/disallow-keywords)
