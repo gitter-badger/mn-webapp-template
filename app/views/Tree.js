@@ -10,15 +10,16 @@ define(function(require) {
 
     var TreeCompositeView = Marionette.CompositeView.extend({
         template: template,
-        tagName: "li",
-        // specifies a selector for the element we want the
-        // child elements placed into
-        childViewContainer: "ul",
+        tagName: 'li',
+        className: 'tree-leaf',
+        childViewContainer: 'ul',
         initialize: function() {
-            // grab the child collection from the parent model
-            // so that we can render the collection as children
-            // of this parent node
-            this.collection = this.model.get("nodes");
+            this.collection = this.model.get('nodes');
+            if (this.collection.size() === 0){
+                this.$el.addClass('no-children');
+            } else {
+                this.$el.addClass('parent');
+            }
             this.$el.attr('data-node', this.model.get('nodeName'));
         },
         ui: {
@@ -32,7 +33,8 @@ define(function(require) {
         }
     });
     return Marionette.CollectionView.extend({
-        tagName: "ul",
-        childView: TreeCompositeView
+        tagName: 'ul',
+        childView: TreeCompositeView,
+        className: 'tree-branch'
     });
 });

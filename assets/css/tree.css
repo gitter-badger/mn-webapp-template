@@ -1,0 +1,7 @@
+.no-children {
+    background-color: green;
+}
+
+.tree-leaf .parent {
+    background-color: coral;
+}
