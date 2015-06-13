@@ -19,13 +19,16 @@ define(function(require) {
             // so that we can render the collection as children
             // of this parent node
             this.collection = this.model.get("nodes");
+            this.$el.attr('data-node', this.model.get('nodeName'));
+        },
+        ui: {
+            'item': 'li'
         },
         events: {
-            'click li': 'onClick'
+            'click @ui.item': 'onClick'
         },
         onClick: function(e) {
             e.stopImmediatePropagation();
-            console.log($(e.currentTarget).text());
         }
     });
     return Marionette.CollectionView.extend({
