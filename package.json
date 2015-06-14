@@ -43,6 +43,7 @@
     "grunt-karma": "^0.10.1",
     "grunt-karma-coveralls": "^2.5.3",
     "grunt-open": "^0.2.3",
+    "grunt-plato": "^1.2.1",
     "grunt-template-jasmine-requirejs": "^0.2.3",
     "jasmine-core": "^2.2.0",
     "jscs": "^1.12.0",

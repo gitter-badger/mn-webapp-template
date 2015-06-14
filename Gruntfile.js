@@ -167,6 +167,15 @@ module.exports = function(grunt) {
                 recursive: true
             }
         },
+        plato: {
+            app : {
+                src : 'app/**/*.js',
+                dest : 'reports',
+                options : {
+                    jshint : grunt.file.readJSON('.config/.jshintrc')
+                }
+            }
+        },
         express: {
             main: {
                 options: {

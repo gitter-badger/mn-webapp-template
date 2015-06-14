@@ -7,6 +7,9 @@ tests/coverage/
 #Documentation
 docs/
 
+#Plato Code Quality Reports
+reports/
+
 #Vagrant system files
 .vagrant/
 
