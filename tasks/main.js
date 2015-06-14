@@ -53,6 +53,12 @@ module.exports = function(grunt) {
         'jasmine:main',
         'karma:coverage'
     ]);
+    grunt.registerTask('test-ci', [
+        'lint',
+        'jasmine:main',
+        'karma:coverage',
+        'coveralls'
+    ]);
     grunt.registerTask('testing', ['lint', 'karma:covering']);
     grunt.registerTask('aria', ['accessibility', 'a11y']);
 

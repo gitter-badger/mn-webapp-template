@@ -167,6 +167,13 @@ module.exports = function(grunt) {
                 singleRun: false
             }
         },
+        coveralls: {
+            options: {
+                // LCOV coverage file relevant to every target
+                src: 'tests/coverage/report-lcov/lcov.info',
+                force: true
+            }
+        },
         express: {
             main: {
                 options: {
