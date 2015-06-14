@@ -1,3 +1,7 @@
+/**
+ * @file Mixins that extend Underscore
+ * @author Jason Wohlgemuth
+ */
 define(function(require) {
     'use strict';
 

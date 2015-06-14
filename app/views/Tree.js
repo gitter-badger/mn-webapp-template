@@ -1,6 +1,8 @@
 /**
  * @file Tree View
  * @author Jason Wohlgemuth
+ * @module views/Tree
+ * @requires Marionette
  */
 define(function(require) {
     'use strict';

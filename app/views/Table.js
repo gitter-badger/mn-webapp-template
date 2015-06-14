@@ -1,3 +1,12 @@
+/**
+ * @file Table View
+ * @author Jason Wohlgemuth
+ * @module views/Table
+ * @requires Marionette
+ * @requires Underscore.js
+ * @requires jQuery
+ * @requires module:models/TableRow
+ */
 define(function(require) {
     'use strict';
 

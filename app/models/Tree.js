@@ -1,6 +1,8 @@
 /**
  * @file Tree Model and Collection
  * @author Jason Wohlgemuth
+ * @module models/Tree
+ * @requires Backbone.js
  */
 define(function(require) {
     'use strict';
