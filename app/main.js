@@ -14,10 +14,8 @@ define(function(require) {
     var data     = require('treeData');
 
     var treeView = new TreeView({collection: (new Tree.collection(data))});
-
     WebApp.on('start', function() {
         this.regions.get('root').show(treeView);
     });
-
     WebApp.start();
 });
