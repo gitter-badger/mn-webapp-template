@@ -2,9 +2,11 @@ module.exports = function(config) {
     config.set({
         basePath: '../',
         frameworks: ['jasmine', 'requirejs'],
-        files: [
-            {pattern: 'assets/library/components/**/*.js', included: false},
+        files: [// WARNING: Order matters! (I think)
             {pattern: 'app/**/*.js', included: false},
+            {pattern: 'assets/templates/**/*.html', included: false},
+            {pattern: 'assets/library/require.text.js', included: false},
+            {pattern: 'assets/library/components/**/*.js', included: false},
             {pattern: 'tests/jasmine/specs/**/*.js', included: false},
             'tests/test-main.js'
         ],

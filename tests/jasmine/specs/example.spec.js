@@ -1,11 +1,10 @@
 define(['app'], function(app) {
-    describe('Web App', function() {
+    describe('When using this web app template', function() {
         it('should be awesome.', function() {
             expect(true).toBeTruthy();
         });
         it('should be able to parse JSON objects', function() {
-            var text = '{"foo": "bar"}';
-            var data = JSON.parse(text);
+            var data = JSON.parse('{"foo": "bar"}');
             expect(data.foo).toMatch('bar');
         });
     });

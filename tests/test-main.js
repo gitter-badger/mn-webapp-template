@@ -3,7 +3,7 @@ for (var file in window.__karma__.files) {
     // Our test modules are named "<something>Spec.js"
     // If you decide to change the format of the file name this Regex
     // must reflect it.
-    if (/Spec\.js$/.test(file)) {
+    if (/\.spec\.js$/.test(file)) {
         tests.push(file);
     }
 }
