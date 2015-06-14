@@ -15,7 +15,7 @@ define(function(require) {
     'use strict';
 
     var Marionette   = require('marionette');
-    var treeTemplate = require('text!../../../assets/templates/tree.html');
+    var treeTemplate = require('text!../../assets/templates/tree.html');
 
     /**
      * @name TreeCompositeView
