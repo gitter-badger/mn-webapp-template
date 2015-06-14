@@ -17,12 +17,11 @@ module.exports = function(config) {
         coverageReporter: {
             dir: 'tests/coverage/',
             includeAllSources: true,
-            reporters: [
-                {type: 'text-summary'},
+            reporters: [// WARNING: Order matters! (I think)
                 {type: 'text-summary',subdir: '.', file: 'text-summary.txt'},
                 {type: 'html', subdir: 'report-html'},
+                {type: 'text-summary'},
                 {type: 'lcov', subdir: 'report-lcov'},
-                {type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt'},
                 {type: 'cobertura', subdir: '.', file: 'report-cobertura.txt'}//Jenkins compatible
             ]
         },

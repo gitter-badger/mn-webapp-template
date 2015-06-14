@@ -59,6 +59,14 @@ module.exports = function(grunt) {
         'karma:coverage',
         'coveralls'
     ]);
+    grunt.registerTask('cover', [
+        'clean:build',
+        'karma:coverage'
+    ]);
+    grunt.registerTask('covering', [
+        'clean:build',
+        'karma:covering'
+    ]);
     grunt.registerTask('testing', ['lint', 'karma:covering']);
     grunt.registerTask('aria', ['accessibility', 'a11y']);
 
