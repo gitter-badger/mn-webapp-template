@@ -17,7 +17,7 @@ requirejs.config({
         marionette: '../assets/library/components/backbone.marionette.min',
         handlebars: '../assets/library/components/handlebars.min',
         text:       '../assets/library/require.text',
-        //Data modules for testing
+        //Data modules
         treeData:   '../tests/data/modules/tree',
         tableData:  '../tests/data/modules/table'
     }
