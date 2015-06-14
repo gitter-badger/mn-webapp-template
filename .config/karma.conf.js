@@ -1,7 +1,8 @@
+// WARNING: Order matters!
 module.exports = function(config) {
     config.set({
         basePath: '../',
-        frameworks: ['jasmine', 'sinon', 'requirejs'],
+        frameworks: [ 'requirejs', 'jasmine', 'sinon'],// WARNING: Order matters!
         files: [// WARNING: Order matters! (I think)
             {pattern: 'app/**/*.js', included: false},
             {pattern: 'assets/templates/**/*.html', included: false},

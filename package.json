@@ -68,10 +68,10 @@
     "time-grunt": "^1.1.0"
   },
   "scripts": {
-    "preinstall": "npm install grunt-cli -g",
-    "test": "grunt test-ci",
-    "start": "grunt",
-    "inspect": "jsinspect app/**/*.js",
+    "preinstall":   "npm install grunt-cli -g",
+    "test":         "grunt test-ci",
+    "start":        "grunt",
+    "inspect":      "jsinspect app/**/*.js",
     "inspect:main": "jsinspect app/main.js"
   },
   "dependencies": {}
