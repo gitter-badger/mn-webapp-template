@@ -10,11 +10,11 @@ define(function(require) {
         it('should be awesome.', function() {
             expect(true).toBeTruthy();
         });
-        it('should load and render without problem', function() {
+        it('should load and render without problems', function() {
             var TreeView = new view({
                 collection: (new model.collection(data))
             });
-            expect(true).toBeTruthy();
+            expect(TreeView.collection.size()).toBeGreaterThan(0);
         })
     });
 });

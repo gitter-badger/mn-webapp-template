@@ -1,7 +1,6 @@
 define(function(require) {
     'use strict';
 
-    var $     = require('jquery');
     var app   = require('app');
     var model = require('models/TableRow');
     var view  = require('views/Table');
@@ -11,11 +10,11 @@ define(function(require) {
         it('should be awesome.', function() {
             expect(true).toBeTruthy();
         });
-        it('should load and render without problem', function() {
+        it('should load and render without problems', function() {
             var TableView = new view({
                 collection: (new model.collection(data))
             });
-            expect(true).toBeTruthy();
+            expect(TableView.collection.size()).toBeGreaterThan(0);
         })
     });
 });
