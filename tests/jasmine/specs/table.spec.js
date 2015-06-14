@@ -1,5 +1,12 @@
-define(['app', 'models/TableRow', 'views/Table', 'tableData'], function(app, model, view, data) {
-    describe('When using the template Tree View', function() {
+define(function(require) {
+    'use strict';
+
+    var app   = require('app');
+    var model = require('models/TableRow');
+    var view  = require('views/Table');
+    var data  = require('tableData');
+
+    describe('When using the template Table View', function() {
         it('should be awesome.', function() {
             expect(true).toBeTruthy();
         });

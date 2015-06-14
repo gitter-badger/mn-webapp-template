@@ -61,6 +61,7 @@
     "lodash": "^3.7.0",
     "phantomjs": "^1.9.16",
     "requirejs": "^2.1.17",
+    "sinon": "^1.15.3",
     "time-grunt": "^1.1.0"
   },
   "scripts": {
