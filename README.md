@@ -1,6 +1,7 @@
 <div align="center"><h1>Web App Project Template</h1></div>
 <div align="center">
 <a href="https://travis-ci.org/jhwohlgemuth/template-dev-webapp"><img src="https://travis-ci.org/jhwohlgemuth/template-dev-webapp.svg?branch=master"</img></a>
+<a href='https://coveralls.io/r/jhwohlgemuth/template-dev-webapp?branch=master'><img src='https://coveralls.io/repos/jhwohlgemuth/template-dev-webapp/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href="https://codeclimate.com/github/jhwohlgemuth/template-dev-webapp"><img src="https://codeclimate.com/github/jhwohlgemuth/template-dev-webapp/badges/gpa.svg"</img></a>
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp.svg"></img></a>
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp/dev-status.svg"></img></a>
@@ -210,6 +211,7 @@
 
 #Future
 - [x] Passing tests on [CI servers](#free-devops-tools)
+- [ ] Add [Plato](https://es-analysis.github.io/plato/examples/marionette/) support
 - [ ] Add [SinonJS](http://sinonjs.org/) support
 - [ ] Create build and deploy tasks
 - [ ] Optimize JS code with r.js
