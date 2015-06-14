@@ -5,36 +5,32 @@
 define(function(require) {
     'use strict';
 
-    var Marionette = require('marionette');
-    var template   = require('text!../../assets/templates/tree.html');
+    var Marionette   = require('marionette');
+    var treeTemplate = require('text!../../../assets/templates/tree.html');
 
     var TreeCompositeView = Marionette.CompositeView.extend({
-        template: template,
+        template: treeTemplate,
         tagName: 'li',
-        className: 'tree-leaf',
         childViewContainer: 'ul',
         initialize: function() {
-            this.collection = this.model.get('nodes');
-            if (this.collection.size() === 0){
-                this.$el.addClass('no-children');
+            var view =  this;
+            var model = view.model;
+            view.collection = model.get(model.get('children'));
+        },
+        onRender: function() {
+            var view =  this;
+            var model = view.model;
+            if (view.collection.size() === 0){
+                view.$el.addClass('leaf');
             } else {
-                this.$el.addClass('parent');
+                view.$el.addClass('branch');
             }
-            this.$el.attr('data-node', this.model.get('nodeName'));
-        },
-        ui: {
-            'item': 'li'
-        },
-        events: {
-            'click @ui.item': 'onClick'
-        },
-        onClick: function(e) {
-            e.stopImmediatePropagation();
+            view.$el.attr('data-node', model.get(model.get('parent')));
         }
     });
     return Marionette.CollectionView.extend({
         tagName: 'ul',
         childView: TreeCompositeView,
-        className: 'tree-branch'
+        className: 'tree'
     });
 });

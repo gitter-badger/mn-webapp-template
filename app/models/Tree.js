@@ -8,21 +8,22 @@ define(function(require) {
     var Backbone = require('backbone');
 
     var TreeModel = Backbone.Model.extend({
+        defaults: {
+            parent:   'nodeName', //change this value to match the structure of your data/template
+            children: 'nodes'     //change this value to match the structure of your data/template
+        },
         initialize: function() {
-            var nodes = this.get("nodes");
-            // Covert nodes to a NodeCollection
-            this.set("nodes", new TreeCollection(nodes));
+            var model = this;
+            var childrenSelector = model.get('children');
+            this.set(childrenSelector, new TreeCollection(model.get(childrenSelector)));
         },
         toJSON: function() {
-            // Call parent"s toJSON method
             var data = Backbone.Model.prototype.toJSON.call(this);
             if (data.nodes && data.nodes.toJSON) {
-                // If nodes is a collection, convert it to JSON
                 data.nodes = data.nodes.toJSON();
             }
             return data;
         }
-
     });
     var TreeCollection = Backbone.Collection.extend({
         model: TreeModel
