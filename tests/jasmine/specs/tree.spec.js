@@ -14,6 +14,7 @@ define(function(require) {
             var TreeView = new view({
                 collection: (new model.collection(data))
             });
+            expect(true).toBeTruthy();
         })
     });
 });

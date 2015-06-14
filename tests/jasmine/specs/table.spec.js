@@ -1,6 +1,7 @@
 define(function(require) {
     'use strict';
 
+    var $     = require('jquery');
     var app   = require('app');
     var model = require('models/TableRow');
     var view  = require('views/Table');
@@ -14,6 +15,7 @@ define(function(require) {
             var TableView = new view({
                 collection: (new model.collection(data))
             });
+            expect(true).toBeTruthy();
         })
     });
 });

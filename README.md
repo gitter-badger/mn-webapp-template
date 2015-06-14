@@ -97,10 +97,13 @@
 - ```grunt linting``` (watch task)
 - ```grunt test```
 - ```grunt testing``` (watch task)
+- ```grunt cover```
+- ```grunt covering``` (watch task)
 - ```grunt review``` (watch task)
 - ```grunt quick-review``` (watch task) **[default task]**
 - ```grunt aria```
-- ```grunt docs``` (generate documentation in ./docs folder)
+- ```grunt docs``` (generate documentation in ```./docs``` folder)
+- ```grunt plato``` (generate plato report in ```./reports``` folder)
 - Read [tasks/main.js](tasks/main.js) for all available tasks
 
 ##JSCS Rules ([JSHint rules](.config/.jshintrc))
