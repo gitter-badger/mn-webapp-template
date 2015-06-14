@@ -8,6 +8,7 @@ module.exports = function(config) {
             {pattern: 'assets/library/require.text.js', included: false},
             {pattern: 'assets/library/components/**/*.js', included: false},
             {pattern: 'tests/jasmine/specs/**/*.js', included: false},
+            {pattern: 'tests/data/**/*.js', included: false},
             'tests/test-main.js'
         ],
         exclude: ['app/config.js'],
@@ -26,8 +27,8 @@ module.exports = function(config) {
             ]
         },
         colors: true,
-        logLevel: 'INFO',//DISABLE, ERROR, WARN, INFO, DEBUG
-        browsers: ['PhantomJS'],//Chrome, ChromeCanary, Firefox, Opera, IE (Win), Safari (Mac)
+        logLevel: 'INFO',        //DISABLE, ERROR, WARN, INFO, DEBUG
+        browsers: ['PhantomJS'], //Chrome, ChromeCanary, Firefox, Opera, IE (Win), Safari (Mac)
         captureTimeout: 60000,
         singleRun: true
     });
