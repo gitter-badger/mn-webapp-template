@@ -20,7 +20,7 @@ define(function(require) {
         onRender: function() {
             var view =  this;
             var model = view.model;
-            if (view.collection.size() === 0){
+            if (view.collection.size() === 0) {
                 view.$el.addClass('leaf');
             } else {
                 view.$el.addClass('branch');

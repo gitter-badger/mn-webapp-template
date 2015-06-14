@@ -13,8 +13,8 @@ define(function(require) {
 
     // import dependencies
     var WebApp    = require('app');
-    var Tree      = require('models/Tree');
-    var TreeView  = require('views/Tree');
+    //var Tree      = require('models/Tree');
+    //var TreeView  = require('views/Tree');
 
     // treeView is a CollectionView that creates a nested tree structure
     //var treeView = new TreeView({collection: (new Tree.collection(JSON.parse(treeData)))});

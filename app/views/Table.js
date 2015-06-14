@@ -68,7 +68,7 @@ define(function(require) {
             var view = this;
             var headers = _.clone(view.model.get('headers'));
             view.model.set('headers',headers.reverse());
-            $('th').each(function(index){
+            $('th').each(function(index) {
                 $(this).find('.data').text(headers[index]);
             });
             var models = this.collection.models;

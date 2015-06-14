@@ -4,4 +4,9 @@ define(function(require) {
     var _ = require('underscore');
 
     // Underscore mixins
+    _.mixin({
+        capitalize: function(string) {
+            return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+        }
+    });
 });
