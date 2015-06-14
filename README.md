@@ -99,7 +99,7 @@
 - ```grunt review``` (watch task)
 - ```grunt quick-review``` (watch task) **[default task]**
 - ```grunt aria```
-- ```grunt docs```
+- ```grunt docs``` (generate documentation in ./docs folder)
 - Read [tasks/main.js](tasks/main.js) for all available tasks
 
 ##JSCS Rules ([JSHint rules](.config/.jshintrc))

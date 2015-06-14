@@ -8,23 +8,15 @@
 define(function(require) {
     'use strict';
 
-    // import test data
-    //var treeData = require('text!../../../tests/data/tree.json');
+    var WebApp   = require('app');
+    var Tree     = require('models/Tree');
+    var TreeView = require('views/Tree');
+    var data     = require('treeData');
 
-    // import dependencies
-    var WebApp    = require('app');
-    //var Tree      = require('models/Tree');
-    //var TreeView  = require('views/Tree');
-
-    // treeView is a CollectionView that creates a nested tree structure
-    //var treeView = new TreeView({collection: (new Tree.collection(JSON.parse(treeData)))});
+    var treeView = new TreeView({collection: (new Tree.collection(data))});
 
     WebApp.on('start', function() {
-
-        // show dataView or tabularView
-        // by default the view is rendered in the body element
-        //this.regions.get('root').show(treeView);
-
+        this.regions.get('root').show(treeView);
     });
 
     WebApp.start();

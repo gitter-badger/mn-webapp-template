@@ -16,6 +16,9 @@ requirejs.config({
         radio:      '../assets/library/components/backbone.radio.min',
         marionette: '../assets/library/components/backbone.marionette.min',
         handlebars: '../assets/library/components/handlebars.min',
-        text:       '../assets/library/require.text'
+        text:       '../assets/library/require.text',
+        //Data modules for testing
+        treeData:   '../tests/data/modules/tree',
+        tableData:  '../tests/data/modules/table'
     }
 });

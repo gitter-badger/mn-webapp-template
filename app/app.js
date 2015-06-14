@@ -8,6 +8,9 @@ define(function(require) {
     'use strict';
 
     require('modules/Mn.Override.Templates');
+    require('helpers/handlebars.helpers');
+    require('helpers/jquery.extensions');
+    require('helpers/underscore.mixins');
 
     var Marionette = require('marionette');
     var Backbone  = require('backbone');
@@ -21,8 +24,8 @@ define(function(require) {
 
     /**
      * @class ApplicationModel
-     * @requires Backbone.js
      * @extends Backbone.Model
+     * @requires Backbone.js
      * @prop {object} default
      * @prop {string} default.name='WebApp'
      */

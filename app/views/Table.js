@@ -1,3 +1,18 @@
+/**
+ * @file Table View
+ * @author Jason Wohlgemuth
+ * @module views/Table
+ * @extends Marionette.CompositeView
+ * @requires Marionette
+ * @requires Underscore.js
+ * @requires jQuery
+ * @requires module:models/TableRow
+ * @example
+ * var data  = require('tableData');
+ * var rows  = new TableRow.collection(data);
+ * var table = new Table({collection: rows});
+ * someRegion.show(table);
+ */
 define(function(require) {
     'use strict';
 
@@ -8,6 +23,12 @@ define(function(require) {
     var tableTemplate = require('text!../../assets/templates/table.html');
     var rowTemplate   = require('text!../../assets/templates/tableRow.html');
 
+    /**
+     * @name RowView
+     * @constructor
+     * @extends Marionette.ItemView
+     * @prop {string} tagName='tr'
+     */
     var RowView = Marionette.ItemView.extend({
         tagName: 'tr',
         template: rowTemplate
