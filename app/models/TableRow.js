@@ -1,3 +1,9 @@
+/**
+ * @file Table Row model and collection
+ * @author Jason Wohlgemuth
+ * @module models/TableRow
+ * @requires Backbone.js
+ */
 define(function(require) {
     'use strict';
 
