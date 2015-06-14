@@ -7,19 +7,27 @@
 define(function(require) {
     'use strict';
 
-    require('modules/Mn.Override.Templates');
     require('helpers/handlebars.helpers');
     require('helpers/jquery.extensions');
     require('helpers/underscore.mixins');
 
     var Marionette = require('marionette');
-    var Backbone  = require('backbone');
+    var Backbone   = require('backbone');
+    var Radio      = require('radio');
+    var Handlebars = require('handlebars');
     //Backbone.radio shim
-    var Radio = require('radio');
     Marionette.Application.prototype._initChannel = function() {
         this.channelName =  _.result(this, 'channelName') || 'global';
         this.channel     =  _.result(this, 'channel') || Radio.channel(this.channelName);
         this.vent        =  _.result(this, 'channel');
+    };
+    //Override MarionetteJS template retrieval & compilation to use Handlebars.js
+    Marionette.TemplateCache.prototype.loadTemplate = function(rawTemplate) {
+        // Pass straight through to compileTemplate function
+        return rawTemplate;
+    };
+    Marionette.TemplateCache.prototype.compileTemplate = function(rawTemplate) {
+        return Handlebars.compile(rawTemplate);
     };
 
     /**
