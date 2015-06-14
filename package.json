@@ -36,12 +36,12 @@
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-coveralls": "^1.0.0",
     "grunt-express": "^1.4.1",
     "grunt-jscs": "^1.6.0",
     "grunt-jsdoc": "^0.6.7",
     "grunt-jsonlint": "^1.0.4",
     "grunt-karma": "^0.10.1",
+    "grunt-karma-coveralls": "^2.5.3",
     "grunt-open": "^0.2.3",
     "grunt-template-jasmine-requirejs": "^0.2.3",
     "jasmine-core": "^2.2.0",
@@ -67,10 +67,10 @@
     "time-grunt": "^1.1.0"
   },
   "scripts": {
-    "preinstall":   "npm install grunt-cli -g",
-    "test":         "grunt test-ci",
-    "start":        "grunt",
-    "inspect":      "jsinspect app/**/*.js",
+    "preinstall": "npm install grunt-cli -g",
+    "test": "grunt test-ci",
+    "start": "grunt",
+    "inspect": "jsinspect app/**/*.js",
     "inspect:main": "jsinspect app/main.js"
   },
   "dependencies": {}

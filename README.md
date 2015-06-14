@@ -210,6 +210,7 @@
 
 #Future
 - [x] Passing tests on [CI servers](#free-devops-tools)
+- [ ] Add [SinonJS](http://sinonjs.org/) support
 - [ ] Create build and deploy tasks
 - [ ] Optimize JS code with r.js
 - [ ] Precompile templates with [grunt-contrib-jst](https://github.com/gruntjs/grunt-contrib-jst) or the [Handlebars precompiler](http://handlebarsjs.com/precompilation.html)
