@@ -4,13 +4,13 @@ module.exports = function(config) {
         basePath: '../',
         frameworks: [ 'requirejs', 'jasmine', 'sinon'],// WARNING: Order matters!
         files: [// WARNING: Order matters! (I think)
+            'node_modules/sinon/pkg/sinon.js', //sinon will accessible from global context
             {pattern: 'app/**/*.js', included: false},
             {pattern: 'assets/templates/**/*.html', included: false},
             {pattern: 'assets/library/require.text.js', included: false},
             {pattern: 'assets/library/components/**/*.js', included: false},
             {pattern: 'tests/jasmine/specs/**/*.js', included: false},
             {pattern: 'tests/data/**/*.js', included: false},
-            'node_modules/sinon/pkg/sinon.js', //sinon will accessible from global context
             'tests/test-main.js'
         ],
         exclude: ['app/config.js'],
