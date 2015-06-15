@@ -4,10 +4,10 @@ module.exports = function(config) {
         basePath: '../',
         frameworks: [ 'requirejs', 'jasmine', 'sinon'],// WARNING: Order matters!
         files: [// WARNING: Order matters! (I think)
-            {pattern: 'assets/library/components/json2.js',included: false},
             {pattern: 'app/**/*.js',                       included: false},//app source
             {pattern: 'assets/templates/**/*.html',        included: false},//templates
             {pattern: 'assets/library/require.text.js',    included: false},//RequireJS Text plugin
+            {pattern: 'assets/library/require.json.js',    included: false},//RequireJS JSON plugin
             {pattern: 'assets/library/components/**/*.js', included: false},//Dependencies
             {pattern: 'tests/jasmine/specs/**/*.js',       included: false},//Jasmine Specs
             {pattern: 'tests/data/**/*.js',                included: false},//Data modules

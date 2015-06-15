@@ -11,6 +11,7 @@ requirejs.config({
     paths: {
         //RequireJS Plugins
         text:       '../assets/library/require.text',
+        json:       '../assets/library/require.json',
         //Dependencies
         jquery:     '../assets/library/components/jquery',
         underscore: '../assets/library/components/underscore',
