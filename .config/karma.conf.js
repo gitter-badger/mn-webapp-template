@@ -10,6 +10,7 @@ module.exports = function(config) {
             {pattern: 'assets/library/components/**/*.js', included: false},
             {pattern: 'tests/jasmine/specs/**/*.js', included: false},
             {pattern: 'tests/data/**/*.js', included: false},
+            'node_modules/sinon/pkg/sinon.js', //sinon will accessible from global context
             'tests/test-main.js'
         ],
         exclude: ['app/config.js'],
