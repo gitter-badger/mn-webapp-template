@@ -1,6 +1,8 @@
 define(function(require) {
     'use strict';
 
+    require('sinon');
+
     var app   = require('app');
     var model = require('models/Tree');
     var view  = require('views/Tree');
