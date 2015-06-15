@@ -4,13 +4,13 @@ module.exports = function(config) {
         basePath: '../',
         frameworks: [ 'requirejs', 'jasmine', 'sinon'],// WARNING: Order matters!
         files: [// WARNING: Order matters! (I think)
-            {pattern: 'app/**/*.js',                       included: false},
-            {pattern: 'assets/templates/**/*.html',        included: false},
-            {pattern: 'assets/library/require.text.js',    included: false},
-            {pattern: 'assets/library/components/**/*.js', included: false},
-            {pattern: 'tests/jasmine/specs/**/*.js',       included: false},
-            {pattern: 'tests/data/**/*.js',                included: false},
-            {pattern: 'node_modules/sinon/pkg/sinon.js',   included: false},
+            {pattern: 'app/**/*.js',                       included: false},//app source
+            {pattern: 'assets/templates/**/*.html',        included: false},//templates
+            {pattern: 'assets/library/require.text.js',    included: false},//RequireJS Text plugin
+            {pattern: 'assets/library/components/**/*.js', included: false},//Dependencies
+            {pattern: 'tests/jasmine/specs/**/*.js',       included: false},//Jasmine Specs
+            {pattern: 'tests/data/**/*.js',                included: false},//Data modules
+            {pattern: 'node_modules/sinon/pkg/sinon.js',   included: false},//SinonJS
             'tests/test-main.js'
         ],
         exclude: ['app/config.js'],

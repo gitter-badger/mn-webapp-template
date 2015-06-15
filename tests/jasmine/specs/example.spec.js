@@ -1,4 +1,10 @@
-define(['app', 'sinon'], function(app, sinon) {
+define(function(require) {
+    'use strict';
+
+    require('sinon');
+
+    var app = require('app');
+
     describe('When using this web app template', function() {
         it('should be awesome.', function() {
             expect(true).toBeTruthy();
