@@ -7,7 +7,7 @@ define(['app'], function(app) {
             var data = JSON.parse('{"foo": "bar"}');
             expect(data.foo).toMatch('bar');
         });
-        it('should be able to use SinonJS for servers, spies, and stubs', function() {
+        xit('should be able to use SinonJS for servers, spies, and stubs', function() {
             //Servers
             var server = sinon.fakeServer.create();
             server.restore();
