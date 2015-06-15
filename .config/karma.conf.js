@@ -4,7 +4,7 @@ module.exports = function(config) {
         basePath: '../',
         frameworks: [ 'requirejs', 'jasmine', 'sinon'],// WARNING: Order matters!
         files: [// WARNING: Order matters! (I think)
-            {pattern: 'assets/library/components/json2.js',included: true},
+            {pattern: 'assets/library/components/json2.js',included: false},
             {pattern: 'app/**/*.js',                       included: false},//app source
             {pattern: 'assets/templates/**/*.html',        included: false},//templates
             {pattern: 'assets/library/require.text.js',    included: false},//RequireJS Text plugin
