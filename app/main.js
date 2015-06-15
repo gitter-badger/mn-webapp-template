@@ -10,9 +10,9 @@ define(function(require) {
     var WebApp   = require('app');
 
     var tpl = require('text!../../assets/templates/table.html');
-    var jso = require('text!../../tests/data/json/users.json');
+    var jso = '{"foo": "bar"}';
     var data = JSON.parse(jso);
-    console.log(data[3]);
+    console.log(data);
 
     WebApp.on('start', function() {
         console.info('Please read the source and/or generated documentation for more information.');
