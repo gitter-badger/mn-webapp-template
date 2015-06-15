@@ -132,7 +132,7 @@
  - [Require Capitalized Constructors](http://jscs.info/rule/requireCapitalizedConstructors.html)
  - [Require Commas Before Line Breaks](http://jscs.info/rule/requireCommaBeforeLineBreak.html)
  - [Require Curly Braces ("else", "for", "while", "do", "try", "catch")](http://jscs.info/rule/requireCurlyBraces.html)
- - [Require Space After Keywords ("if", "else", "for", "while", "do", "switch", "return", "try", "catch")]()
+ - [Require Space After Keywords ("if", "else", "for", "while", "do", "switch", "return", "try", "catch")](http://jscs.info/rule/requireSpaceAfterKeywords.html)
  - [Require Space Before Binary Operators ("+", "-", "/", "*", "=", "==", "===", "!=", "!==")](http://jscs.info/rule/requireSpaceAfterBinaryOperators.html)
  - [Require Space Before Block Statements](http://jscs.info/rule/requireSpaceBeforeBlockStatements.html)
  - [Validate Indentation (4)](http://jscs.info/rule/validateIndentation.html)

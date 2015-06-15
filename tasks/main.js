@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         'jsonlint',
         'css',
         'jshint:app',
-        'jscs'
+        'jscs:app'
     ]);
     grunt.registerTask('csslinting',[
         'csslint',
@@ -16,6 +16,10 @@ module.exports = function(grunt) {
     grunt.registerTask('jshinting',[
         'jshint:app',
         'watch:jshint'
+    ]);
+    grunt.registerTask('jscsing',[
+        'jscs',
+        'watch:jscs'
     ]);
     grunt.registerTask('linting', [
         'lint',

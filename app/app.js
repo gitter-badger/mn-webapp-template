@@ -3,7 +3,7 @@
  * @author Jason Wohlgemuth
  * @module app
  * @exports app
- */
+**/
 define(function(require) {
     'use strict';
 
@@ -34,7 +34,7 @@ define(function(require) {
      * @class ApplicationModel
      * @extends Backbone.Model
      * @requires Backbone.js
-     * @prop {object} default
+     * @prop {Object} default
      * @prop {string} default.name='WebApp'
      */
     var ApplicationModel = Backbone.Model.extend({

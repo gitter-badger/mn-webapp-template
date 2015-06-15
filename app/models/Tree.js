@@ -16,7 +16,7 @@ define(function(require) {
      * @name TreeModel
      * @constructor
      * @extends Backbone.Model
-     * @prop {object} defaults
+     * @prop {Object} defaults
      * @prop {string} defaults.parent='nodeName'
      * @prop {string} defaults.children='nodes'
      */

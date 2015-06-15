@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         config: {
             jshint:  './.config/.jshintrc',
             jscs:    './.config/.jscsrc',
+            jsdoc:   './.config/.jscsrc-jsdoc',
             csslint: './.config/.csslintrc',
             karma:   './.config/karma.conf.js'
         },
@@ -48,14 +49,24 @@ module.exports = function(grunt) {
         },
         jscs: {
             options: {
-                config: '<%= config.jscs %>',
                 force: true,
                 reporter: 'console',//checkstyle, inline, console, text
                 reporterOutput: null
             },
-            main: {
+            app: {
                 files: {
                     src: ['./app/**/*.js']
+                },
+                options: {
+                    config: '<%= config.jscs %>'
+                }
+            },
+            comments: {
+                files: {
+                    src: ['./app/**/*.js']
+                },
+                options: {
+                    config: '<%= config.jsdoc %>'
                 }
             }
         },
@@ -200,6 +211,11 @@ module.exports = function(grunt) {
             jshint: {
                 files: './app/**/*.js',
                 tasks: ['jshint:app'],
+                options: {spawn: false}
+            },
+            jscs: {
+                files: './app/**/*.js',
+                tasks: ['jscs:app', 'jscs:comments'],
                 options: {spawn: false}
             },
             lint: {
