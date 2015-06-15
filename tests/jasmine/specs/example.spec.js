@@ -1,4 +1,4 @@
-define(['app'], function(app) {
+define(['app', 'sinon'], function(app, sinon) {
     describe('When using this web app template', function() {
         it('should be awesome.', function() {
             expect(true).toBeTruthy();
