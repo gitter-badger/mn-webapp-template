@@ -10,7 +10,7 @@ define(function(require) {
     var WebApp   = require('app');
 
     var tpl = require('text!../../assets/templates/table.html');
-    var jso = '{"foo": "bar"}';
+    var jso = '[{"foo": "bar"},{"foo": "bar"}]';
     var data = JSON.parse(jso);
     console.log(data);
 
