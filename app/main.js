@@ -9,6 +9,9 @@ define(function(require) {
 
     var WebApp   = require('app');
 
+    var tpl = require('text!../../assets/templates/table.html');
+    var jso = require('text!../../tests/data/json/users.json');
+
     WebApp.on('start', function() {
         console.info('Please read the source and/or generated documentation for more information.');
     });
