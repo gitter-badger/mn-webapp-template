@@ -10,7 +10,8 @@ module.exports = function(config) {
             {pattern: 'assets/library/require.json.js',    included: false},//RequireJS JSON plugin
             {pattern: 'assets/library/components/**/*.js', included: false},//Dependencies
             {pattern: 'tests/jasmine/specs/**/*.js',       included: false},//Jasmine Specs
-            {pattern: 'tests/data/**/*.js',                included: false},//Data modules
+            {pattern: 'tests/data/modules/*.js',           included: false},//Data modules
+            {pattern: 'tests/data/json/*.json',            included: false},//Data JSON files
             {pattern: 'node_modules/sinon/pkg/sinon.js',   included: false},//SinonJS (global scope)
             'tests/test-main.js'
         ],
