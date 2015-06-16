@@ -17,8 +17,9 @@ module.exports = function(config) {
         exclude: ['app/config.js'],
         reporters: ['progress', 'coverage'],
         preprocessors: {
-            'app/**/*.js': 'coverage',
-            './**/*.json': {} //This is REQUIRED to parse JSON files loaded with Require text! plugin...
+            './**/*.json': {}, //This is REQUIRED to parse JSON files loaded with Require text! plugin...
+            './**/*.html': {}, //This is REQUIRED to parse JSON files loaded with Require text! plugin...
+            'app/**/*.js': 'coverage'
         },
         coverageReporter: {
             dir: 'tests/coverage/',
