@@ -9,8 +9,6 @@ define(function(require) {
 
     var WebApp   = require('app');
 
-    var data = JSON.parse(require('text!../../tests/data/json/users.json'));
-
     WebApp.on('start', function() {
         console.info('Please read the source and/or generated documentation for more information.');
     });
