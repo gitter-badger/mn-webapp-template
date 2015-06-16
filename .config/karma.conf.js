@@ -17,7 +17,8 @@ module.exports = function(config) {
         exclude: ['app/config.js'],
         reporters: ['progress', 'coverage'],
         preprocessors: {
-            'app/**/*.js': 'coverage'
+            'app/**/*.js': ['coverage'],
+            '**/*.json': ['json']
         },
         coverageReporter: {
             dir: 'tests/coverage/',

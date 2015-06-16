@@ -55,6 +55,7 @@
     "karma-chrome-launcher": "^0.1.8",
     "karma-coverage": "^0.3.1",
     "karma-jasmine": "^0.3.5",
+    "karma-json-preprocessor": "^0.2.0",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-requirejs": "^0.2.2",
     "karma-sinon": "^1.0.4",
@@ -68,10 +69,10 @@
     "time-grunt": "^1.1.0"
   },
   "scripts": {
-    "preinstall":   "npm install grunt-cli -g",
-    "test":         "grunt test-ci",
-    "start":        "grunt",
-    "inspect":      "jsinspect app/**/*.js",
+    "preinstall": "npm install grunt-cli -g",
+    "test": "grunt test-ci",
+    "start": "grunt",
+    "inspect": "jsinspect app/**/*.js",
     "inspect:main": "jsinspect app/main.js"
   },
   "dependencies": {}
