@@ -211,6 +211,7 @@
 - [HandlebarsJS Template Precompilation](http://handlebarsjs.com/precompilation.html)
 - [Marionette: The Backbone Framework (YouTube Video)](https://www.youtube.com/watch?v=EvQnntaqVdE&app=desktop)
 - [Building Beautiful Apps with Marionette (YouTube Video)](https://www.youtube.com/watch?v=7yZKsgKxziw&app=desktop)
+- [Parsing JSON files loaded with RequireJS text! plugin while using Karma](https://github.com/karma-runner/karma/issues/740)
 
 #Future
 - [x] Passing tests on [CI servers](#free-devops-tools)
