@@ -20,9 +20,10 @@
 - Connect to a [local data service](#data-services)
 
 ###Languages
-![HTML5](../images/assets/images/html5.png "HTML5")
-&nbsp;![CSS3](../images/assets/images/css3.png "CSS3")
 &nbsp;[![JavaScript](../images/assets/images/js.png "JavaScript (ECMAScript 5)")](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
+&nbsp;![HTML5](../images/assets/images/html5.png "HTML5")
+&nbsp;![CSS3](../images/assets/images/css3.png "CSS3")
+&nbsp;[![{less}](../images/assets/images/less.png "less CSS")](http://lesscss.org/)
 
 ###Frameworks & Libraries
 [![Marionette.js](../images/assets/images/marionette.png "Marionette.js")](http://marionettejs.com/)
@@ -38,7 +39,6 @@
 &nbsp;[![Karma](../images/assets/images/karma.png "Karma")](https://karma-runner.github.io/0.12/index.html)
 &nbsp;[![JSCS](../images/assets/images/jscs.png "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
-&nbsp;[![{less}](../images/assets/images/less.png "less CSS")](http://lesscss.org/)
 
 ###Free DevOps Tools
 [![Code Climate](../images/assets/images/devops/code%20climate.png "Code Climate")](https://codeclimate.com/dashboard)
