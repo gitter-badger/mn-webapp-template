@@ -32,7 +32,7 @@
 &nbsp;[![RequireJS](../images/assets/images/requirejs.png "RequireJS")](http://requirejs.org/)
 &nbsp;[![Jasmine](../images/assets/images/jasmine.png "Jasmine")](https://jasmine.github.io/2.2/introduction.html)
 
-###Front-end Tooling
+###Front-end Development
 [![node.js](../images/assets/images/node.png "node.js")](https://nodejs.org/)
 &nbsp;[![GruntJS](../images/assets/images/grunt.png "GruntJS")](http://gruntjs.com/)
 &nbsp;[![Karma](../images/assets/images/karma.png "Karma")](https://karma-runner.github.io/0.12/index.html)
