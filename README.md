@@ -38,7 +38,6 @@
 &nbsp;[![Karma](../images/assets/images/karma.png "Karma")](https://karma-runner.github.io/0.12/index.html)
 &nbsp;[![JSCS](../images/assets/images/jscs.png "JSCS")](http://jscs.info/)
 &nbsp;[![JSHint](../images/assets/images/jshint.png "JSHint")](http://jshint.com/docs/)
-&nbsp;[![JS Inspect](../images/assets/images/jsinspect.png "JS Inspect")](https://github.com/danielstjules/jsinspect)
 &nbsp;[![{less}](../images/assets/images/less.png "less CSS")](http://lesscss.org/)
 
 ###Free DevOps Tools
