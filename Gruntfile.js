@@ -84,7 +84,7 @@ module.exports = function(grunt) {
                     ]
                 },
                 files: {
-                    'assets/css/result.css': 'assets/less/source.less'
+                    'assets/css/styles.css': 'assets/less/styles.less'
                 }
             },
             prod: {
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
                     ]
                 },
                 files: {
-                    'assets/css/result.css': 'assets/less/source.less'
+                    'assets/css/styles.css': 'assets/less/styles.less'
                 }
             }
         },
