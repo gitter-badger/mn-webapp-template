@@ -1,6 +1,8 @@
-node_modules/
+/node_modules/
 assets/library/components/
-tests/coverage/
+assets/css/
+/tests/
+/docs/
 .vagrant/
 
 # Created by .ignore support plugin (hsz.mobi)
