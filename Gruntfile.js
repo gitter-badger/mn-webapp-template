@@ -175,7 +175,8 @@ module.exports = function(grunt) {
             options: {
                 // LCOV coverage file relevant to every target
                 coverageDir: 'tests/coverage/',
-                recursive: true
+                recursive: true,
+                force: true
             }
         },
         plato: {
