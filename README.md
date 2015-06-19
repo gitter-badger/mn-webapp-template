@@ -72,9 +72,10 @@
     |   +- templates
     |       +- data
     |   +- css
-    |       |- main.css
     |       \- reset.css
     |   +- images
+    |   +- less
+    |       \- styles.less
     |   +- library
     |       +- components
     |       |- require.min.js
