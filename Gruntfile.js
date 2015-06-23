@@ -136,7 +136,7 @@ module.exports = function(grunt) {
         },
         jasmine: {
             main: {
-                src: ['app/**/*.js'],
+                src: ['app/**/*.js', '!app/main.js'],
                 options: {
                     specs: ['tests/jasmine/specs/**/*.js'],
                     keepRunner: false,
