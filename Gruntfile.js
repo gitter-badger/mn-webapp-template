@@ -20,19 +20,19 @@ module.exports = function(grunt) {
             package: grunt.file.readJSON('package.json'),
             files: {
                 all: [
-                    './app/**/*.html',//HTML
-                    './app/**/*.js',//JS
-                    './assets/css/**/*.css',//CSS
-                    './assets/templates/**/*.html',//Templates
+                    './app/**/*.html',               //HTML
+                    './app/**/*.js',                 //JS
+                    './assets/css/**/*.css',         //CSS
+                    './assets/templates/**/*.html',  //Templates
                     './assets/templates/data/*.json',//JSON Template Data
-                    './tests/**/*.js',//Tests
-                    '!./tests/coverage/**/*'//Exclude coverage files
+                    './tests/**/*.js',               //Tests
+                    '!./tests/coverage/**/*'         //Exclude coverage files
                 ],
                 app: [
-                    './app/**/*.html',//HTML
-                    './app/**/*.js',//JS
-                    './assets/css/**/*.css',//CSS
-                    './assets/templates/**/*.html',//Templates
+                    './app/**/*.html',              //HTML
+                    './app/**/*.js',                //JS
+                    './assets/css/**/*.css',        //CSS
+                    './assets/templates/**/*.html', //Templates
                     './assets/templates/data/*.json'//JSON Template Data
                 ]
             }
