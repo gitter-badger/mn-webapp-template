@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     'use strict';
 
     //Review & Write Code
-    grunt.registerTask('css', ['less:dev', 'csslint']);
+    grunt.registerTask('css', ['less:main', 'csslint']);
     grunt.registerTask('lint', [
         'jsonlint',
         'css',

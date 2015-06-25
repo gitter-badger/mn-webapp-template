@@ -76,7 +76,7 @@ module.exports = function(grunt) {
             src: ['./assets/css/**/*.css']
         },
         less: {
-            dev: {
+            main: {
                 options: {
                     paths: ['assets/less'],
                     plugins: [
