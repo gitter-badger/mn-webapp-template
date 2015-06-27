@@ -1,4 +1,3 @@
-
 <div align="center">
 <a href="https://travis-ci.org/jhwohlgemuth/template-dev-webapp"><img src="https://travis-ci.org/jhwohlgemuth/template-dev-webapp.svg?branch=master"</img></a>
 <a href='https://coveralls.io/r/jhwohlgemuth/template-dev-webapp?branch=master'><img src='https://coveralls.io/repos/jhwohlgemuth/template-dev-webapp/badge.svg?branch=master' alt='Coverage Status' /></a>
