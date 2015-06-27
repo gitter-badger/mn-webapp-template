@@ -6,7 +6,7 @@
 
 <div align="center">
 <a href="https://travis-ci.org/jhwohlgemuth/mn-webapp-template"><img src="https://travis-ci.org/jhwohlgemuth/mn-webapp-template.svg?branch=master"</img></a>
-<a href='https://coveralls.io/r/jhwohlgemuth/mn-webapp-template'><img src='https://coveralls.io/repos/jhwohlgemuth/mn-webapp-template/badge.svg' alt='Coverage Status' /></a>
+<a href='https://coveralls.io/r/jhwohlgemuth/mn-webapp-template?branch=master'><img src='https://coveralls.io/repos/jhwohlgemuth/mn-webapp-template/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href="https://codeclimate.com/github/jhwohlgemuth/mn-webapp-template"><img src="https://codeclimate.com/github/jhwohlgemuth/mn-webapp-template/badges/gpa.svg"</img></a>
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies"><img src="https://david-dm.org/jhwohlgemuth/mn-webapp-template/dev-status.svg"></img></a>
 <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License"></img></a>
