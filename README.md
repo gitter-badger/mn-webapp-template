@@ -1,4 +1,10 @@
 <div align="center">
+<a href="https://github.com/jhwohlgemuth/template-dev-webapp"><img src="assets/images/banner.png"</img></a>
+</div>
+
+> Opinionated boilerplate for MarionetteJS web app development using modern front-end tools
+
+<div align="center">
 <a href="https://travis-ci.org/jhwohlgemuth/template-dev-webapp"><img src="https://travis-ci.org/jhwohlgemuth/template-dev-webapp.svg?branch=master"</img></a>
 <a href='https://coveralls.io/r/jhwohlgemuth/template-dev-webapp?branch=master'><img src='https://coveralls.io/repos/jhwohlgemuth/template-dev-webapp/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href="https://codeclimate.com/github/jhwohlgemuth/template-dev-webapp"><img src="https://codeclimate.com/github/jhwohlgemuth/template-dev-webapp/badges/gpa.svg"</img></a>
@@ -6,11 +12,6 @@
 <a href="https://david-dm.org/jhwohlgemuth/template-dev-webapp#info=devDependencies"><img src="https://david-dm.org/jhwohlgemuth/template-dev-webapp/dev-status.svg"></img></a>
 <a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License"></img></a>
 </div>
-<div align="center">
-<a href="https://github.com/jhwohlgemuth/template-dev-webapp"><img src="assets/images/banner.png"</img></a>
-</div>
-
-> Opinionated boilerplate for MarionetteJS web app development using modern front-end tools
 
 ##Getting Started
 - ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
