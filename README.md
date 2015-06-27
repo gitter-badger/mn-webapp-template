@@ -10,9 +10,9 @@
 <div align="center">
 <a href="https://github.com/jhwohlgemuth/template-dev-webapp"><img src="assets/images/banner.png"</img></a>
 </div>
-<div align="center"><h1>Web App Project Template</h1></div>
+<div align="center"><h1>MarionetteJS Web App Template</h1></div>
 
-> Opinionated boilerplate environment for Web App development using modern front-end tools
+> Opinionated boilerplate for MarionetteJS web app development using modern front-end tools
 
 ##Getting Started
 - ```git clone https://github.com/jhwohlgemuth/template-dev-webapp.git```
