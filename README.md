@@ -10,7 +10,6 @@
 <div align="center">
 <a href="https://github.com/jhwohlgemuth/template-dev-webapp"><img src="assets/images/banner.png"</img></a>
 </div>
-<div align="center"><h1>MarionetteJS Web App Template</h1></div>
 
 > Opinionated boilerplate for MarionetteJS web app development using modern front-end tools
 
