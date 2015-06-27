@@ -1,3 +1,6 @@
+<div align="center">
+<a href="https://github.com/jhwohlgemuth/template-dev-webapp"><img src="assets/images/banner.png"</img></a>
+</div>
 <div align="center"><h1>Web App Project Template</h1></div>
 <div align="center">
 <a href="https://travis-ci.org/jhwohlgemuth/template-dev-webapp"><img src="https://travis-ci.org/jhwohlgemuth/template-dev-webapp.svg?branch=master"</img></a>
